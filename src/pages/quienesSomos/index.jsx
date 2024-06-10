@@ -2,7 +2,7 @@ import Footer from "@/components/Footer";
 import Politicas from "@/components/QuienesSomos/Politicas";
 import QuienesSomos from "@/components/QuienesSomos/QuienesSomos";
 import HeaderQuienesSomos from "@/components/QuienesSomos/HeaderQuienesSomos";
-import Creditos from "@/components/QuienesSomos/creditos";
+
 import Beneficios from "@/components/QuienesSomos/Beneficios";
 import { Contacto } from "@/components/Contacto";
 
@@ -17,7 +17,7 @@ export default function SobreNosotros(){
         <QuienesSomos />
          <Beneficios />
         <Politicas />
-        <Creditos />
+
         <Contacto />
         <Footer />
         <div className="z-[100]">
