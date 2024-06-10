@@ -4,7 +4,6 @@ const navigation = {
   main: [
     { name: 'Inicio', href: '/' },
     { name: 'Catálogo', href: '#tipoPersona' },
-    // { name: 'Sobre Nosotros', href: '#aboutUs' },
     { name: 'Promociones', href: '#Promociones' },
     { name: 'Quienes Somos', href: '#Quienes Somos' },
   ],
