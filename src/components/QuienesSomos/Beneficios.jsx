@@ -5,7 +5,7 @@ import { BsBox2, BsCalendar2Check } from 'react-icons/bs';
 
 const cards = [
     {
-        name: 'Financia Tu Sueño: Crédito para Vehículos Nuevos y Usados',
+        name: 'Financia Tu Sueño: Crédito para Vehículos Nuevos y Usados.',
         icon: AiOutlineDollar,
     },
     {
@@ -13,19 +13,19 @@ const cards = [
         icon: LifebuoyIcon,
     },
     {
-        name: '100% Financiado: Adquiere Tu Carro con el Mejor Financiamiento',
+        name: '100% Financiado: Adquiere Tu Carro con el Mejor Financiamiento.',
         icon: BsBox2,
     },
     {
-        name: '¡Rápida Aprobación!: Agilidad en tu Trámite',
+        name: '¡Rápida Aprobación!: Agilidad en tu Trámite.',
         icon: NewspaperIcon,
     },
     {
-        name: 'Flexibilidad Total: Cuotas Extraordinarias Sin Costos Adicionales',
+        name: 'Flexibilidad Total: Cuotas Extraordinarias Sin Costos Adicionales.',
         icon: BsCalendar2Check,
     },
     {
-        name: 'Pago a tu Medida: Elige la Cuota que Mejor se Ajuste a Ti',
+        name: 'Pago a tu Medida: Elige la Cuota que Mejor se Ajuste a Ti.',
         icon: AiOutlineCar,
     },
     {
