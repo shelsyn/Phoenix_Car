@@ -23,6 +23,7 @@ export default function Home() {
         <TipoPersona />
         <Productos />
         <Contacto />
+      
       </main>
       <Footer />
       <div className="z-[100]">

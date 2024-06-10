@@ -8,6 +8,7 @@ const navigation = [
   { name: 'Inicio', href: '/' },
   { name: 'Catálogo Empresa', href: '/catalogoEmpresa' },
   { name: 'Catálogo Persona Natural', href: '/catalogoNatural' },
+
   { name: 'Términos y Condiciones', href: '#Condiciones' },
 ];
 

@@ -7,6 +7,7 @@ import Link from 'next/link';
 const navigation = [
   { name: 'Inicio', href: '/' },
   { name: 'Catálogo Empresa', href: '/catalogoEmpresa' },
+
   { name: 'Promociones', href: '#Promociones' },
   // { name: 'Sobre Nosotros', href: '#aboutUs' },
 ];
