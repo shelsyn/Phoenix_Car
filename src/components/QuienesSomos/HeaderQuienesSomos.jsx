@@ -9,7 +9,7 @@ const navigation = [
   { name: 'Catálogo Empresa', href: '/catalogoEmpresa' },
   { name: 'Catálogo Persona Natural', href: '/catalogoNatural' },
 
-  { name: 'Términos y Condiciones', href: '#Condiciones' },
+  { name: 'Términos y Condicionesssd', href: '#Condiciones' },
 ];
 
 const products = [

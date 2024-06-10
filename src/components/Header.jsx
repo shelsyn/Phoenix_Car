@@ -8,7 +8,8 @@ const navigation = [
   { name: 'Inicio', href: '/' },
   { name: 'Catálogo', href: '#tipoPersona' },
   { name: 'Promociones', href: '#Promociones' },
-  { name: 'Quienes somos', href: '/quienesSomos'}
+  { name: 'Crédito de vehículo', href: '/quienesSomos'},
+  { name: 'Crédito Hipotecario', href: '/hipoteca'}
 ];
 
 const products = [
@@ -73,7 +74,10 @@ export default function Header() {
               Promociones
             </a>
             <Link href="/quienesSomos" className="text-lg font-semibold leading-6 text-gold-goldButton">
-              Quienes somos
+            Crédito de vehículo
+            </Link>
+            <Link href="/hipoteca" className="text-lg font-semibold leading-6 text-gold-goldButton">
+            Crédito Hipotecario
             </Link>
           </Popover.Group>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">

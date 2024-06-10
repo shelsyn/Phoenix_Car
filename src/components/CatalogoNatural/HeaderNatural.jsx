@@ -8,7 +8,7 @@ const navigation = [
   { name: 'Inicio', href: '/' },
   { name: 'Catálogo Empresa', href: '/catalogoEmpresa' },
 
-  { name: 'Promociones', href: '#Promociones' },
+  { name: 'Promociones3', href: '#Promociones' },
   // { name: 'Sobre Nosotros', href: '#aboutUs' },
 ];
 const products = [
