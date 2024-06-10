@@ -5,7 +5,6 @@ const products = [
       year: '2023',
       href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Mazda+Cx5+Touring,+gracias.',
       imageSrc: 'https://m.atcdn.co.uk/vms/media/df522b45ccef4a34b9ebebbd7c747985.jpg',
-      precio: '$3´990.000 mensual',
       marca: 'Mazda',
       iva:'IVA INCLUIDO',
       ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:ac167ec6-79cf-4bfd-9fbf-cf4498ad5ab7'
@@ -18,7 +17,6 @@ const products = [
       year: '2023',
       href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Jeep+Camioneta-SUV+gracias.',
       imageSrc: 'https://www.jeep.co.za/content/dam/jeep/crossmarket/new-renegade-2019/Overview/02_colorizer/02_Colors/02_Trims/02_longitude/Longitude_562_my20.png',
-      precio: '$2´990.000 mensual',
       marca: 'Jepp',
       iva:'IVA INCLUIDO',
       ficha: 'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:8d0a4fa4-b9c5-4db4-9c69-37acc2cdfa1e'
@@ -30,7 +28,6 @@ const products = [
       href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+Logan+Life+Ph2+,gracias.',
       imageSrc: 'https://agenciauto.com/wp-content/uploads/2021/02/10797-color-vehiculo-nuevo-logan.jpg',
       imageAlt: 'Renault ',
-      precio: '$1´690.000 mensual',
       iva:'IVA INCLUIDO',
       marca: 'Renault ',
       ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:97e30701-aea4-40a8-9878-6aed570bf12e'
@@ -42,7 +39,6 @@ const products = [
       year: '2023',
       href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Renault+New+Kangoo,+gracias.',
       imageSrc: 'https://img-ik.cars.co.za/news-site-za/images/2021/02/renault-kangoo-express-van-3.jpg',
-      precio: '$1´990.000 mensual',
       marca: 'Renault New',
       iva:'IVA INCLUIDO',
       ficha:''

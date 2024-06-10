@@ -11,7 +11,6 @@ const products = [
     year: '2023',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Suzuki+Vitara+Mc,+gracias.',
     imageSrc: './suzuki-Vitara.jpg',
-    precio: '$3´110.900 mensual',
     marca: 'Suzuki',
     tipo: 'Camioneta - SUV',
     ficha: 'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:8d0a4fa4-b9c5-4db4-9c69-37acc2cdfa1e'
@@ -23,7 +22,6 @@ const products = [
     year: '2023',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Chevrolet+Tracker+Turbo+Ls,+gracias.',
     imageSrc: './trackerTurbo.webp',
-    precio: '$3´151.900 mensual',
     marca: 'Chevrolet',
     tipo: 'Camioneta - SUV',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:6858eb01-bab7-4c05-81ad-d86aeb00a0ac'
@@ -34,7 +32,6 @@ const products = [
     year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Renault+Duster+Zen+1.6+2024,+gracias.',
     imageSrc: './duster.jpg',
-    precio: '$3´111.900 mensual',
     marca: 'Renault',
     tipo: 'Camioneta - SUV',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:21e2e904-7fe1-42e7-8494-ad9c5c33438d'
@@ -45,7 +42,6 @@ const products = [
     year: '2023',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Fiat+Pulse+Impetus,+gracias.',
     imageSrc: './fiat.png',
-    precio: '$3´659.900 mensual',
     marca: 'Fiat',
     tipo: 'Camioneta – SUV',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:c6fd3378-0772-42d0-bc3e-5436334a4a49'
@@ -56,7 +52,6 @@ const products = [
     year: '2023',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Mazda+Cx5+Cx5+Touring,+gracias.',
     imageSrc: './mazda2-0.webp',
-    precio: '$4´204.900 mensual',
     marca: 'Mazda',
     tipo: 'Camioneta – SUV',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:ac167ec6-79cf-4bfd-9fbf-cf4498ad5ab7'
@@ -67,7 +62,6 @@ const products = [
     year: '2023',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+T-Cross+Trendline+Sense+SE+170,+gracias.',
     imageSrc: './t-cross.jpg',
-    precio: '$3´280.900 mensual',
     marca: 'Volkswagen',
     tipo: 'Camioneta - SUV',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:c16ce7f6-737a-42fc-9b35-777a8ee47b37'
@@ -78,7 +72,6 @@ const products = [
     year: '2023',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Koleos+Intens+4x4+,gracias.',
     imageSrc: './koleos.webp',
-    precio: '$4´827.900 mensual',
     marca: 'Renault',
     tipo: 'Camioneta – SUV',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:7fb00daf-f8a0-42c4-ae05-e6bae40e9eed'
@@ -89,7 +82,6 @@ const products = [
     year: '2023',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Mazda+Cx5+grand+touring+2.5,+gracias.',
     imageSrc: './mazda2-5.webp',
-    precio: '$4´709.900 mensual',
     marca: 'Mazda',
     tipo: 'Camioneta - SUV',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:ac167ec6-79cf-4bfd-9fbf-cf4498ad5ab7'
@@ -103,7 +95,6 @@ const products = [
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+Logan+Life+Ph2+,gracias.',
     imageSrc: 'https://agenciauto.com/wp-content/uploads/2021/02/10797-color-vehiculo-nuevo-logan.jpg',
     imageAlt: 'Renault ',
-    precio: '$2´010.900 mensual',
     marca: 'Renault ',
     tipo: 'Automovil',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:97e30701-aea4-40a8-9878-6aed570bf12e'
@@ -115,8 +106,7 @@ const products = [
     year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Renault+Kwid+Zen+,gracias.',
     imageSrc: './kwid.jpg',
-    precio: '$1´982.900 mensual',
-    marca: 'Renault',
+   marca: 'Renault',
     tipo: 'Automovil',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:795b6441-97af-46e1-ae04-2bb968ad558d'
   },
@@ -127,7 +117,6 @@ const products = [
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Renault+Logan+Life+Fleet+,gracias.',
     imageSrc: './logan2.jpg',
     imageAlt: 'Renault Logan Life Fleet Cvt',
-    precio: '$2´466.900 mensual',
     marca: 'Renault ',
     tipo: 'Automovil',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:271725e8-1057-4deb-958f-dfe5b0298387'
@@ -138,7 +127,6 @@ const products = [
     year: '2023',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Suzuki+New+Swift,+gracias.',
     imageSrc: './susukiSwift.png',
-    precio: '$2´483.900 mensual',
     marca: 'Suzuki',
     tipo: 'Automovil',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:7bbbb655-403c-427e-beb6-877f5b9a8097'
@@ -149,7 +137,6 @@ const products = [
     year: '2023',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Chevrolet+Onix+Nb,+gracias.',
     imageSrc: './onix.png',
-    precio: '$2´599.900 mensual',
     marca: 'Chevrolet',
     tipo: 'Automovil',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:f1bfa9e0-9bdb-455f-81e8-47a1e34891a5'
@@ -160,7 +147,6 @@ const products = [
     year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Renault+Logan+Intens,+gracias.',
     imageSrc: 'https://http2.mlstatic.com/D_NQ_NP_782608-MLA49856599569_052022-O.jpg',
-    precio: '$2´670.900 mensual',
     marca: 'Renault',
     tipo: 'Automovil',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:97e30701-aea4-40a8-9878-6aed570bf12e'
@@ -171,7 +157,6 @@ const products = [
     year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Volkswagen+Virtus+Trendline+gracias.',
     imageSrc: './wwagen.jpg',
-    precio: '$2´657.900 mensual',
     marca: 'Volkswagen',
     tipo: 'Automovil',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:37ee82c5-c505-44ee-9cce-c1b0df307e42'
@@ -182,7 +167,6 @@ const products = [
     year: '2023',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Seat+Arona+FR+1.6+AT,+gracias.',
     imageSrc: './arona.jpg',
-    precio: '$3´386.900 mensual',
     marca: 'Seat',
     tipo: 'Automovil',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:5be6a945-a718-4c0b-b46f-2985882cdf62'
@@ -194,7 +178,6 @@ const products = [
     year: '2023',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Volkswagen+Nivus+Comfortline,+gracias.',
     imageSrc: './nivus.webp',
-    precio: '$3´193.900 mensual',
     marca: 'Volkswagen',
     tipo: 'Campero',
     ficha:''
@@ -205,7 +188,6 @@ const products = [
     year: '2023',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Toyota+Prado+5+Puertas,+gracias.',
     imageSrc: './prado.png',
-    precio: '$9´296.900 mensual',
     marca: 'Toyota ',
     tipo: 'Campero',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:265846d5-9ff8-43ff-8219-0c3706b88bf8'
@@ -216,7 +198,6 @@ const products = [
     year: '2023',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Renault+Duster+Iconic,+gracias.',
     imageSrc: './duster3.jpg',
-    precio: '$3´419.900 mensual',
     marca: 'Renault',
     tipo: 'Campero',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:ace1f531-aebd-4733-b8d3-a5d06548e2ee'
@@ -227,7 +208,6 @@ const products = [
     year: '2023',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Renault+Duster+Intens,+gracias.',
     imageSrc: 'https://cdn.group.renault.com/ren/ar/modelos/nuevo-duster/ph1/renault-duster-hjd-ph1-diseno-exterior-017.jpg.ximg.xsmall.jpg/906484ffde.jpg',
-    precio: '$3´000.000 mensual',
     marca: 'Renault',
     tipo: 'Campero',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:950e36d6-5626-4af8-8c81-539679c1e075'
@@ -238,7 +218,6 @@ const products = [
     year: '2023',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Opel+Crossland+Edition,+gracias.',
     imageSrc: 'https://www.elcolombiano.com/binrepository/1020x680/0c26/1020d627/none/11101/AWQY/grpi20-c02-606-dark-ruby-red_37642515_20210430205013.jpg',
-    precio: '$3´361.900 mensual',
     marca: 'Opel',
     tipo: 'Campero',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:42d09578-c779-4ccc-8e24-7fb05a90aca9'
