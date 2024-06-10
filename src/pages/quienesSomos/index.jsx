@@ -11,12 +11,9 @@ export default function SobreNosotros(){
   return(
     <>
         <HeaderQuienesSomos />
-        
-       
         <QuienesSomos />
          <Beneficios />
         <Politicas />
-
         <Contacto />
         <Footer />
         <div className="z-[100]">
