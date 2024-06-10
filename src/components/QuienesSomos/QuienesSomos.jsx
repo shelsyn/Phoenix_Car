@@ -4,15 +4,15 @@ import { GlobeAltIcon, EyeIcon } from '@heroicons/react/24/outline';
 
 const supportLinks = [
   {
-    name: '¿Qué ofrecemos en Hipotecas?',
+    name: '¿Qué ofrecemos?',
     description:
-      'En nuestro servicio de hipotecas, ofrecemos asesoramiento personalizado para encontrar la mejor opción de financiamiento para la compra de tu hogar, adaptándonos a tus necesidades y perfil financiero.',
+      'En Phoenix, brindamos la opción más adecuada de crédito vehicular para cada cliente, teniendo en cuenta su perfil crediticio y sus necesidades específicas. Realizamos un exhaustivo comparativo con las principales entidades financieras para asegurar la mejor solución.',
     icon: GlobeAltIcon,
   },
   {
-    name: '¿Cómo lo hacemos posible?',
+    name: '¿Cómo lo logramos?',
     description:
-      'Gracias a nuestras alianzas con las principales entidades financieras, facilitamos el acceso a una amplia gama de productos hipotecarios, asegurando condiciones favorables y un proceso claro y eficiente.',
+      'A través de alianzas estratégicas con las instituciones financieras más destacadas del país, facilitamos a nuestros clientes el acceso a opciones de financiamiento vehicular de manera rápida y efectiva. En Phoenix, nos comprometemos a proporcionarle a nuestros clientes una experiencia bancaria óptima.',
     icon: EyeIcon,
   },
 ];

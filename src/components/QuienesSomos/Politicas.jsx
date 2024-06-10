@@ -10,27 +10,27 @@ const products = [
   {
     id: 2,
     name: 'Utilitarios',
-    imageSrc: 'https://m.atcdn.co.uk/vms/media/df522b45ccef4a34b9ebebbd7c747985.jpg',
+    imageSrc: '/Utilitarios.png',
   },
   {
     id: 3,
     name: 'Pickup',
-    imageSrc: 'https://m.atcdn.co.uk/vms/media/df522b45ccef4a34b9ebebbd7c747985.jpg',
+    imageSrc: '/carga.png',
   },
   {
     id: 4,
     name: 'Comerciales de pasajeros',
-    imageSrc: 'https://m.atcdn.co.uk/vms/media/df522b45ccef4a34b9ebebbd7c747985.jpg',
+    imageSrc: 'https://www.autosonline.cl/images/stories/foton/ft-crew/exterior/foton-ft-crew-2.jpg',
   },
   {
     id: 5,
     name: 'Comerciales de carga',
-    imageSrc: 'https://m.atcdn.co.uk/vms/media/df522b45ccef4a34b9ebebbd7c747985.jpg',
+    imageSrc: 'https://leonalperovich.com.ar/wp-content/uploads/2023/08/10005-1.jpg',
   },
   {
     id: 6,
     name: 'Vanes',
-    imageSrc: 'https://m.atcdn.co.uk/vms/media/df522b45ccef4a34b9ebebbd7c747985.jpg',
+    imageSrc: 'https://build.ford.com/dig/Ford/Transit%20VanWagon/2024/HD-TILE/Image%5B%7CFord%7CTransit%20VanWagon%7C2024%7C1%7C1.%7C301A.X2Y.148.PYZ..88C.89K.LRL.18P.XL.20G.B2GAB.16E.85C.41B.90B.21L.96K.CS2.~CA%23KA_SE%23B8.51D.SRW.64D.TC8.RWD.998.57G.FLE.60C.SAA.58U.19Z.62D.18A.15F.BS4.44U.17F.X73.96X.541.CLO.WAL.%5D/EXT/1/vehicle.png',
   },
 ];
 
