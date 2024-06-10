@@ -8,7 +8,7 @@ const products = [
   {
     id: 1,
     name: 'Vitara Mc 2Wd At Gl+',
-    year: '2023',
+    year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Suzuki+Vitara+Mc,+gracias.',
     imageSrc: './suzuki-Vitara.jpg',
     marca: 'Suzuki',
@@ -19,7 +19,7 @@ const products = [
   {
     id: 1,
     name: 'Tracker Turbo Ls At',
-    year: '2023',
+    year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Chevrolet+Tracker+Turbo+Ls,+gracias.',
     imageSrc: './trackerTurbo.webp',
     marca: 'Chevrolet',
@@ -39,7 +39,7 @@ const products = [
   {
     id: 1,
     name: ' Pulse Impetus At',
-    year: '2023',
+    year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Fiat+Pulse+Impetus,+gracias.',
     imageSrc: './fiat.png',
     marca: 'Fiat',
@@ -49,7 +49,7 @@ const products = [
   {
     id: 1,
     name: 'Cx5 Touring 2.0 At 4X2',
-    year: '2023',
+    year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Mazda+Cx5+Cx5+Touring,+gracias.',
     imageSrc: './mazda2-0.webp',
     marca: 'Mazda',
@@ -59,7 +59,7 @@ const products = [
   {
     id: 1,
     name: 'T-Cross Trendline Sense 170 Tsi Mt',
-    year: '2023',
+    year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+T-Cross+Trendline+Sense+SE+170,+gracias.',
     imageSrc: './t-cross.jpg',
     marca: 'Volkswagen',
@@ -69,7 +69,7 @@ const products = [
   {
     id: 1,
     name: 'Nueva Koleos Intens 4X4 Ph2',
-    year: '2023',
+    year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Koleos+Intens+4x4+,gracias.',
     imageSrc: './koleos.webp',
     marca: 'Renault',
@@ -79,7 +79,7 @@ const products = [
   {
     id: 1,
     name: 'Cx5 Grand Touring 2.5 At 4X2',
-    year: '2023',
+    year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Mazda+Cx5+grand+touring+2.5,+gracias.',
     imageSrc: './mazda2-5.webp',
     marca: 'Mazda',
@@ -91,7 +91,7 @@ const products = [
   {
     id: 1,
     name: 'Logan Life Ph2',
-    year: '2023',
+    year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+Logan+Life+Ph2+,gracias.',
     imageSrc: 'https://agenciauto.com/wp-content/uploads/2021/02/10797-color-vehiculo-nuevo-logan.jpg',
     imageAlt: 'Renault ',
@@ -113,7 +113,7 @@ const products = [
   {
     id: 1,
     name: 'Logan Life Fleet Cvt',
-    year: '2023',
+    year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Renault+Logan+Life+Fleet+,gracias.',
     imageSrc: './logan2.jpg',
     imageAlt: 'Renault Logan Life Fleet Cvt',
@@ -124,7 +124,7 @@ const products = [
   {
     id: 1,
     name: ' New Swift 1.2 Hybrid',
-    year: '2023',
+    year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Suzuki+New+Swift,+gracias.',
     imageSrc: './susukiSwift.png',
     marca: 'Suzuki',
@@ -134,7 +134,7 @@ const products = [
   {
     id: 1,
     name: 'Onix Nb Lt Turbo At',
-    year: '2023',
+    year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Chevrolet+Onix+Nb,+gracias.',
     imageSrc: './onix.png',
     marca: 'Chevrolet',
@@ -164,7 +164,7 @@ const products = [
   {
     id: 1,
     name: 'Arona FR 1.6 AT',
-    year: '2023',
+    year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Seat+Arona+FR+1.6+AT,+gracias.',
     imageSrc: './arona.jpg',
     marca: 'Seat',
@@ -175,7 +175,7 @@ const products = [
   {
     id: 1,
     name: ' Nivus Comfortline 1.0L 200Tsi 6At',
-    year: '2023',
+    year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Volkswagen+Nivus+Comfortline,+gracias.',
     imageSrc: './nivus.webp',
     marca: 'Volkswagen',
@@ -185,7 +185,7 @@ const products = [
   {
     id: 1,
     name: ' Prado 5 Puertas Diesel 2.8 Tx',
-    year: '2023',
+    year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Toyota+Prado+5+Puertas,+gracias.',
     imageSrc: './prado.png',
     marca: 'Toyota ',
@@ -195,7 +195,7 @@ const products = [
   {
     id: 1,
     name: ' Duster Iconic 1.3T 4X4 Mt',
-    year: '2023',
+    year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Renault+Duster+Iconic,+gracias.',
     imageSrc: './duster3.jpg',
     marca: 'Renault',
@@ -205,7 +205,7 @@ const products = [
   {
     id: 1,
     name: ' Nueva Duster Intens 1.3T 4X4 Mt',
-    year: '2023',
+    year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Renault+Duster+Intens,+gracias.',
     imageSrc: 'https://cdn.group.renault.com/ren/ar/modelos/nuevo-duster/ph1/renault-duster-hjd-ph1-diseno-exterior-017.jpg.ximg.xsmall.jpg/906484ffde.jpg',
     marca: 'Renault',
@@ -215,7 +215,7 @@ const products = [
   {
     id: 1,
     name: ' Crossland Edition',
-    year: '2023',
+    year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Opel+Crossland+Edition,+gracias.',
     imageSrc: 'https://www.elcolombiano.com/binrepository/1020x680/0c26/1020d627/none/11101/AWQY/grpi20-c02-606-dark-ruby-red_37642515_20210430205013.jpg',
     marca: 'Opel',

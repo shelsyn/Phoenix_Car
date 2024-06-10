@@ -2,7 +2,7 @@ const products = [
     {
       id: 1,
       name: 'Cx5 Touring 2.0 At 4X2',
-      year: '2023',
+      year: '2024',
       href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Mazda+Cx5+Touring,+gracias.',
       imageSrc: 'https://m.atcdn.co.uk/vms/media/df522b45ccef4a34b9ebebbd7c747985.jpg',
       marca: 'Mazda',
@@ -14,7 +14,7 @@ const products = [
     {
       id: 1,
       name: 'Renegade Connect',
-      year: '2023',
+      year: '2024',
       href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Jeep+Camioneta-SUV+gracias.',
       imageSrc: 'https://www.jeep.co.za/content/dam/jeep/crossmarket/new-renegade-2019/Overview/02_colorizer/02_Colors/02_Trims/02_longitude/Longitude_562_my20.png',
       marca: 'Jepp',
@@ -24,7 +24,7 @@ const products = [
     {
       id: 1,
       name: 'Logan Life Ph2',
-      year: '2023',
+      year: '2024',
       href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+Logan+Life+Ph2+,gracias.',
       imageSrc: 'https://agenciauto.com/wp-content/uploads/2021/02/10797-color-vehiculo-nuevo-logan.jpg',
       imageAlt: 'Renault ',
@@ -36,7 +36,7 @@ const products = [
     {
       id: 1,
       name: '  Kangoo Evolución ',
-      year: '2023',
+      year: '2024',
       href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Renault+New+Kangoo,+gracias.',
       imageSrc: 'https://img-ik.cars.co.za/news-site-za/images/2021/02/renault-kangoo-express-van-3.jpg',
       marca: 'Renault New',

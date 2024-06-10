@@ -10,7 +10,7 @@ const products = [
 {
   id: 1,
   name: ' L200 Glx 2.5 Diesel 4X4 Dc Mt',
-  year: '2023',
+  year: '2024',
   href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Mitsubishi+L200+Glx,+gracias.',
   imageSrc: './mitsu.jpeg',
 
@@ -21,7 +21,7 @@ const products = [
 {
   id: 1,
   name: 'Alaskan Cargo',
-  year: '2023',
+  year: '2024',
   href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Renault+Alaskan,+gracias.',
   imageSrc: './renault.jpg',
   marca: 'Renault',
@@ -31,7 +31,7 @@ const products = [
 {
   id: 1,
   name: ' Rich 6 Ev Dc',
-  year: '2023',
+  year: '2024',
   href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+HZna+Rich+6,+gracias.',
   imageSrc: './dongfe.webp',
   marca: 'HZna',
@@ -41,7 +41,7 @@ const products = [
 {
   id: 1,
   name: ' Colorado (S10) Ls Mt 4X4 2.8 Dsl Cd',
-  year: '2023',
+  year: '2024',
   href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Chevrolet+Colorado,+gracias.',
   imageSrc: './colorado.png',
   marca: 'Chevrolet ',
@@ -51,7 +51,7 @@ const products = [
 {
   id: 1,
   name: ' Hilux D.C. Diesel 2.4 4X4 Mecanica',
-  year: '2023',
+  year: '2024',
   href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Toyota+Hilux+gracias.',
   imageSrc: './toyota1.jpg',
   marca: 'Toyota',
@@ -61,7 +61,7 @@ const products = [
 {
   id: 1,
   name: ' Ranger Xls Diesel Mt D/C',
-  year: '2023',
+  year: '2024',
   href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Ford+Ranger,+gracias.',
   imageSrc: './ford.webp',
   marca: 'Ford ',
@@ -72,7 +72,7 @@ const products = [
  {
   id: 1,
   name: ' New Kangoo Evolución Producto',
-  year: '2023',
+  year: '2024',
   href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Renault+New+Kangoo,+gracias.',
   imageSrc: './kangoo.jpg',
   marca: 'Renault',
@@ -83,7 +83,7 @@ const products = [
 {
   id: 1,
   name: 'Nhr Reward Euro Iv',
-  year: '2023',
+  year: '2024',
   href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Chevrolet+Nhr+Reward,+gracias.',
   imageSrc: './camion1.png',
   marca: 'Chevrolet ',
@@ -93,7 +93,7 @@ const products = [
 {
   id: 1,
   name: ' Npr Reward Euro Iv',
-  year: '2023',
+  year: '2024',
   href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+sobre+la+Chevrolet+Npr+Reward,+gracias.',
   imageSrc: './camion2.png',
   marca: 'Chevrolet',
