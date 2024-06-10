@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Creditos from '../../components/QuienesSomos/creditos';
 
 const products = [
   {
@@ -34,7 +35,7 @@ const products = [
   },
 ];
 
-export default function Creditos() {
+export default function Credito() {
   return (
     <section id="Creditos">
       <div className="bg-white">
