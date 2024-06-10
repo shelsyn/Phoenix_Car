@@ -21,22 +21,18 @@ export default function QuienesSomos() {
   return (
     <section id="aboutUs" className="pt-18">
       <div className="bg-white">
-        {/* Header */}
+     
         <div className="relative pb-32">
           <div className="absolute inset-0">
-            <img
-              className="h-full w-full object-cover"
-              src="https://example.com/your-image-url.jpg"
-              alt=""
-            />
-            <div className="absolute inset-0 bg-gray-700 mix-blend-multiply" aria-hidden="true" />
+            <img className="h-full w-full object-cover opacity-75" src="https://www.aoacolombia.com/wp-content/uploads/2020/06/soluciones-integrales-movilidad-renta-renting.jpg" alt="" />
+            <div className="absolute inset-0 bg-gold-goldTitle mix-blend-multiply" aria-hidden="true" />
           </div>
           <div className="relative mx-auto max-w-7xl py-10 px-4 sm:py-32 sm:px-6 lg:px-8">
             <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl text-center">Crédito de vehículo</h1>
           </div>
         </div>
 
-        {/* Overlapping cards */}
+   
         <section
           className="relative z-10 mx-auto -mt-32 max-w-7xl px-4 pb-20 sm:px-6 lg:px-8"
           aria-labelledby="contact-heading"

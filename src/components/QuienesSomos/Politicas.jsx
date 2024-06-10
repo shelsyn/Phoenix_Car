@@ -5,7 +5,7 @@ const products = [
   {
     id: 1,
     name: 'Furgonetas',
-    imageSrc: 'https://m.atcdn.co.uk/vms/media/df522b45ccef4a34b9ebebbd7c747985.jpg',
+    imageSrc: '/furgon.png',
   },
   {
     id: 2,
