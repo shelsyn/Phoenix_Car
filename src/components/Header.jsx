@@ -70,9 +70,7 @@ export default function Header() {
                 </Popover.Panel>
               </Transition>
             </Popover>
-            <a href="#Promociones" className="text-lg font-semibold leading-6 text-gold-goldButton">
-              Promociones
-            </a>
+           
             <Link href="/quienesSomos" className="text-lg font-semibold leading-6 text-gold-goldButton">
             Crédito de vehículo
             </Link>

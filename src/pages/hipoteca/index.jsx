@@ -1,4 +1,7 @@
 
+import Empleado from "@/components/Hipotecas/Empleado";
+import Hipotecario from "@/components/Hipotecas/Hipotecario";
+import Independiente from "@/components/Hipotecas/Independiente";
 import HeaderQuienesSomos from "@/components/QuienesSomos/HeaderQuienesSomos";
 
 
@@ -8,6 +11,11 @@ export default function Hipoteca(){
   return(
     <>
         <HeaderQuienesSomos />
+         <Hipotecario />
+         <Empleado />
+        < Independiente />
+       
+       
       
      
         <div className="z-[100]">
