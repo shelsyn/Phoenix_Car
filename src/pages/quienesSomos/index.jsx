@@ -6,6 +6,7 @@ import Beneficios from "@/components/QuienesSomos/Beneficios";
 import { Contacto } from "@/components/Contacto";
 import Creditos from "@/components/QuienesSomos/Creditos";
 import Header from "@/components/Header";
+import Productos from "@/components/Productos";
 
 
 
@@ -17,6 +18,7 @@ export default function SobreNosotros(){
          <Beneficios />
         <Politicas />
         <Creditos />
+        <Productos/>
         <Contacto />
         <Footer />
         <div className="z-[100]">

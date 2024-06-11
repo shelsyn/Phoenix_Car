@@ -5,6 +5,7 @@ import Empleado from "@/components/Hipotecas/Empleado";
 import Hipotecario from "@/components/Hipotecas/Hipotecario";
 import Independiente from "@/components/Hipotecas/Independiente";
 import Pensionado from "@/components/Hipotecas/Pensionado";
+import Productos from "@/components/Productos";
 import HeaderQuienesSomos from "@/components/QuienesSomos/HeaderQuienesSomos";
 
 
@@ -18,6 +19,7 @@ export default function Hipoteca(){
          <Empleado />
         < Independiente />
              <Pensionado />
+             <Productos />
              <Contacto />
        
       

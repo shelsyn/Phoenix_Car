@@ -2,7 +2,7 @@ import Carrusel from '@/components/Carrusel'
 import { Contacto } from '@/components/Contacto'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
-
+import Productos from '@/components/Productos'
 import Renting from '@/components/Renting'
 import TipoPersona from '@/components/TipoPersona'
 import Head from 'next/head'
@@ -17,11 +17,12 @@ export default function Home() {
         />
       </Head>
       <main>
+      
         <Header />
         <Carrusel />
         <Renting />
         <TipoPersona />
-    
+        <Productos />
         <Contacto />
       
       </main>

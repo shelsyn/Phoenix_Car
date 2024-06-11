@@ -2,6 +2,7 @@ import HeaderNatural from "@/components/CatalogoNatural/HeaderNatural";
 import RentingNatural from "@/components/CatalogoNatural/RentingNatural";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import Productos from "@/components/Productos";
 
 import Head from "next/head";
 
@@ -292,7 +293,7 @@ export default function CatalogoPersonaNatural() {
           </div>
         </div>
       </section>
-
+      <Productos />
       {/* <Contacto /> */}
       <Footer />
       <div className="z-[100]">
