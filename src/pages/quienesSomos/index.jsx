@@ -18,7 +18,7 @@ export default function SobreNosotros(){
          <Beneficios />
         <Politicas />
         <Creditos />
-        <Productos/>
+  
         <Contacto />
         <Footer />
         <div className="z-[100]">
