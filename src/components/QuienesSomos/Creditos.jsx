@@ -33,7 +33,7 @@ const cards = [
         <div className="relative isolate overflow-hidden bg-white mt-5 py-0 sm:py-0">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="mx-auto max-w-2xl lg:mx-0">
-              <h2 className="text-5xl font-bold tracking-tight text-gold-goldTitle xs:text-4xl lg:text-6xl">Créditos</h2>
+              <h2 className="text-5xl font-bold tracking-tight text-gold-goldTitle xs:text-4xl lg:text-4xl">Créditos</h2>
             </div>
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-6 mt-4 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
               {cards.map((card) => (

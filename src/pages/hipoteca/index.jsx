@@ -1,7 +1,10 @@
 
+import { Contacto } from "@/components/Contacto";
+import Header from "@/components/Header";
 import Empleado from "@/components/Hipotecas/Empleado";
 import Hipotecario from "@/components/Hipotecas/Hipotecario";
 import Independiente from "@/components/Hipotecas/Independiente";
+import Pensionado from "@/components/Hipotecas/Pensionado";
 import HeaderQuienesSomos from "@/components/QuienesSomos/HeaderQuienesSomos";
 
 
@@ -10,11 +13,12 @@ import HeaderQuienesSomos from "@/components/QuienesSomos/HeaderQuienesSomos";
 export default function Hipoteca(){
   return(
     <>
-        <HeaderQuienesSomos />
+        <Header />
          <Hipotecario />
          <Empleado />
         < Independiente />
-       
+             <Pensionado />
+             <Contacto />
        
       
      

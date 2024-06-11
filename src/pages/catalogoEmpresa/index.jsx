@@ -1,6 +1,7 @@
 import HeaderEmpresas from "@/components/CatalogoEmpresa/HeaderEmpresas";
 import RentingEmpresas from "@/components/CatalogoEmpresa/RentingEmpresas";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import Productos from "@/components/Productos";
 import Head from "next/head";
 
@@ -111,7 +112,7 @@ export default function CatalogoEmpresa() {
           name="description"
         />
       </Head>
-      <HeaderEmpresas />
+      <Header />
       <RentingEmpresas />
       <section id="catalogoEmpresa">
       <div className="bg-white">

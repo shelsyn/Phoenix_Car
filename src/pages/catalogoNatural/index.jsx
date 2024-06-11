@@ -1,6 +1,7 @@
 import HeaderNatural from "@/components/CatalogoNatural/HeaderNatural";
 import RentingNatural from "@/components/CatalogoNatural/RentingNatural";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import Productos from "@/components/Productos";
 import Head from "next/head";
 
@@ -233,7 +234,7 @@ export default function CatalogoPersonaNatural() {
           name="description"
         />
       </Head>
-      <HeaderNatural />
+      <Header />
       <RentingNatural />
       <section id="catalogoEmpresa">
         <div className="bg-white">
@@ -282,7 +283,7 @@ export default function CatalogoPersonaNatural() {
                       className="col-span-1 relative flex items-center justify-center rounded-md border border-transparent bg-gold-goldButton py-2 px-8 text-sm font-medium text-gray-900 hover:bg-gold-goldHover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-goldSubtitle"
                       rel="noreferrer"
                     >
-                      Más información<span className="sr-only">, {product.name}</span>
+                      Cotizar<span className="sr-only">, {product.name}</span>
                     </a>
                   </div>
                 </div>

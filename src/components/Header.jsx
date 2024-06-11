@@ -6,10 +6,11 @@ import Link from 'next/link';
 
 const navigation = [
   { name: 'Inicio', href: '/' },
-  { name: 'Catálogo', href: '#tipoPersona' },
   { name: 'Promociones', href: '#Promociones' },
   { name: 'Crédito de vehículo', href: '/quienesSomos'},
-  { name: 'Crédito Hipotecario', href: '/hipoteca'}
+  { name: 'Crédito Hipotecario', href: '/hipoteca'},
+  { name: 'Catálogo Empresa', href: '/catalogoEmpresa' },
+  { name: 'Catálogo Persona Natural', href: '/catalogoNatural' }
 ];
 
 const products = [

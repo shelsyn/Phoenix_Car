@@ -5,13 +5,14 @@ import HeaderQuienesSomos from "@/components/QuienesSomos/HeaderQuienesSomos";
 import Beneficios from "@/components/QuienesSomos/Beneficios";
 import { Contacto } from "@/components/Contacto";
 import Creditos from "@/components/QuienesSomos/Creditos";
+import Header from "@/components/Header";
 
 
 
 export default function SobreNosotros(){
   return(
     <>
-        <HeaderQuienesSomos />
+        <Header />
         <QuienesSomos />
          <Beneficios />
         <Politicas />

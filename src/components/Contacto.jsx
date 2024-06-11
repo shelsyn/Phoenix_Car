@@ -52,7 +52,7 @@ export function Contacto() {
       <section id="ContactUs" className="pb-20">
         <div className="relative bg-white">
           <div className="relative mx-auto max-w-7xl lg:grid lg:grid-cols-5">
-            <div className="bg-white py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
+            <div className="bg-white  px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
               <div className="mx-auto max-w-lg">
                 <h2 className="text-2xl font-bold tracking-tight text-gold-goldTitle phoenix_car@outlook.com sm:text-3xl">Contáctanos</h2>
                 <p className="mt-3 text-lg leading-6 text-gray-500">Estaremos respondiendo lo mas pronto posible.</p>
@@ -74,7 +74,7 @@ export function Contacto() {
                 </dl>
               </div>
             </div>
-            <div className="bg-white py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
+            <div className="bg-white py-5 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
               <div className="mx-auto max-w-lg lg:max-w-none">
                 <form onSubmit={sendEmail} className="grid grid-cols-1 gap-y-6">
                   <div>
