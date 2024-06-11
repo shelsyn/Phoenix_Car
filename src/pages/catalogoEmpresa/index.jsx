@@ -2,7 +2,7 @@ import HeaderEmpresas from "@/components/CatalogoEmpresa/HeaderEmpresas";
 import RentingEmpresas from "@/components/CatalogoEmpresa/RentingEmpresas";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Productos from "@/components/Productos";
+
 import Head from "next/head";
 
 
@@ -170,7 +170,7 @@ export default function CatalogoEmpresa() {
           </div>
         </div>
       </section>
-      <Productos />
+   
       {/* <Contacto /> */}
       <Footer />
       <div className="z-[100]">
