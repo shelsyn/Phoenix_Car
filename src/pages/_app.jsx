@@ -13,7 +13,6 @@ export default function App({ Component, pageProps }) {
     script.async = true;
     document.head.appendChild(script);
 
-   
     const scriptConfig = document.createElement('script');
     scriptConfig.id = 'gtm-config';
     scriptConfig.innerHTML = `

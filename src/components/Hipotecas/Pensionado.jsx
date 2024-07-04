@@ -43,6 +43,6 @@ export default function Pensionado() {
                     </div>
                 </div>
             </div>
-        </section>
+        </section> 
     );
 }
