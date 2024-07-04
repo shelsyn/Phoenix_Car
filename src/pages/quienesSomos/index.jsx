@@ -1,12 +1,11 @@
 import Footer from "@/components/Footer";
 import Politicas from "@/components/QuienesSomos/Politicas";
 import QuienesSomos from "@/components/QuienesSomos/QuienesSomos";
-import HeaderQuienesSomos from "@/components/QuienesSomos/HeaderQuienesSomos";
 import Beneficios from "@/components/QuienesSomos/Beneficios";
 import { Contacto } from "@/components/Contacto";
 import Creditos from "@/components/QuienesSomos/Creditos";
 import Header from "@/components/Header";
-import Productos from "@/components/Productos";
+
 
 
 

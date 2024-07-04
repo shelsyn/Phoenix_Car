@@ -5,6 +5,7 @@ import React from "react"
 
 export default function Document() {
   return (
+
     <Html lang="en">
       <Head>
         <meta charSet="UTF-8" />
@@ -17,6 +18,15 @@ export default function Document() {
         <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
         <title>PhoenixCar - renta de carros Colombia</title>
         <link rel="google-site-verification" href="google-site-verification=g6TmV7DgMs9nADiZ9VSxZWMN96YqsD2SNRivN6RDwOs" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16627463138"></script>
+      <script dangerouslySetInnerHTML={{
+        __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-16627463138');
+        `,
+      }} />
       </Head>
       <body>
         <Main />
@@ -25,3 +35,5 @@ export default function Document() {
     </Html>
   )
 }
+
+

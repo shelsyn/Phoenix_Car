@@ -19,7 +19,7 @@ export default function Hipoteca(){
          <Empleado />
         < Independiente />
              <Pensionado />
-             <Productos />
+            
              <Contacto />
        
       
