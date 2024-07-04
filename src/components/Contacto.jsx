@@ -36,7 +36,7 @@ export function Contacto() {
   });
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs.send('service_p87l617', 'template_ka7ig5m', form, 'gpsaDZJ5IEe1uw7-M').then(
+    emailjs.send('service_7u9bsv9', 'template_ujp25w7', form, 'yxMEi6_7I0oqQh6dX').then(
       () => {
         notify('Todo fue enviado corectamente', 'success');
         setForm({ name: '', email: '', phone: '', message: '' });
@@ -46,7 +46,7 @@ export function Contacto() {
         console.log(error.text);
       }
     );
-    emailjs.send('service_p87l617', 'template_ka7ig5m', form, 'gpsaDZJ5IEe1uw7-M');
+    emailjs.send('service_7u9bsv9', 'template_ujp25w7', form, 'yxMEi6_7I0oqQh6dX');
   };
     return (
       <section id="ContactUs" className="pb-20">
