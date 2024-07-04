@@ -37,16 +37,8 @@ export function Contacto() {
     user_message: '',
   });
 
-  const [showConfirmation, setShowConfirmation] = useState(false); // Estado para mostrar el mensaje de confirmación
-
   const sendEmail = (e) => {
     e.preventDefault();
-
-    // Verificar campos obligatorios
-    if (!form.user_name || !form.user_email || !form.user_phone || !form.user_message) {
-      notify('Todos los campos son obligatorios.', 'error');
-      return;
-    }
 
     emailjs.send('service_7u9bsv9', 'template_ujp25w7', form, 'user_youruserid')
       .then(() => {
@@ -57,7 +49,6 @@ export function Contacto() {
           user_phone: '',
           user_message: '',
         });
-        setShowConfirmation(true); // Mostrar mensaje de confirmación
       })
       .catch((error) => {
         notify('Ocurrió un error al enviar el correo. Por favor, inténtelo de nuevo más tarde.', 'error');
@@ -164,9 +155,6 @@ export function Contacto() {
                   >
                     Enviar
                   </button>
-                  {showConfirmation && (
-                    <p className="mt-2 text-sm text-green-600">Gracias por brindarnos tus datos. Estaremos en contacto.</p>
-                  )}
                 </div>
               </form>
             </div>
@@ -176,4 +164,3 @@ export function Contacto() {
     </section>
   );
 }
-
