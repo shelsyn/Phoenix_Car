@@ -1,5 +1,5 @@
 import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
-import emailjs from '@emailjs/browser';
+import emailjs from 'emailjs-com';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
