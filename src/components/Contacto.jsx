@@ -49,6 +49,18 @@ export function Contacto() {
           user_phone: '',
           user_message: '',
         });
+
+        // Mostrar mensaje de confirmación al usuario
+        toast.success('Gracias por brindarnos tus datos. Estaremos en contacto.', {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'light',
+        });
       })
       .catch((error) => {
         notify('Ocurrió un error al enviar el correo. Por favor, inténtelo de nuevo más tarde.', 'error');
