@@ -42,6 +42,12 @@ export function Contacto() {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    // Verificar campos obligatorios
+    if (!form.user_name || !form.user_email || !form.user_phone || !form.user_message) {
+      notify('Todos los campos son obligatorios.', 'error');
+      return;
+    }
+
     emailjs.send('service_7u9bsv9', 'template_ujp25w7', form, 'user_youruserid')
       .then(() => {
         notify('¡Correo enviado correctamente!', 'success');
