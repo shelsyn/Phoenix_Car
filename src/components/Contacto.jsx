@@ -37,6 +37,8 @@ export function Contacto() {
     user_message: '',
   });
 
+  const [showConfirmation, setShowConfirmation] = useState(false); // Estado para mostrar el mensaje de confirmación
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -49,18 +51,7 @@ export function Contacto() {
           user_phone: '',
           user_message: '',
         });
-
-        // Mostrar mensaje de confirmación al usuario
-        toast.success('Gracias por brindarnos tus datos. Estaremos en contacto.', {
-          position: 'top-right',
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: 'light',
-        });
+        setShowConfirmation(true); // Mostrar mensaje de confirmación
       })
       .catch((error) => {
         notify('Ocurrió un error al enviar el correo. Por favor, inténtelo de nuevo más tarde.', 'error');
@@ -167,6 +158,9 @@ export function Contacto() {
                   >
                     Enviar
                   </button>
+                  {showConfirmation && (
+                    <p className="mt-2 text-sm text-green-600">Gracias por brindarnos tus datos. Estaremos en contacto.</p>
+                  )}
                 </div>
               </form>
             </div>
