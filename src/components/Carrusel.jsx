@@ -23,9 +23,8 @@ export default function Carrusel(props) {
     
     './carr4.png',
    '../ejem.png',
-   './twitter999.jpg',
-    './pohenixCar.png',
-     './twitter3.jpg',
+  '../encabezado3.png',
+     './renault3.png',
     
   ];
   return (
@@ -40,7 +39,7 @@ export default function Carrusel(props) {
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
-                height: '50vh', // Altura predeterminada para computadora
+                height: '40vh', // Altura predeterminada para computadora
               }}
             >
               {/* Estilo adicional para dispositivos móviles */}
