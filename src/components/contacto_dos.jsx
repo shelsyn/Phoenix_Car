@@ -77,7 +77,7 @@ export function Contacto_dos() {
         }
         `}
       </style>
-      <section id="ContactUs" className="py-20 bg-white">
+      <section id="ContactUs" className="py-10 bg-white">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div className="p-6 bg-white rounded-lg shadow-lg">
