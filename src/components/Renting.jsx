@@ -33,7 +33,7 @@ const cards = [
 export default function Renting() {
   return (
     <section id="Renting" className="">
-      <div className="relative isolate overflow-hidden bg-white mt-5 py-1 sm:py-20">
+      <div className="relative isolate overflow-hidden bg-white mt-5 py-1 sm:py-0">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-5xl font-bold tracking-tight text-gold-goldTitle xs:text-3xl lg:text-6xl">¿Qué es  renting?</h2>

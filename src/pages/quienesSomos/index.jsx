@@ -14,6 +14,7 @@ export default function SobreNosotros(){
   return(
     <>
         <Header />
+        
         <QuienesSomos />
          <Beneficios />
         <Politicas />
