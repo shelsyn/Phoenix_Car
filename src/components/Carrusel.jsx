@@ -23,7 +23,7 @@ export default function Carrusel(props) {
     
     './carr4.png',
    '../ejem.png',
-  '../encabezado3.png',
+  '../encabezado4.png',
      './renault3.png',
     
   ];
