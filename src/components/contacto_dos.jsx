@@ -93,7 +93,7 @@ export function Contacto_dos() {
               </div>
               <div className="flex items-center mt-4">
                 <WhatsAppIcon className="h-8 w-8 mr-3" />
-                <a href="https://api.whatsapp.com/send?phone=573143532474" className="text-gold-goldTitle text-lg"> WhatsApp </a>
+                <a href="'https://api.whatsapp.com/send/?phone=573006099054&text=Hola,+quiero+información+sobre+renting+,gracias.'," className="text-gold-goldTitle text-lg"> WhatsApp </a>
               </div>
             </div>
             <div className="p-6 bg-white rounded-lg shadow-lg">
