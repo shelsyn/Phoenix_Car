@@ -1,4 +1,4 @@
-import { AiOutlineWhatsApp, AiOutlineInstagram } from 'react-icons/ai';
+import { AiOutlineWhatsApp, AiOutlineInstagram, XMarkIcon } from 'react-icons/ai';
 
 const navigation = {
   main: [
@@ -19,6 +19,11 @@ const navigation = {
       name: 'WhatsApp',
       href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias.',
       icon: AiOutlineWhatsApp,
+    },
+    {
+      name: 'Terminos y condiciones',
+      href: 'https://acortar.link/PfUDnS',
+      icon: XMarkIcon,
     },
   ],
 };
