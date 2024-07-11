@@ -1,5 +1,6 @@
 
 import { Contacto } from "@/components/Contacto";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Empleado from "@/components/Hipotecas/Empleado";
 import Hipotecario from "@/components/Hipotecas/Hipotecario";
@@ -21,7 +22,7 @@ export default function Hipoteca(){
              <Pensionado />
             
              <Contacto />
-       
+             <Footer />
       
      
         <div className="z-[100]">
