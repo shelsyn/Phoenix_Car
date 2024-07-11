@@ -73,7 +73,7 @@ export default function HeaderEmpresas() {
           </Popover.Group>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a
-              href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+estoy+interesado+en+rentar+un+vehículo,+pordrían+brindarme+más+información,+gracias."
+              href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias."
               target="_blank"
               className="text-lg font-semibold leading-6 text-gray-900"
               rel="noreferrer"

@@ -17,7 +17,7 @@ const navigation = {
     },
     {
       name: 'WhatsApp',
-      href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+estoy+interesado+en+rentar+un+vehículo,+pordrían+brindarme+más+información,+gracias.',
+      href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias.',
       icon: AiOutlineWhatsApp,
     },
   ],
