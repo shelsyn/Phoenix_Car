@@ -1,13 +1,14 @@
-import { AiOutlineWhatsApp, AiOutlineInstagram, XMarkIcon } from 'react-icons/ai';
+import { AiOutlineWhatsApp, AiOutlineInstagram } from 'react-icons/ai';
 
 const navigation = {
   main: [
     { name: 'Inicio', href: '/' },
     { name: 'Promociones', href: '#Promociones' },
-    { name: 'Crédito de vehículo', href: '/quienesSomos'},
-    { name: 'Crédito Hipotecario', href: '/hipoteca'},
+    { name: 'Crédito de vehículo', href: '/quienesSomos' },
+    { name: 'Crédito Hipotecario', href: '/hipoteca' },
     { name: 'Catálogo Empresa', href: '/catalogoEmpresa' },
-    { name: 'Catálogo Persona Natural', href: '/catalogoNatural' }
+    { name: 'Catálogo Persona Natural', href: '/catalogoNatural' },
+    { name: 'Términos y condiciones', href: 'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:f002e481-c9de-49f0-be43-0238d920de06' }
   ],
   social: [
     {
@@ -20,11 +21,6 @@ const navigation = {
       href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias.',
       icon: AiOutlineWhatsApp,
     },
-    {
-      name: 'Terminos y condiciones',
-      href: 'https://acortar.link/PfUDnS',
-      icon: XMarkIcon,
-    },
   ],
 };
 
@@ -36,9 +32,23 @@ export default function Footer() {
           <nav className="flex flex-wrap justify-center sm:justify-between sm:space-x-12 xs:space-x-4" aria-label="Footer">
             {navigation.main.map((item) => (
               <div key={item.name} className="mb-2 sm:mb-0">
-                <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
-                  {item.name}
-                </a>
+                {item.name === 'Términos y condiciones' ? (
+                  <a
+                    href={item.href}
+                    className="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <a
+                    href={item.href}
+                    className="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                  >
+                    {item.name}
+                  </a>
+                )}
               </div>
             ))}
           </nav>

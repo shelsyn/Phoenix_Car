@@ -92,9 +92,16 @@ export function Contacto_dos() {
                 <a href="mailto:Comercial@phoenixcar.com.co?Subject=Aquí%20el%20asunto%20del%20mail" className="text-gold-goldTitle text-lg">Comercial@phoenixcar.com.co</a>
               </div>
               <div className="flex items-center mt-4">
-                <WhatsAppIcon className="h-8 w-8 mr-3" />
-                <a href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias." className="text-gold-goldTitle text-lg"> WhatsApp </a>
-              </div>
+  <WhatsAppIcon className="h-8 w-8 mr-3" />
+  <a 
+    href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias." 
+    className="text-gold-goldTitle text-lg" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  > 
+    WhatsApp 
+  </a>
+</div>
             </div>
             <div className="p-6 bg-white rounded-lg shadow-lg">
               <form onSubmit={sendEmail} className="grid grid-cols-1 gap-4">
