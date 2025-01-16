@@ -1,67 +1,101 @@
 import Link from "next/link";
+import Slider from "react-slick";
 
-export default function TipoPersona() {
-    return (
-      <section id="tipoPersona">
-        <div className="relative overflow-hidden bg-white">
-          <div className="pt-16 pb-[39rem] sm:pt-24 sm:pb-[608px] lg:pt-40 lg:pb-48">
-            <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
-              <div className="sm:max-w-lg">
-                <h1 className="font text-4xl font-bold tracking-tight sm:text-6xl xs:text-3xl text-gold-goldTitle">Nuestro Catálogo</h1>
-                <p className="mt-4 text-2xl xs:text-xl text-gray-900">
-                  Optimiza tu tiempo y ahorra dinero con nuestro servicio de renting de carros. ¡Explora nuestro completo catálogo y elige el vehículo perfecto para ti!
-                </p>
-              </div>
-              <div>
-                <div className="mt-10">
-                  {/* Decorative image grid */}
-                  <div aria-hidden="true" className="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl">
-                    <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
-                      <div className="flex items-center space-x-6 lg:space-x-8">
-                        <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                          <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
-                            <img src="./toyota.jpg" alt="" className="h-full w-full object-cover object-center" />
-                          </div>
-                          <div className="h-64 w-44 overflow-hidden rounded-lg">
-                            <img
-                              src="https://images.unsplash.com/photo-1552559789-c57c0a79a8cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-                              alt=""
-                              className="h-full w-full object-cover object-center"
-                            />
-                          </div>
-                        </div>
-                        <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                          <div className="h-64 w-44 overflow-hidden rounded-lg"></div>
-                          <div className="h-64 w-44 overflow-hidden rounded-lg">
-                            <img src="./ojo.png" alt="" className="h-full w-full object-cover object-center" />
-                          </div>
-                          <div className="h-64 w-44 overflow-hidden rounded-lg"></div>
-                        </div>
-                        <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                          <div className="h-64 w-44 overflow-hidden rounded-lg">
-                            <img src="./cams.png" alt="" className="h-full w-full object-cover object-center" />
-                          </div>
-                          <div className="h-64 w-44 overflow-hidden rounded-lg">
-                            <img src="./vass.png" alt="" className="h-full w-full object-cover object-center" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex justify-start">
-                    <Link href="/catalogoNatural" className="rounded-lg border border-transparent bg-gold-goldTitle py-3 px-8 text-center font-normal text-white hover:bg-gold-goldText mr-4">
-                      Catálogo Natutal
-                    </Link>
-                    <Link href="/catalogoEmpresa" className="rounded-lg border border-transparent bg-gold-goldTitle py-3 px-8 text-center font-normal text-white hover:bg-gold-goldText">
-                      Catálogo Empresa
-                    </Link>
+export default function ServiciosCarrusel() {
+  const items = [
+    {
+      src: "https://trinyrent.com/wp-content/uploads/2023/06/renting-de-vehiculos-en-Peru.jpg",
+      href: "/catalogoNatural",
+      label: "Renting Natural",
+    },
+    {
+      src: "https://rentingautomayor.com/wp-content/uploads/2022/06/RentingAutomayor_Web_Inicio_junio-03.png",
+      href: "/catalogoEmpresa",
+      label: "Renting Empresas",
+    },
+    {
+      src: "https://www.organizacionforsa.com/img/dummies/alquiler.jpg",
+      href: "#",
+      label: "Alquiler de Maquinaria",
+    },
+    {
+      src: "https://static.wixstatic.com/media/af5ee7_abf4748fa18c4f8dbb4a626f8a98a783~mv2.jpg/v1/fill/w_640,h_420,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/af5ee7_abf4748fa18c4f8dbb4a626f8a98a783~mv2.jpg",
+      href: "#",
+      label: "Equipos Médicos",
+    },
+    {
+      src: "https://itelco.com.co/wp-content/uploads/2020/07/itelco-seguridad-electronica-768x381-1.jpg",
+      href: "#",
+      label: "Equipos de Oficina",
+    },
+  ];
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024, // Tablets
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 640, // Móviles
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+    ],
+  };
+
+  return (
+    <section id="servicios" className="bg-white py-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Título */}
+        <div className="text-center mb-10">
+          <h2 className="text-4xl font-extrabold text-gold-goldTitle sm:text-5xl mb-4">
+          Nuestro Catálogo de Soluciones
+          </h2>
+          <p className="text-lg text-gray-700 sm:text-xl">
+          Descubre nuestras opciones y elige el servicio ideal para ti o tu empresa.
+          </p>
+        </div>
+
+        {/* Carrusel */}
+        <Slider {...settings}>
+          {items.map((item, index) => (
+            <div key={index} className="px-3">
+              <Link href={item.href}>
+                <div className="relative group rounded-lg overflow-hidden shadow-lg">
+                  {/* Imagen de fondo */}
+                  <div
+                    className="h-64 sm:h-72 lg:h-80 bg-gray-200"
+                    style={{
+                      backgroundImage: `url(${item.src})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }}
+                  ></div>
+
+                  {/* Capa de fondo translúcido SIEMPRE visible */}
+                  <div className="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 group-hover:bg-opacity-60 transition-all duration-300">
+                    <span className="text-xl font-bold text-white">{item.label}</span>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
-          </div>
-        </div>
-      </section>
-      );
-    }
-  
+          ))}
+        </Slider>
+      </div>
+    </section>
+  );
+}

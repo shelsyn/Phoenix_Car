@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Carrusel from "@/components/Carrusel";
 import { Contacto } from "@/components/Contacto";
-import { Contacto_2, Contacto_dos } from "@/components/contacto_dos";
+import { Contacto_dos } from "@/components/contacto_dos";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Productos from "@/components/Productos";

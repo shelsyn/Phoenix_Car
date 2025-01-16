@@ -8,7 +8,6 @@ const navigation = [
   { name: 'Inicio', href: '/' },
   { name: 'Catálogo Empresa', href: '/catalogoEmpresa' },
 
-  { name: 'Promociones3', href: '#Promociones' },
   // { name: 'Sobre Nosotros', href: '#aboutUs' },
 ];
 const products = [
@@ -22,7 +21,7 @@ export default function HeaderNatural() {
       <header className="bg-white">
         <nav className="mx-12 flex items-center justify-between" aria-label="Global">
           <div className="flex lg:flex-1">
-            <img className="h-[100px] w-[302px]" src="/fondoss.png" alt="" />
+            <img className="h-[100px] w-[302px]" src="/rent_all.png" alt="" />
           </div>
           <div className="flex lg:hidden">
             <button type="button" className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400" onClick={() => setMobileMenuOpen(true)}>
@@ -68,9 +67,7 @@ export default function HeaderNatural() {
                 </Popover.Panel>
               </Transition>
             </Popover>
-            <a href="#Promociones" className="text-lg font-semibold leading-6 text-gold-goldButton">
-              Promociones
-            </a>
+           
           </Popover.Group>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a
@@ -89,7 +86,7 @@ export default function HeaderNatural() {
             <div className="flex items-center justify-between">
               <a href="#Home" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
-                <img className="h-20" src="/fondoss.png" alt="" />
+                <img className="h-20" src="/rent_all.png" alt="" />
               </a>
               <button type="button" className="-m-2.5 rounded-md p-2.5 text-gray-700" onClick={() => setMobileMenuOpen(false)}>
                 <span className="sr-only">Close menu</span>

@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const navigation = [
   { name: 'Inicio', href: '/' },
-  { name: 'Promociones', href: '#Promociones' },
+
   { name: 'Crédito de vehículo', href: '/quienesSomos'},
   { name: 'Crédito Hipotecario', href: '/hipoteca'},
   { name: 'Catálogo Empresa', href: '/catalogoEmpresa' },
@@ -24,9 +24,25 @@ export default function Header() {
     <>
       <header className="bg-white">
         <nav className="mx-12 flex items-center justify-between" aria-label="Global">
-          <div className="flex lg:flex-1">
-            <img className="h-[97px] w-[285px]" src="/fondoss.png" alt="" />
-          </div>
+        <div className="flex items-center space-x-4 lg:flex-1">
+  {/* Logo */}
+  <img
+    className="h-16 w-auto object-contain"
+    src="/rent_all.png"
+    alt="Rent All Logo"
+  />
+  {/* Texto estilizado */}
+  <div className="flex items-center">
+    <span className="text-2xl font-bold" style={{ color: '#b39456' }}>
+      PHOENIX
+    </span>
+    <span className="text-2xl font-bold" style={{ color: '#d6ae7b', marginLeft: '5px' }}>
+      CAR
+    </span>
+  </div>
+</div>
+
+
           <div className="flex lg:hidden">
             <button type="button" className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400" onClick={() => setMobileMenuOpen(true)}>
               <span className="sr-only">Open main menu</span>
@@ -93,16 +109,34 @@ export default function Header() {
         <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
           <div className="fixed inset-0 z-10" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gold-goldWhite px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
-            <div className="flex items-center justify-between">
-              <Link href="/" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
-                <img className="h-20" src="/fondoss.png" alt="" />
-              </Link>
-              <button type="button" className="rounded-md p-2.5 text-gray-700" onClick={() => setMobileMenuOpen(false)}>
-                <span className="sr-only">Close menu</span>
-                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-              </button>
-            </div>
+          <div className="flex items-center justify-between">
+  <div className="flex items-center space-x-4">
+    {/* Logo */}
+    <Link href="/" className="-m-1.5 p-1.5 flex items-center">
+      <span className="sr-only">Phoenix Car</span>
+      <img className="h-14 w-auto object-contain" src="/rent_all.png" alt="Phoenix Car Logo" />
+      {/* Texto estilizado */}
+      <div className="ml-2">
+        <span className="text-xl font-bold" style={{ color: '#b39456' }}>
+          PHOENIX
+        </span>
+        <span className="text-xl font-bold" style={{ color: '#d6ae7b', marginLeft: '5px' }}>
+          CAR
+        </span>
+      </div>
+    </Link>
+  </div>
+  {/* Botón para cerrar el menú */}
+  <button
+    type="button"
+    className="rounded-md p-2.5 text-gray-700"
+    onClick={() => setMobileMenuOpen(false)}
+  >
+    <span className="sr-only">Close menu</span>
+    <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+  </button>
+</div>
+
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/25">
                 <div className="space-y-2 py-6">

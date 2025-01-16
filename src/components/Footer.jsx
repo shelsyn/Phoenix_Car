@@ -3,7 +3,7 @@ import { AiOutlineWhatsApp, AiOutlineInstagram } from 'react-icons/ai';
 const navigation = {
   main: [
     { name: 'Inicio', href: '/' },
-    { name: 'Promociones', href: '#Promociones' },
+   
     { name: 'Crédito de vehículo', href: '/quienesSomos' },
     { name: 'Crédito Hipotecario', href: '/hipoteca' },
     { name: 'Catálogo Empresa', href: '/catalogoEmpresa' },
