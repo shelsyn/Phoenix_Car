@@ -5,7 +5,7 @@ export default function Productos() {
       name: "Cx5 Touring 2.0 At 4X2",
       year: "2024",
       href: "https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias.",
-      imageSrc: "https://m.atcdn.co.uk/vms/media/df522b45ccef4a34b9ebebbd7c747985.jpg",
+      imageSrc: "https://mazda-brochures.com/main/mazdacx5/2023/1/es-es/assets/images/cx-5-eternal-blue-crystal.jpg",
       marca: "Mazda",
       iva: "IVA INCLUIDO",
     },
@@ -46,20 +46,21 @@ export default function Productos() {
             {products.map((product) => (
               <div
                 key={product.id}
-                className="relative flex flex-col justify-between rounded-xl shadow-lg p-4 bg-white border border-gray-200"
+                className="relative flex flex-col justify-between rounded-xl shadow-lg p-4 bg-white border border-gray-300"
               >
                 {/* Información del producto */}
                 <div className="text-center">
-                  <h3 className="text-lg font-bold text-gray-900">{product.name}</h3>
-                  <div className="flex items-center justify-center space-x-3 mt-2">
-                    <span className="text-sm bg-gray-100 text-gray-900 rounded-full px-3 py-1">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">{product.name}</h3>
+                  <div className="flex items-center justify-center space-x-4">
+                    {/* Etiquetas elegantes */}
+                    <span className="text-sm text-gray-700 bg-white border border-gray-300 rounded-full px-3 py-1">
                       {product.marca}
                     </span>
-                    <span className="text-sm bg-gray-100 text-gray-900 rounded-full px-3 py-1">
+                    <span className="text-sm text-gray-700 bg-white border border-gray-300 rounded-full px-3 py-1">
                       {product.year}
                     </span>
                   </div>
-                  <p className="mt-2 text-sm font-medium text-gray-700">{product.iva}</p>
+                  <p className="mt-3 text-sm font-medium text-gray-600">{product.iva}</p>
                 </div>
 
                 {/* Imagen del producto */}
@@ -78,7 +79,7 @@ export default function Productos() {
                   rel="noreferrer"
                   className="inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-white hover:opacity-90"
                   style={{
-                    backgroundColor: "#A3822F", // Color dorado
+                    backgroundColor: "#B2904F", // Color dorado formal
                   }}
                 >
                   Cotizar
