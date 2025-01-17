@@ -25,6 +25,7 @@ export default function Carrusel(props) {
    '../ejem.png',
   '../encabezado3.png',
      './renault5.png',
+     
     
   ];
   return (

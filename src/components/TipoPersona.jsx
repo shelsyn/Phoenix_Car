@@ -3,32 +3,35 @@ import Slider from "react-slick";
 
 export default function ServiciosCarrusel() {
   const items = [
-    {
-      src: "https://trinyrent.com/wp-content/uploads/2023/06/renting-de-vehiculos-en-Peru.jpg",
-      href: "/catalogoNatural",
-      label: "Renting Natural",
-    },
-    {
-      src: "https://rentingautomayor.com/wp-content/uploads/2022/06/RentingAutomayor_Web_Inicio_junio-03.png",
-      href: "/catalogoEmpresa",
-      label: "Renting Empresas",
-    },
-    {
-      src: "https://www.organizacionforsa.com/img/dummies/alquiler.jpg",
-      href: "#",
-      label: "Alquiler de Maquinaria",
-    },
-    {
-      src: "https://static.wixstatic.com/media/af5ee7_abf4748fa18c4f8dbb4a626f8a98a783~mv2.jpg/v1/fill/w_640,h_420,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/af5ee7_abf4748fa18c4f8dbb4a626f8a98a783~mv2.jpg",
-      href: "#",
-      label: "Equipos Médicos",
-    },
-    {
-      src: "https://itelco.com.co/wp-content/uploads/2020/07/itelco-seguridad-electronica-768x381-1.jpg",
-      href: "#",
-      label: "Equipos de Oficina",
-    },
-  ];
+    
+      {
+        src: "https://trinyrent.com/wp-content/uploads/2023/06/renting-de-vehiculos-en-Peru.jpg",
+        href: "/catalogoNatural",
+        label: "Renting Vehicular para Personas Naturales",
+      },
+      {
+        src: "https://rentingautomayor.com/wp-content/uploads/2022/06/RentingAutomayor_Web_Inicio_junio-03.png",
+        href: "/catalogoEmpresa",
+        label: "Renting Vehicular para Empresas",
+      },
+      {
+        src: "https://www.organizacionforsa.com/img/dummies/alquiler.jpg",
+        href: "#",
+        label: "Alquiler de Maquinaria Pesada",
+      },
+      {
+        src: "https://static.wixstatic.com/media/af5ee7_abf4748fa18c4f8dbb4a626f8a98a783~mv2.jpg/v1/fill/w_640,h_420,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/af5ee7_abf4748fa18c4f8dbb4a626f8a98a783~mv2.jpg",
+        href: "#",
+        label: "Renting de Equipos Médicos",
+      },
+      {
+        src: "https://itelco.com.co/wp-content/uploads/2020/07/itelco-seguridad-electronica-768x381-1.jpg",
+        href: "#",
+        label: "Renting de Equipos de Oficina",
+      },
+    ];
+    
+ 
 
   const settings = {
     dots: true,

@@ -8,6 +8,7 @@ import Productos from "@/components/Productos";
 import Renting from "@/components/Renting";
 import TipoPersona from "@/components/TipoPersona";
 import Head from "next/head";
+import Informacion from "@/components/Informacion";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,9 +28,12 @@ export default function Home() {
         <Carrusel />
         <Contacto_dos />
         <Renting />
+        
         <TipoPersona />
-        <Productos />
+        <Informacion />
+        
         <Contacto />
+        
       </main>
       <Footer />
 
