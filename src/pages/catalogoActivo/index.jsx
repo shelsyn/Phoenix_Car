@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import RentingActivos from "@/components/CatalogoActivos/RentingActivos";
 import MaquinariaPesada from "@/components/CatalogoActivos/MaquinariaPesada";
 
-export default function CatalogoActivos() {
+export default function CatalogoActivo() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleChat = () => {
