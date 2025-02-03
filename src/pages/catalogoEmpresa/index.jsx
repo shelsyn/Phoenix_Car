@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Productos from "@/components/Productos";
 import Head from "next/head";
-import Image from "next/image";
 
 const products = [
   ////////////////////////camioneta/////////
@@ -146,7 +145,7 @@ export default function CatalogoEmpresa() {
                     <p className="text-sm text-gray-600 mt-2">{product.tipo}</p>
                   </div>
                   <div className="relative h-56 w-full overflow-hidden">
-                    <Image
+                    <img
                       src={product.imageSrc}
                       alt={product.name}
                       className="w-full h-full object-cover"
