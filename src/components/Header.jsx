@@ -28,8 +28,8 @@ export default function Header() {
   {/* Logo */}
   <img
     className="h-16 w-auto object-contain"
-    src="/rent_all.png"
-    alt="Rent All Logo"
+    src="/phonelogo.png"
+    alt="Logo"
   />
   {/* Texto estilizado */}
   <div className="flex items-center">
@@ -114,7 +114,7 @@ export default function Header() {
     {/* Logo */}
     <Link href="/" className="-m-1.5 p-1.5 flex items-center">
       <span className="sr-only">Phoenix Car</span>
-      <img className="h-14 w-auto object-contain" src="/rent_all.png" alt="Phoenix Car Logo" />
+      <img className="h-14 w-auto object-contain" src="/phonelogo.png" alt="Phoenix Car Logo" />
       {/* Texto estilizado */}
       <div className="ml-2">
         <span className="text-xl font-bold" style={{ color: '#b39456' }}>

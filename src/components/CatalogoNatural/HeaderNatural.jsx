@@ -21,7 +21,7 @@ export default function HeaderNatural() {
       <header className="bg-white">
         <nav className="mx-12 flex items-center justify-between" aria-label="Global">
           <div className="flex lg:flex-1">
-            <img className="h-[100px] w-[302px]" src="/rent_all.png" alt="" />
+            <img className="h-[100px] w-[302px]" src="/phonelogo.png" alt="" />
           </div>
           <div className="flex lg:hidden">
             <button type="button" className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400" onClick={() => setMobileMenuOpen(true)}>
@@ -86,7 +86,7 @@ export default function HeaderNatural() {
             <div className="flex items-center justify-between">
               <a href="#Home" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
-                <img className="h-20" src="/rent_all.png" alt="" />
+                <img className="h-20" src="/phonelogo.png" alt="" />
               </a>
               <button type="button" className="-m-2.5 rounded-md p-2.5 text-gray-700" onClick={() => setMobileMenuOpen(false)}>
                 <span className="sr-only">Close menu</span>

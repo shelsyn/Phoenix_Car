@@ -15,7 +15,7 @@ export default function Document() {
         <meta name="robots" content="index, follow" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="impact-site-verification" value="82679832-f122-4fef-a00d-b805cf90e014" />
-        <link rel="shortcut icon" href="/rent_all.png" type="image/x-icon" />
+        <link rel="shortcut icon" href="/phonelogo.png" type="image/x-icon" />
         <title>PhoenixCar - renta de carros Colombia</title>
         <link rel="google-site-verification" href="google-site-verification=g6TmV7DgMs9nADiZ9VSxZWMN96YqsD2SNRivN6RDwOs" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16627463138"></script>
