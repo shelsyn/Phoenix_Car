@@ -5,7 +5,7 @@ const maquinariaItems = [
   { name: "Montacargas", href: "/montacargas", image: "https://lc.cx/ncC75P" },
   { name: "Excavadoras", href: "/excavadoras", image: "https://lc.cx/ocQRB1" },
   { name: "Retroexcavadoras", href: "/retroexcavadoras", image: "https://lc.cx/hKxhiy" },
-  { name: "Vibrocompactadores", href: "/vibrocompactadores", image: "https://lc.cx/tUsT47" },
+  { name: "Vibrocompactadores", href: "/vibrocompactadores", image: "https://s.alicdn.com/@sc04/kf/H92fcd8c3f8be4bfd9006618e5b785dbe6.jpg_720x720q50.jpg" },
   { name: "Motoniveladoras", href: "/motoniveladoras", image: "https://lc.cx/wi7-Jg" },
   { name: "Mini excavadoras", href: "/mini-excavadoras", image: "https://www.topconpositioning.com/content/topconpositioning/global/es/solutions/infrastructure/earthmoving/mini-excavators/_jcr_content/root/container/container/container/teaser_8671333_copy_.coreimg.jpeg/1709084559369/mini-excavator-solutions-web-teaser.jpeg" },
   { name: "Compresores", href: "/compresores", image: "https://maquinariapesadanegocios.com.co/wp-content/uploads/2023/07/WhatsApp-Image-2023-07-17-at-10.20.04-1024x768.jpeg" },
