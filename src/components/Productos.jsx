@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function Productos() {
   const products = [
     {
@@ -32,7 +33,7 @@ export default function Productos() {
       name: "Kangoo Evolución",
       year: "2024",
       href: "https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias.",
-      imageSrc: "https://img-ik.cars.co.za/news-site-za/images/2021/02/renault-kangoo-express-van-3.jpg",
+      imageSrc: "https://Image-ik.cars.co.za/news-site-za/images/2021/02/renault-kangoo-express-van-3.jpg",
       marca: "Renault",
       iva: "IVA INCLUIDO",
     },
@@ -65,7 +66,7 @@ export default function Productos() {
 
                 {/* Imagen del producto */}
                 <div className="relative h-48 w-full overflow-hidden rounded-lg my-4">
-                  <img
+                  <Image
                     src={product.imageSrc}
                     alt={product.name}
                     className="w-full h-full object-contain"

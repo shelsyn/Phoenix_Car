@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { GlobeAltIcon, EyeIcon } from '@heroicons/react/24/outline';
-
+import Image from "next/image";
 const supportLinks = [
   {
     name: '¿Qué ofrecemos?',
@@ -24,7 +24,7 @@ export default function QuienesSomos() {
      
         <div className="relative pb-32">
           <div className="absolute inset-0">
-            <img className="h-full w-full object-cover opacity-75" src="https://www.aoacolombia.com/wp-content/uploads/2020/06/soluciones-integrales-movilidad-renta-renting.jpg" alt="" />
+            <Image className="h-full w-full object-cover opacity-75" src="https://www.aoacolombia.com/wp-content/uploads/2020/06/soluciones-integrales-movilidad-renta-renting.jpg" alt="" />
             <div className="absolute inset-0 bg-gold-goldTitle mix-blend-multiply" aria-hidden="true" />
           </div>
           <div className="relative mx-auto max-w-7xl py-10 px-4 sm:py-32 sm:px-6 lg:px-8">

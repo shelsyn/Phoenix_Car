@@ -1,6 +1,6 @@
 
     import React from 'react';
-
+    import Image from "next/image";
 const products = [
   {
     id: 1,
@@ -45,7 +45,7 @@ export default function Politicas() {
               <div key={product.id}>
                 <div className="relative rounded-xl shadow-lg">
                   <div className="relative h-72 w-full overflow-hidden rounded-lg">
-                    <img src={product.imageSrc} alt={product.name} className="w-full h-auto object-cover object-center" />
+                    <Image src={product.imageSrc} alt={product.name} className="w-full h-auto object-cover object-center" />
                   </div>
                   <div className="relative p-2">
                     <h3 className="text-xl font-bold text-center" style={{ color: '#451a03' }}>{product.name}</h3>

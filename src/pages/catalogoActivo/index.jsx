@@ -3,12 +3,9 @@ import { Contacto } from "@/components/Contacto";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import RentingActivos from "@/components/CatalogoActivos/RentingActivos";
-
 import MaquinariaPesada from "@/components/CatalogoActivos/MaquinariaPesada";
 
-
-
-export default function catalogoActivos() {
+export default function CatalogoActivos() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleChat = () => {
@@ -18,10 +15,8 @@ export default function catalogoActivos() {
   return (
     <>
       <Header />
-      <RentingActivos/>
-      <MaquinariaPesada/>
-     
-    
+      <RentingActivos />
+      <MaquinariaPesada />
       <Contacto />
       <Footer />
 

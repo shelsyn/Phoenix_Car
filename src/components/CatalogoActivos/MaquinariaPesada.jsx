@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
+import Image from "next/image";
+
 
 const maquinariaItems = [
   { name: "Montacargas", href: "/montacargas", image: "https://lc.cx/ncC75P" },
@@ -51,7 +53,7 @@ export default function MaquinariaPesada() {
           {/* Imagen dinámica */}
           <div className="flex-1 text-center lg:text-left">
             <a href={maquinariaItems[activeIndex].href}>
-              <img
+              <Image
                 src={maquinariaItems[activeIndex].image}
                 alt={maquinariaItems[activeIndex].name}
                 className="w-full max-w-md mx-auto rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"

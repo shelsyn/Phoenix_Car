@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Productos from "@/components/Productos";
 import Head from "next/head";
+import Image from "next/image";
 
 const products = [
   {
@@ -73,7 +74,7 @@ const products = [
     name: 'Nueva Koleos Intens 4X4 Ph2',
     year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias.',
-    imageSrc: 'https://cdn.group.renault.com/ren/ar/modelos/koleos/ph1/2560x1440-responsive-format/renault-koleos2-hzg-ph1-exterior-diseno-013.jpg.ximg.xsmall.jpg/46b5832186.jpg',
+    imageSrc: 'https://cdn.group.renault.com/ren/ar/modelos/koleos/ph1/2560x1440-responsive-format/renault-koleos2-hzg-ph1-exterior-diseno-013.jpg.xImage.xsmall.jpg/46b5832186.jpg',
     marca: 'Renault',
     tipo: 'Camioneta – SUV',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:7fb00daf-f8a0-42c4-ae05-e6bae40e9eed'
@@ -148,7 +149,7 @@ const products = [
     name: ' Logan Intens Cvt Ph2',
     year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias.',
-    imageSrc: 'https://movilidadco.vteximg.com.br/arquivos/ids/975357/Renault-Logan-Intens-CVT-00691234-1.jpg?v=638452706169130000',
+    imageSrc: 'https://movilidadco.vtexImage.com.br/arquivos/ids/975357/Renault-Logan-Intens-CVT-00691234-1.jpg?v=638452706169130000',
     marca: 'Renault',
     tipo: 'Automovil',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:97e30701-aea4-40a8-9878-6aed570bf12e'
@@ -168,7 +169,7 @@ const products = [
     name: 'Arona FR 1.6 AT',
     year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias.',
-    imageSrc: 'https://movilidadco.vteximg.com.br/arquivos/ids/950356/Seat-Arona-fr-reference.jpg?v=638406900317400000',
+    imageSrc: 'https://movilidadco.vtexImage.com.br/arquivos/ids/950356/Seat-Arona-fr-reference.jpg?v=638406900317400000',
     marca: 'Seat',
     tipo: 'Automovil',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:5be6a945-a718-4c0b-b46f-2985882cdf62'
@@ -209,7 +210,7 @@ const products = [
     name: ' Nueva Duster Intens 1.3T 4X4 Mt',
     year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias.',
-    imageSrc: 'https://cdn.group.renault.com/ren/ar/modelos/nuevo-duster/ph1/renault-duster-hjd-ph1-diseno-exterior-017.jpg.ximg.xsmall.jpg/906484ffde.jpg',
+    imageSrc: 'https://cdn.group.renault.com/ren/ar/modelos/nuevo-duster/ph1/renault-duster-hjd-ph1-diseno-exterior-017.jpg.xImage.xsmall.jpg/906484ffde.jpg',
     marca: 'Renault',
     tipo: 'Campero',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:950e36d6-5626-4af8-8c81-539679c1e075'
@@ -268,7 +269,7 @@ export default function CatalogoPersonaNatural() {
                     <p className="text-sm text-gray-600 mt-2">{product.tipo}</p>
                   </div>
                   <div className="relative h-56 w-full overflow-hidden flex items-center justify-center bg-white">
-                            <img
+                            <Image
                   src={product.imageSrc}
                 alt={product.name}
                    className="w-full h-full object-cover"
