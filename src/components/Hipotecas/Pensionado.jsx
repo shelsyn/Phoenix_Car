@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { HomeIcon } from "@heroicons/react/24/outline";
 
 export default function Pensionado() {
@@ -33,7 +32,7 @@ export default function Pensionado() {
                             </div>
                             <div className="hidden lg:flex justify-center lg:justify-end">
                                 <div className="w-64 sm:w-80 lg:w-[30rem] overflow-hidden rounded-lg">
-                                    <Image
+                                    <img
                                         src="https://dontamalio.com/wp-content/uploads/2020/09/mini_subsidio_vivienda_urbana.png"
                                         alt="Ilustración de un automóvil"
                                         className="h-full w-full object-cover object-center"

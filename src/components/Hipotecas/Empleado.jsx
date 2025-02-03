@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { HomeIcon } from "@heroicons/react/24/outline";
 
 export default function Empleado() {
@@ -40,7 +39,7 @@ export default function Empleado() {
                             {/* Imagen */}
                             <div className="flex justify-center lg:justify-center">
                                 <div className="w-96 h-72 sm:h-96 sm:w-120 lg:h-96 lg:w-120 overflow-hidden rounded-lg">
-                                    <Image
+                                    <img
                                         src="https://s3.pagegear.co/181/69/imagenes-editor/2023/09/0912_primer_plano_agente_bienes_raices_dando_par_llaves_su_nuevo_hogar_xwarfh.jpg"
                                         alt="Persona entregando llaves en una oficina de bienes raíces"
                                         loading="lazy"

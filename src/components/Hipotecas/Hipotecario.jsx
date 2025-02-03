@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from "next/image";
 import { GlobeAltIcon, EyeIcon, HomeIcon, CurrencyDollarIcon } from '@heroicons/react/24/outline';
 
 const supportLinks = [
@@ -28,7 +27,7 @@ export default function Hipotecario() {
       <div className="bg-white">
         <div className="relative pb-32">
           <div className="absolute inset-0">
-            <Image className="h-full w-full object-cover opacity-75" src="https://www.semana.com/resizer/v2/Y6C7P6UHDBC3FHPUIKLBQHY4NM.jpg?auth=add0fb2473c72632eb179721d01d35f8ef6e24c30b95d31e6f9ae0466fd8d11e&smart=true&quality=75&width=1280&height=720" alt="" />
+            <img className="h-full w-full object-cover opacity-75" src="https://www.semana.com/resizer/v2/Y6C7P6UHDBC3FHPUIKLBQHY4NM.jpg?auth=add0fb2473c72632eb179721d01d35f8ef6e24c30b95d31e6f9ae0466fd8d11e&smart=true&quality=75&width=1280&height=720" alt="" />
             <div className="absolute inset-0 bg-gold-goldTitle mix-blend-multiply" aria-hidden="true" />
           </div>
           <div className="relative mx-auto max-w-7xl py-10 px-4 sm:py-32 sm:px-6 lg:px-8">

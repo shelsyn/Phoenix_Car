@@ -1,31 +1,26 @@
 import { AiOutlineBarChart, AiOutlineDollarCircle } from "react-icons/ai";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { MdOutlineDevicesOther } from "react-icons/md";
-import Image from "next/image";
 
 const resultados = [
   {
     title: "Incrementa tus Utilidades",
-    description:
-      "Renueva tu maquinaria pesada sin preocupaciones, aumentando la productividad y reduciendo los tiempos muertos.",
+    description: "Renueva tu maquinaria pesada sin preocupaciones, aumentando la productividad y reduciendo los tiempos muertos.",
     icon: AiOutlineBarChart,
   },
   {
     title: "Optimiza tus Recursos",
-    description:
-      "Reduce costos operativos y administrativos al centralizar tus proveedores y maximizar la eficiencia.",
+    description: "Reduce costos operativos y administrativos al centralizar tus proveedores y maximizar la eficiencia.",
     icon: MdOutlineDevicesOther,
   },
   {
     title: "Control Financiero ",
-    description:
-      "Accede a maquinaria de alta calidad sin grandes inversiones iniciales ni endeudamiento.",
+    description: "Accede a maquinaria de alta calidad sin grandes inversiones iniciales ni endeudamiento.",
     icon: AiOutlineDollarCircle,
   },
   {
     title: "Impulsa tu Negocio",
-    description:
-      "Asegura un rendimiento óptimo con mantenimientos especializados para mantenerte siempre en marcha.",
+    description: "Asegura un rendimiento óptimo con mantenimientos especializados para mantenerte siempre en marcha.",
     icon: BsFillPeopleFill,
   },
 ];
@@ -74,13 +69,10 @@ export default function RentingActivos() {
         <div className="mt-12 flex flex-col lg:flex-row items-center justify-between">
           {/* Imagen */}
           <div className="lg:w-1/2">
-            <Image
+            <img
               src="https://www.revei2000.com/wp-content/uploads/2021/01/maquinaria-pesada-724x429.jpg"
               alt="Persona usando tecnología"
               className="rounded-lg shadow-md"
-              width={724} // Ancho en píxeles
-              height={429} // Alto en píxeles
-              priority // Optimización para mejorar el rendimiento
             />
           </div>
           {/* Texto */}

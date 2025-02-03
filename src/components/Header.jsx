@@ -2,7 +2,6 @@ import { Fragment, useState } from "react";
 import { Dialog, Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import Image from "next/image";
 
 const navigation = [
   { name: "Inicio", href: "/" },
@@ -31,7 +30,7 @@ export default function Header() {
         <nav className="mx-12 flex items-center justify-between space-x-8" aria-label="Global">
           {/* Logo */}
           <div className="flex items-center space-x-4 lg:flex-1">
-            <Image className="h-16 w-auto object-contain" src="/phonelogo.png" alt="Logo" />
+            <img className="h-16 w-auto object-contain" src="/phonelogo.png" alt="Logo" />
             <div className="flex items-center">
               <span className="text-2xl font-bold" style={{ color: "#b39456" }}>
                 PHOENIX
@@ -182,7 +181,7 @@ export default function Header() {
           <Dialog.Panel className="fixed inset-0 z-10 bg-white p-6">
             <div className="flex justify-between items-center">
               <div className="flex items-center space-x-4">
-                <Image className="h-10 w-auto object-contain" src="/phonelogo.png" alt="Logo" />
+                <img className="h-10 w-auto object-contain" src="/phonelogo.png" alt="Logo" />
                 <div className="flex items-center">
                   <span className="text-lg font-bold" style={{ color: "#b39456" }}>
                     PHOENIX

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { HomeIcon } from "@heroicons/react/24/outline";
 
 export default function Independiente() {
@@ -11,7 +10,7 @@ export default function Independiente() {
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                             <div className="hidden lg:flex justify-center lg:justify-end">
                                 <div className="w-64 sm:w-80 lg:w-[30rem] overflow-hidden rounded-lg">
-                                    <Image
+                                    <img
                                         src="https://www.bbva.com/wp-content/uploads/2019/11/hipotecario.jpg"
                                         alt="Ilustración de un automóvil"
                                         className="h-full w-full object-cover object-center"
