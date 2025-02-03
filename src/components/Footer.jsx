@@ -7,6 +7,7 @@ const navigation = {
     { name: 'Crédito de vehículo', href: '/quienesSomos' },
     { name: 'Crédito Hipotecario', href: '/hipoteca' },
     { name: 'Catálogo Empresa', href: '/catalogoEmpresa' },
+    { name: 'Catálogo Activo', href: '/catalogoActivo' },
     { name: 'Catálogo Persona Natural', href: '/catalogoNatural' },
     { name: 'Términos y condiciones', href: 'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:f002e481-c9de-49f0-be43-0238d920de06' }
   ],

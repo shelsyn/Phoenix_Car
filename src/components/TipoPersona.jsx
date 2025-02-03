@@ -16,7 +16,7 @@ export default function ServiciosCarrusel() {
       },
       {
         src: "https://www.organizacionforsa.com/img/dummies/alquiler.jpg",
-        href: "#",
+        href: "/catalogoActivo",
         label: "Alquiler de Maquinaria Pesada",
       },
       {

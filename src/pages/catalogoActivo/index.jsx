@@ -1,16 +1,14 @@
 import { useState } from "react";
-import Carrusel from "@/components/Carrusel";
 import { Contacto } from "@/components/Contacto";
-import { Contacto_dos } from "@/components/contacto_dos";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Productos from "@/components/Productos";
-import Renting from "@/components/Renting";
-import TipoPersona from "@/components/TipoPersona";
-import Head from "next/head";
-import Informacion from "@/components/Informacion";
+import RentingActivos from "@/components/CatalogoActivos/RentingActivos";
 
-export default function Home() {
+import MaquinariaPesada from "@/components/CatalogoActivos/MaquinariaPesada";
+
+
+
+export default function catalogoActivos() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleChat = () => {
@@ -19,21 +17,12 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Phoenix Car | Inicio</title>
-        <meta name="description" content="Página principal de Phoenix Car" />
-      </Head>
-      <main>
-        <Header />
-        <Carrusel />
-        <Contacto_dos />
-        <Renting />
-        <TipoPersona />
-        <Informacion />
-        
-        <Contacto />
-        
-      </main>
+      <Header />
+      <RentingActivos/>
+      <MaquinariaPesada/>
+     
+    
+      <Contacto />
       <Footer />
 
       {/* Botón de WhatsApp con nube dinámica */}

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import HeaderEmpresas from "@/components/CatalogoEmpresa/HeaderEmpresas";
-import RentingEmpresas from "@/components/CatalogoEmpresa/RentingEmpresas";
+import HeaderEmpresas from "@/components/CatalogoEmpresas/HeaderEmpresas";
+import RentingEmpresas from "@/components/CatalogoEmpresas/RentingEmpresas";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Productos from "@/components/Productos";
