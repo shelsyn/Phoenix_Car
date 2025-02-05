@@ -11,7 +11,7 @@ const maquinariaItems = [
   { name: "Compresores", href: "/compresores", image: "https://maquinariapesadanegocios.com.co/wp-content/uploads/2023/07/WhatsApp-Image-2023-07-17-at-10.20.04-1024x768.jpeg" },
   { name: "Camiones", href: "/camiones", image: "https://lc.cx/44EAhL" },
   { name: "Grúas", href: "/gruas", image: "https://gruasarlin.com/wp-content/uploads/2016/04/Grove-GRT8100.jpg" },
-  { name: "Martillos hidráulicos", href: "/martillos-hidraulicos", image: "https://juflog.com/wp-content/uploads/2022/08/1651612551w034S5bW.jpg" },
+  { name: "Martillos hidráulicos", href: "/martillos-hidraulicos", image: "https://bbrskrental.s3-sa-east-1.amazonaws.com/images/slider/Martillos%20Hidraulicos_2020-09-07-184706.jpg" },
   { name: "Bulldozer", href: "/bulldozer", image: "https://webklat.s3.amazonaws.com/wp-content/uploads/sites/23/2022/09/19193655/Maquinaria-Pesada-Que-es-y-para-que-sirve-Komatsu-1.jpg" },
 ];
 
