@@ -1,39 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import React, { useState, useEffect } from 'react';
 
-const sliderSettings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 4000, // Cambiar a 2000 para cambiar cada 2 segundos
-  nextArrow: <CustomNextArrow />,
-  beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex), // Actualizar el slide actual
-};
-
-function CustomNextArrow(props) {
-  return <div style={{ display: 'none' }} />;
-}
-
-export default function Carrusel(props) {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  // Hook para deshabilitar foco en slides ocultos
-  useEffect(() => {
-    const slides = document.querySelectorAll('.slick-slide');
-    slides.forEach((slide, index) => {
-      const isHidden = slide.getAttribute('aria-hidden') === 'true';
-      const focusableElements = slide.querySelectorAll('a, button, input, textarea, select');
-      focusableElements.forEach((el) => {
-        el.setAttribute('tabindex', isHidden ? '-1' : '0');
-      });
-    });
-  }, [currentSlide]);
-
+export default function Carrusel() {
   const sliderImages = [
     './carr4.png',
     '../ejem.png',
@@ -41,47 +8,114 @@ export default function Carrusel(props) {
     './renault5.png',
   ];
 
-  return (
-    <section id="Home">
-      <Slider {...sliderSettings}>
-        {sliderImages.map((image, index) => (
-          <div key={index}>
-            <div
-              className="w-screen"
-              style={{
-                backgroundImage: `url(${image})`,
-                backgroundPosition: 'center',
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-                height: '40vh', // Altura predeterminada para computadoras
-              }}
-            >
-              {/* Estilo adicional para dispositivos móviles */}
-              <style>
-                {`
-                  @media screen and (max-width: 767px) {
-                    .slick-slide div {
-                      background-size: cover !important;
-                      background-repeat: no-repeat !important;
-                      background-position: center !important;
-                      height: 17vh !important; // Ajustar la altura de la imagen para dispositivos móviles
-                    }
-                  }
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-                  @media screen and (max-width: 1024px) {
-                    .slick-slide div {
-                      background-size: cover !important;
-                      background-repeat: no-repeat !important;
-                      background-position: center !important;
-                      height: 20vh !important; // Ajustar la altura de la imagen para dispositivos iPad
-                    }
-                  }
-                `}
-              </style>
-            </div>
+  // Cambiar automáticamente de slide cada 4 segundos
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === sliderImages.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [sliderImages.length]);
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === sliderImages.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const goToPrevious = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? sliderImages.length - 1 : prevIndex - 1
+    );
+  };
+
+  return (
+    <section id="Home" className="relative w-full overflow-hidden group">
+      {/* Slides */}
+      <div
+        className="flex transition-transform duration-500"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        {sliderImages.map((image, index) => (
+          <div
+            key={index}
+            className="w-full flex-shrink-0"
+            style={{
+              height: '50vh', // Ajuste de altura inicial
+              maxWidth: '100vw', // Ocupa todo el ancho
+            }}
+          >
+            <img
+              src={image}
+              alt={`Slide ${index + 1}`}
+              className="w-full h-full object-cover" // Asegura que ocupe todo el contenedor
+            />
           </div>
         ))}
-      </Slider>
+      </div>
+
+      {/* Botón anterior */}
+      <button
+        onClick={goToPrevious}
+        className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-900 bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 focus:outline-none opacity-0 group-hover:opacity-100 transition-opacity"
+        aria-label="Anterior"
+      >
+        &#10094;
+      </button>
+
+      {/* Botón siguiente */}
+      <button
+        onClick={goToNext}
+        className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-900 bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 focus:outline-none opacity-0 group-hover:opacity-100 transition-opacity"
+        aria-label="Siguiente"
+      >
+        &#10095;
+      </button>
+
+      {/* Indicadores */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {sliderImages.map((_, index) => (
+          <button
+            key={index}
+            className={`w-3 h-3 rounded-full ${
+              currentIndex === index ? 'bg-gray-800' : 'bg-gray-400'
+            }`}
+            onClick={() => setCurrentIndex(index)}
+            aria-label={`Ir al slide ${index + 1}`}
+          />
+        ))}
+      </div>
+
+      {/* Estilos Responsivos */}
+      <style>
+        {`
+          @media screen and (max-width: 767px) {
+            #Home div {
+              height: 15vh !important; /* Altura ajustada para móviles */
+            }
+
+            #Home img {
+              object-fit: cover !important; /* Asegura que las imágenes llenen el contenedor */
+            }
+          }
+
+          @media screen and (min-width: 768px) and (max-width: 1024px) {
+            #Home div {
+              height: 40vh !important; /* Altura media para tablets */
+            }
+          }
+
+          @media screen and (min-width: 1025px) {
+            #Home div {
+              height: 50vh !important; /* Altura para pantallas grandes */
+            }
+          }
+        `}
+      </style>
     </section>
   );
 }
