@@ -44,10 +44,12 @@ function CustomPrevArrow(props) {
 
 export default function Carrusel(props) {
   const sliderImages = [
-    './carr4.png',
+    
     '../ejem.png',
+    '../maquinaria.png',
     '../encabezado3.png',
-    './renault5.png',
+'../medi.png',
+    './banerren2.png',
   ];
 
   return (
