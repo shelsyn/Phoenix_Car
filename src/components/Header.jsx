@@ -33,10 +33,10 @@ export default function Header() {
             <img className="h-16 w-auto object-contain" src="/phonelogo.png" alt="Logo" />
             <div className="flex items-center">
               <span className="text-2xl font-bold" style={{ color: "#b39456" }}>
-                PHOENIX
+              VentRent
               </span>
               <span className="text-2xl font-bold" style={{ color: "#d6ae7b", marginLeft: "5px" }}>
-                CAR
+                All
               </span>
             </div>
           </div>
