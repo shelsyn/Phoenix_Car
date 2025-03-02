@@ -236,7 +236,7 @@ export default function CatalogoPersonaNatural() {
   return (
     <>
       <Head>
-        <title>Phoenix Car | Catalogo Natural</title>
+        <title>VentRentAll | Catalogo Natural</title>
         <meta name="description" content="Catálogo de vehículos y activos para personas naturales" />
       </Head>
       <Header />

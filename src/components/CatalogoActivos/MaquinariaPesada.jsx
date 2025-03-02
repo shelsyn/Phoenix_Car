@@ -42,7 +42,7 @@ export default function MaquinariaPesada() {
             Tipos de Maquinaria Pesada
           </h2>
           <p className="mt-4 text-gray-800 max-w-3xl mx-auto text-base sm:text-lg">
-            Explora nuestra amplia selección de maquinaria pesada en PhoenixCar.
+            Explora nuestra amplia selección de maquinaria pesada en VentRentAll.
           </p>
         </div>
 

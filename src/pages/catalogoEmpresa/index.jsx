@@ -113,7 +113,7 @@ export default function CatalogoEmpresa() {
   return (
     <>
       <Head>
-        <title>Phoenix Car | Catalogo Empresa</title>
+        <title>VentRentAll | Catalogo Empresa</title>
         <meta name="description" content="Catálogo de vehículos y activos para empresas" />
       </Head>
       <Header />

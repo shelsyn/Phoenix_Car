@@ -6,13 +6,13 @@ const supportLinks = [
   {
     name: '¿Qué ofrecemos?',
     description:
-      'En Phoenix, brindamos la opción más adecuada de crédito vehicular para cada cliente, teniendo en cuenta su perfil crediticio y sus necesidades específicas. Realizamos un exhaustivo comparativo con las principales entidades financieras para asegurar la mejor solución.',
+      'En VentRentAll, brindamos la opción más adecuada de crédito vehicular para cada cliente, teniendo en cuenta su perfil crediticio y sus necesidades específicas. Realizamos un exhaustivo comparativo con las principales entidades financieras para asegurar la mejor solución.',
     icon: GlobeAltIcon,
   },
   {
     name: '¿Cómo lo logramos?',
     description:
-      'A través de alianzas estratégicas con las instituciones financieras más destacadas del país, facilitamos a nuestros clientes el acceso a opciones de financiamiento vehicular de manera rápida y efectiva. En Phoenix, nos comprometemos a proporcionarle a nuestros clientes una experiencia bancaria óptima.',
+      'A través de alianzas estratégicas con las instituciones financieras más destacadas del país, facilitamos a nuestros clientes el acceso a opciones de financiamiento vehicular de manera rápida y efectiva. En VentRentAll, nos comprometemos a proporcionarle a nuestros clientes una experiencia bancaria óptima.',
     icon: EyeIcon,
   },
 ];

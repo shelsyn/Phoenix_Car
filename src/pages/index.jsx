@@ -20,8 +20,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Phoenix Car | Inicio</title>
-        <meta name="description" content="Página principal de Phoenix Car" />
+        <title>VentRentAll | Inicio</title>
+        <meta name="description" content="Página principal de VentRentAll" />
       </Head>
       <main>
         <Header />

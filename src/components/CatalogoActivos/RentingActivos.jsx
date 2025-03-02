@@ -36,7 +36,7 @@ export default function RentingActivos() {
           </h2>
           <p className="mt-4 text-sm sm:text-base lg:text-lg text-gray-700 max-w-3xl mx-auto">
             Beneficios del alquiler de maquinaria pesada con{" "}
-            <span className="font-bold text-gold-goldTitle">PhoenixCar</span>
+            <span className="font-bold text-gold-goldTitle">VentRentAll</span>
           </p>
         </div>
 
@@ -81,7 +81,7 @@ export default function RentingActivos() {
               Soluciones de Alquiler de Maquinaria Pesada
             </h3>
             <p className="text-sm sm:text-base lg:text-lg text-gray-700">
-              En <span className="font-bold text-gold-goldTitle">PhoenixCar</span>, transformamos tus operaciones con un servicio de alquiler diseñado para maximizar tu productividad. Con equipos modernos y confiables, somos la solución ideal para industrias como construcción, minería y agricultura.
+              En <span className="font-bold text-gold-goldTitle">VentRentAll</span>, transformamos tus operaciones con un servicio de alquiler diseñado para maximizar tu productividad. Con equipos modernos y confiables, somos la solución ideal para industrias como construcción, minería y agricultura.
             </p>
           </div>
         </div>
