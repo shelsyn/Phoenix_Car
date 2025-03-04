@@ -8,11 +8,12 @@ export default function Pensionado() {
                 <div className="pt-6 pb-6 lg:pt-8 lg:pb-8">
                     <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                            <div className="flex flex-col gap-x-4 rounded-xl border border-dashed border-gold-goldButton p-5 shadow-lg">
-                                <h1 className="text-3xl font-bold tracking-tight xs:text-4xl sm:text-5xl md:text-6xl lg:text-4xl text-gold-goldTitle">
+                            <div className="flex flex-col gap-x-4 rounded-xl border border-dashed border-[#05a0e3]
+ p-5 shadow-lg">
+                                <h1 className="text-3xl font-bold tracking-tight xs:text-4xl sm:text-5xl md:text-6xl lg:text-4xl text-[#047ab7]">
                                 Crédito Hipotecario para pensionados
                                 </h1>
-                                <p className="mt-4 text-lg lg:text-xl text-gold-goldTitle">
+                                <p className="mt-4 text-lg lg:text-xl text-[#047ab7]">
                                     <span className="text-xl lg:text-2xl font-semibold">Solicitud de vinculación como persona natural.</span>
                                 </p>
                                 <div className="mt-6 sm:mt-8">

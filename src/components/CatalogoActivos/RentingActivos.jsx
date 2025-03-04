@@ -31,12 +31,12 @@ export default function RentingActivos() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Encabezado */}
         <div className="text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gold-goldTitle">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#047ab7]">
             MAQUINARIA PESADA
           </h2>
           <p className="mt-4 text-sm sm:text-base lg:text-lg text-gray-700 max-w-3xl mx-auto">
             Beneficios del alquiler de maquinaria pesada con{" "}
-            <span className="font-bold text-gold-goldTitle">VentRentAll</span>
+            <span className="font-bold text-[#047ab7]">VentRentAll</span>
           </p>
         </div>
 
@@ -47,8 +47,8 @@ export default function RentingActivos() {
               key={resultado.title}
               className="relative flex flex-col items-center text-center p-6 bg-white shadow-lg rounded-lg hover:scale-105 transform transition duration-300 ease-in-out"
             >
-              {/* Ícono */}
-              <div className="flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-r from-gold-goldTitle to-gold-goldButton">
+              {/* Ícono */}<div className="flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-r from-[#1e4d89] to-[#05a0e3]">
+
                 <resultado.icon className="w-8 h-8 text-white" />
               </div>
               {/* Título */}
@@ -60,7 +60,8 @@ export default function RentingActivos() {
                 {resultado.description}
               </p>
               {/* Decorativo */}
-              <div className="absolute -bottom-2 w-8 h-1 sm:w-10 bg-gradient-to-r from-gold-goldTitle to-gold-goldButton rounded-full"></div>
+              <div className="absolute -bottom-2 w-8 h-1 sm:w-10 bg-gradient-to-r from-[#1e4d89] to-[#05a0e3] rounded-full"></div>
+
             </div>
           ))}
         </div>
@@ -77,11 +78,11 @@ export default function RentingActivos() {
           </div>
           {/* Texto */}
           <div className="lg:w-1/2 lg:pl-10 mt-6 lg:mt-0">
-            <h3 className="text-2xl font-bold text-gold-goldTitle mb-4">
+            <h3 className="text-2xl font-bold text-[#047ab7] mb-4">
               Soluciones de Alquiler de Maquinaria Pesada
             </h3>
             <p className="text-sm sm:text-base lg:text-lg text-gray-700">
-              En <span className="font-bold text-gold-goldTitle">VentRentAll</span>, transformamos tus operaciones con un servicio de alquiler diseñado para maximizar tu productividad. Con equipos modernos y confiables, somos la solución ideal para industrias como construcción, minería y agricultura.
+              En <span className="font-bold text-[#047ab7]">VentRentAll</span>, transformamos tus operaciones con un servicio de alquiler diseñado para maximizar tu productividad. Con equipos modernos y confiables, somos la solución ideal para industrias como construcción, minería y agricultura.
             </p>
           </div>
         </div>

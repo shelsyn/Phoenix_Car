@@ -30,11 +30,11 @@ export default function HeaderEmpresas() {
             </button>
           </div>
           <Popover.Group className="hidden lg:flex lg:gap-x-12">
-            <Link href="/" className="text-lg font-semibold leading-6 text-gold-goldButton">
+            <Link href="/" className="text-lg font-semibold leading-6 text-[#047ab7]">
               Inicio
             </Link>
             <Popover className="relative">
-              <Popover.Button className="flex items-center gap-x-1 text-lg font-semibold leading-6 text-gold-goldButton">
+              <Popover.Button className="flex items-center gap-x-1 text-lg font-semibold leading-6 text-[#047ab7]">
                 Catálogo
                 <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
               </Popover.Button>
@@ -52,7 +52,7 @@ export default function HeaderEmpresas() {
                     {products.map((item) => (
                       <div key={item.name} className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
                         <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                          <item.icon className="h-6 w-6 text-gray-600 group-hover:text-gold-goldText" aria-hidden="true" />
+                          <item.icon className="h-6 w-6 text-gray-600 group-hover:text-[#047ab7]" aria-hidden="true" />
                         </div>
                         <div className="flex-auto">
                           <a href={item.href} className="block font-semibold text-gray-900">

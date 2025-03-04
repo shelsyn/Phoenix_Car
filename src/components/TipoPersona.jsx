@@ -65,7 +65,7 @@ export default function ServiciosCarrusel() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Título */}
         <div className="text-center mb-10">
-          <h2 className="text-4xl font-extrabold text-gold-goldTitle sm:text-5xl mb-4">
+          <h2 className="text-4xl font-extrabold text-[#047ab7] sm:text-5xl mb-4">
           Nuestro Catálogo de Soluciones
           </h2>
           <p className="text-lg text-gray-700 sm:text-xl">

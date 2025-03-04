@@ -63,7 +63,7 @@ const Informacion = () => {
         transition={{ duration: 0.5 }}
       >
         {/* Título en dorado */}
-        <h1 className="text-4xl font-extrabold text-gold-goldTitle sm:text-5xl mb-4">
+        <h1 className="text-4xl font-extrabold text-[#047ab7] sm:text-5xl mb-4">
           Opciones al Finalizar tu Contrato
         </h1>
         <p className="text-lg text-goldSubtitle mt-4">

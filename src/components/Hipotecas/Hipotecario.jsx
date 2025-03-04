@@ -26,10 +26,14 @@ export default function Hipotecario() {
     <section id="aboutUs" className="pt-18">
       <div className="bg-white">
         <div className="relative pb-32">
-          <div className="absolute inset-0">
-            <img className="h-full w-full object-cover opacity-75" src="https://www.semana.com/resizer/v2/Y6C7P6UHDBC3FHPUIKLBQHY4NM.jpg?auth=add0fb2473c72632eb179721d01d35f8ef6e24c30b95d31e6f9ae0466fd8d11e&smart=true&quality=75&width=1280&height=720" alt="" />
-            <div className="absolute inset-0 bg-gold-goldTitle mix-blend-multiply" aria-hidden="true" />
-          </div>
+        <div className="absolute inset-0">
+  <img className="h-full w-full object-cover opacity-75" 
+       src="https://www.semana.com/resizer/v2/Y6C7P6UHDBC3FHPUIKLBQHY4NM.jpg?auth=add0fb2473c72632eb179721d01d35f8ef6e24c30b95d31e6f9ae0466fd8d11e&smart=true&quality=75&width=1280&height=720" 
+       alt="" 
+  />
+  <div className="absolute inset-0 bg-[#05a0e3] bg-opacity-40 mix-blend-multiply" aria-hidden="true" />
+</div>
+
           <div className="relative mx-auto max-w-7xl py-10 px-4 sm:py-32 sm:px-6 lg:px-8">
             <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl text-center">Crédito Hipotecario</h1>
           </div>
@@ -42,7 +46,7 @@ export default function Hipotecario() {
             {supportLinks.map((link) => (
               <div key={link.name} className="flex flex-col rounded-2xl bg-gray-100 shadow-xl">
                 <div className="relative flex-1 px-6 pt-16 pb-8 md:px-8">
-                  <div className="absolute top-0 inline-block -translate-y-1/2 transform rounded-xl bg-gold-goldTitle p-5 shadow-lg">
+                  <div className="absolute top-0 inline-block -translate-y-1/2 transform rounded-xl bg-[#05a0e3] p-5 shadow-lg">
                     <link.icon className="h-8 w-8 text-white" aria-hidden="true" />
                   </div>
                   <h3 className="text-xl font-medium text-gray-900">{link.name}</h3>

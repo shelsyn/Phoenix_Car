@@ -18,9 +18,10 @@
     "clsx": "^2.1.1",
     "emailjs-com": "^3.2.0",
     "focus-visible": "^5.2.1",
-    "force": "^0.0.3",
     "framer-motion": "^11.18.0",
     "heroicons": "^2.2.0",
+    "lucide-react": "^0.477.0",
+    "mime": "^4.0.6",
     "next": "^15.1.4",
     "postcss-focus-visible": "^10.0.1",
     "react": "^19.0.0",
@@ -29,8 +30,10 @@
     "react-router-dom": "^7.1.1",
     "react-slick": "^0.30.3",
     "react-toastify": "^11.0.3",
+    "request": "^2.88.2",
     "slick-carousel": "^1.8.1",
-    "tailwindui-salient": "file:"
+    "tailwindui-salient": "file:",
+    "tough-cookie": "^5.1.2"
   },
   "devDependencies": {
     "@types/react-slick": "^0.23.13",

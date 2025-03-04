@@ -48,14 +48,14 @@ export default function Renting() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Encabezado */}
         <div className="text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gold-goldTitle">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#047ab7]">
             ¿Qué es renting?
           </h2>
           <p className="mt-4 text-sm sm:text-base lg:text-lg text-gray-700 max-w-3xl mx-auto">
           El renting es un servicio de alquiler de vehículos, activos productivos,
-computadores, celulares, que ofrece autonomía y control al cliente durante un
-tiempo determinado, sin comprarlos, facilitando el proceso de renovación total,
-incluye un paquete de servicios adaptado a las necesidades diarias de los clientes.
+          computadores, celulares, que ofrece autonomía y control al cliente durante un
+          tiempo determinado, sin comprarlos, facilitando el proceso de renovación total,
+          incluye un paquete de servicios adaptado a las necesidades diarias de los clientes.
           </p>
         </div>
 
@@ -67,7 +67,8 @@ incluye un paquete de servicios adaptado a las necesidades diarias de los client
               className="relative flex flex-col items-center text-center p-4 sm:p-6 bg-white shadow-lg rounded-lg hover:scale-105 transform transition duration-300 ease-in-out"
             >
               {/* Ícono */}
-              <div className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-gold-goldTitle to-gold-goldButton">
+              <div className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-[#1e4d89] to-[#05a0e3]">
+
                 <card.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
               {/* Título */}
@@ -75,7 +76,8 @@ incluye un paquete de servicios adaptado a las necesidades diarias de los client
                 {card.name}
               </h3>
               {/* Decorativo */}
-              <div className="absolute -bottom-2 w-8 h-1 sm:w-10 bg-gradient-to-r from-gold-goldTitle to-gold-goldButton rounded-full"></div>
+              <div className="absolute -bottom-2 w-8 h-1 sm:w-10 bg-gradient-to-r from-[#1e4d89] to-[#05a0e3] rounded-full"></div>
+
             </div>
           ))}
         </div>

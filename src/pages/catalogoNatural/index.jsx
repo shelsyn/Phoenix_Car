@@ -247,7 +247,7 @@ export default function CatalogoPersonaNatural() {
       <section id="catalogoNatural">
         <div className="bg-white">
           <div className="mx-auto py-16 px-4 sm:py-16 sm:px-6 lg:max-w-7xl lg:px-8">
-            <h2 className="text-4xl text-gold-goldTitle font-bold text-center mb-8">
+            <h2 className="text-4xl text-[#047ab7] font-bold text-center mb-8">
               Nuestro Catálogo
             </h2>
             <div className="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-8">
@@ -283,7 +283,8 @@ export default function CatalogoPersonaNatural() {
                         href={product.ficha}
                         target="_blank"
                         rel="noreferrer"
-                        className="py-2 px-4 bg-gold-goldButton text-white font-medium text-center rounded-lg hover:bg-gold-goldHover transition"
+                        className="py-2 px-4 bg-[#047ab7] text-white font-medium text-center rounded-lg hover:bg-[#05a0e3] transition
+"
                       >
                         Ficha técnica
                       </a>
@@ -291,7 +292,8 @@ export default function CatalogoPersonaNatural() {
                         href={product.href}
                         target="_blank"
                         rel="noreferrer"
-                        className="py-2 px-4 bg-gold-goldButton text-white font-medium text-center rounded-lg hover:bg-gold-goldHover transition"
+                        className="py-2 px-4 bg-[#047ab7] text-white font-medium text-center rounded-lg hover:bg-[#05a0e3] transition
+"
                       >
                         Cotizar
                       </a>

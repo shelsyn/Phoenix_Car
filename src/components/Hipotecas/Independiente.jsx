@@ -17,11 +17,12 @@ export default function Independiente() {
                                     />
                                 </div>
                             </div>
-                            <div className="flex flex-col gap-x-4 rounded-xl border border-dashed border-gold-goldButton p-5 shadow-lg">
-                                <h1 className="text-3xl font-bold tracking-tight xs:text-4xl sm:text-5xl md:text-6xl lg:text-4xl text-gold-goldTitle">
+                            <div className="flex flex-col gap-x-4 rounded-xl border border-dashed border-[#05a0e3]
+ p-5 shadow-lg">
+                                <h1 className="text-3xl font-bold tracking-tight xs:text-4xl sm:text-5xl md:text-6xl lg:text-4xl text-[#047ab7]">
                                     Crédito Hipotecario para Independientes
                                 </h1>
-                                <p className="mt-4 text-lg lg:text-xl text-gold-goldTitle">
+                                <p className="mt-4 text-lg lg:text-xl text-[#047ab7]">
                                     <span className="text-xl lg:text-2xl font-semibold">¡Obtén tu hogar siendo independiente! Financiamos tu sueño de tener casa propia. ¡Empieza hoy!</span>
                                 </p>
                                 <div className="mt-6 sm:mt-8">

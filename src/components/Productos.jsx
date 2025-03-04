@@ -79,7 +79,7 @@ export default function Productos() {
                   rel="noreferrer"
                   className="inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-white hover:opacity-90"
                   style={{
-                    backgroundColor: "#B2904F", // Color dorado formal
+                    backgroundColor: "#047ab7", // Color dorado formal
                   }}
                 >
                   Cotizar

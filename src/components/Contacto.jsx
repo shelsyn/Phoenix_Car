@@ -65,15 +65,15 @@ export function Contacto() {
         <div className="relative mx-auto max-w-7xl lg:grid lg:grid-cols-5">
           <div className="bg-white px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
             <div className="mx-auto max-w-lg">
-              <h2 className="text-3xl font-bold tracking-tight text-gold-goldTitle sm:text-4xl">Contáctanos</h2>
+              <h2 className="text-3xl font-bold tracking-tight text-[#047ab7] sm:text-4xl">Contáctanos</h2>
               <p className="mt-3 text-lg leading-6 text-gray-500">Estaremos respondiendo lo más pronto posible.</p>
               <dl className="mt-8 text-base text-gray-500">
                 <div className="mt-6 flex items-center">
-                  <PhoneIcon className="h-6 w-6 flex-shrink-0 text-gray-400 mr-3" aria-hidden="true" />
+                  <PhoneIcon className="h-6 w-6 flex-shrink-0 text-[#047ab7] mr-3" aria-hidden="true" />
                   <a href="tel:+573143532474" className="hover:text-gray-700">+57 (314) 3532474</a>
                 </div>
                 <div className="mt-3 flex items-center">
-                  <EnvelopeIcon className="h-6 w-6 flex-shrink-0 text-gray-400 mr-3" aria-hidden="true" />
+                  <EnvelopeIcon className="h-6 w-6 flex-shrink-0 text-[#047ab7] mr-3" aria-hidden="true" />
                   <a href="mailto:Comercial@phoenixcar.com.co?Subject=Aquí%20el%20asunto%20del%20mail" className="hover:text-gray-700">Comercial@phoenixcar.com.co</a>
                 </div>
               </dl>
@@ -89,7 +89,7 @@ export function Contacto() {
                     name="user_name"
                     id="user_name"
                     autoComplete="user_name"
-                    className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-gold-goldText focus:ring-gold-goldText"
+                    className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 hadow-sm focus:border-[#05a0e3] focus:ring-[#05a0e3] focus:ring-gold-goldText"
                     placeholder="Nombre Completo *"
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     value={form.name}
@@ -103,7 +103,7 @@ export function Contacto() {
                     name="user_email"
                     type="email"
                     autoComplete="email"
-                    className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-gold-goldText focus:ring-gold-goldText"
+                    className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 hadow-sm focus:border-[#05a0e3] focus:ring-[#05a0e3] focus:ring-gold-goldText"
                     placeholder="Correo Electrónico *"
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                     value={form.email}
@@ -117,7 +117,7 @@ export function Contacto() {
                     name="user_phone"
                     id="user_phone"
                     autoComplete="tel"
-                    className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-gold-goldText focus:ring-gold-goldText"
+                    className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 hadow-sm focus:border-[#05a0e3] focus:ring-[#05a0e3] focus:ring-gold-goldText"
                     placeholder="Número de teléfono *"
                     onChange={(e) => setForm({ ...form, phone: e.target.value })}
                     value={form.phone}
@@ -130,7 +130,7 @@ export function Contacto() {
                     id="user_message"
                     name="user_message"
                     rows={4}
-                    className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-gold-goldText focus:ring-gold-goldText"
+                    className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 hadow-sm focus:border-[#05a0e3] focus:ring-[#05a0e3] focus:ring-gold-goldText"
                     placeholder="Mensaje *"
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     value={form.message}
@@ -140,7 +140,7 @@ export function Contacto() {
                 <div>
                   <button
                     type="submit"
-                    className="inline-flex justify-center items-center w-full rounded-md border border-transparent bg-gold-goldTitle py-3 px-8 text-center font-normal text-white hover:bg-gold-goldText mr-4 focus:outline-none focus:ring-2 focus:ring-gold-goldText focus:ring-offset-2"
+                    className="inline-flex justify-center items-center w-full rounded-md border border-transparent bg-[#047ab7] py-3 px-8 text-center font-normal text-white hover:bg-[#05a0e3] mr-4 focus:outline-none focus:ring-2 focus:ring-[#05a0e3] focus:ring-offset-2"
                   >
                     Enviar
                   </button>

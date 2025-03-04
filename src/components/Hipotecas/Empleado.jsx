@@ -9,8 +9,9 @@ export default function Empleado() {
                     <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                             {/* Texto e información */}
-                            <div className="flex flex-col gap-y-6 rounded-xl border border-dashed border-gold-goldButton p-5 shadow-lg">
-                                <h1 className="text-3xl font-bold tracking-tight xs:text-4xl sm:text-5xl md:text-6xl lg:text-4xl text-gold-goldTitle">
+                            <div className="flex flex-col gap-y-6 rounded-xl border border-dashed border-[#05a0e3]
+ p-5 shadow-lg">
+                                <h1 className="text-3xl font-bold tracking-tight xs:text-4xl sm:text-5xl md:text-6xl lg:text-4xl text-[#047ab7]">
                                     Crédito Hipotecario para empleado
                                 </h1>
                                 <p className="mt-2 text-lg lg:text-xl text-gray-800">

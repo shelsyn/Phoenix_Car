@@ -33,11 +33,12 @@ const cards = [
         <div className="relative isolate overflow-hidden bg-white mt-5 py-0 sm:py-0">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="mx-auto max-w-2xl lg:mx-0">
-              <h2 className="text-5xl font-bold tracking-tight text-gold-goldTitle xs:text-4xl lg:text-4xl">Créditos</h2>
+              <h2 className="text-5xl font-bold tracking-tight text-[#047ab7] xs:text-4xl lg:text-4xl">Créditos</h2>
             </div>
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-6 mt-4 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
               {cards.map((card) => (
-                <div key={card.name} className="flex flex-col gap-x-4 rounded-xl border border-dashed border-gold-goldButton p-5">
+                <div key={card.name} className="flex flex-col gap-x-4 rounded-xl border border-dashed border-[#05a0e3]
+ p-5">
                   <div className="lg:text-lg sm:text-base leading-7">
                     <h3 className="font-semibold text-slate-900">{card.name}</h3>
                     {card.details && (

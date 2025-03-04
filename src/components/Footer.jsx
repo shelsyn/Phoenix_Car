@@ -61,7 +61,7 @@ export default function Footer() {
               </a>
             ))}
           </div>
-          <p className="mt-6 text-center text-xs leading-5 text-gray-500">&copy; 2023  Ventrentall. Derechos reservados.</p>
+          <p className="mt-6 text-center text-xs leading-5 text-[#047ab7]">&copy; 2023  Ventrentall. Derechos reservados.</p>
         </div>
       </footer>
     </>
