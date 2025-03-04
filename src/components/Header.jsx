@@ -32,7 +32,7 @@ export default function Header() {
         <nav className="mx-12 flex items-center justify-between space-x-8" aria-label="Global">
           {/* Logo */}
 <div className="flex items-center space-x-4 lg:flex-1">
-  <img className="h-16 w-auto object-contain" src="/LOGOREDONDO.png" alt="Logo" />
+  <img className="h-16 w-auto object-contain" src="/logos.png" alt="Logo" />
 </div>
 
 {/* Menú móvil */}
@@ -178,7 +178,7 @@ export default function Header() {
     <div className="flex justify-between items-center">
       {/* Logo con más espacio */}
       <div className="flex items-center space-x-4 mb-4">
-        <img className="h-12 w-auto object-contain" src="/LOGOREDONDO.png" alt="Logo" />
+        <img className="h-12 w-auto object-contain" src="/logos.png" alt="Logo" />
       </div>
       <button type="button" onClick={() => setMobileMenuOpen(false)}>
         <X className="h-6 w-6 text-white hover:text-gray-300 transition-all" />
