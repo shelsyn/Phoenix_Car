@@ -15,7 +15,7 @@ export default function Document() {
         <meta name="impact-site-verification" value="82679832-f122-4fef-a00d-b805cf90e014" />
         
         {/* Favicon */}
-        <link rel="shortcut icon" href="/phonelogo.png" type="image/x-icon" />
+        <link rel="shortcut icon" href="/LOGO_AZUL.PNG" type="image/x-icon" />
         
         {/* Google Site Verification */}
         <link rel="google-site-verification" href="google-site-verification=g6TmV7DgMs9nADiZ9VSxZWMN96YqsD2SNRivN6RDwOs" />
