@@ -28,7 +28,7 @@ const productosOptions = [
     name: "Alquiler de Maquinaria",
     subItems: [
       { name: "Maquinaria Industrial", href: "/maquinariaIndustrial" },
-      { name: "Maquinaria Pesada (amarilla)", href: "/catalogoActivo" },
+      { name: "Maquinaria Pesada ", href: "/catalogoActivo" },
     ],
   },
   {
