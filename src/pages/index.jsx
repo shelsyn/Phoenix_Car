@@ -28,7 +28,10 @@ export default function Home() {
         <TipoPersona />
         <Informacion />
         <Contacto />
+        
       </main>
+
+
 
       <Footer />
       <WhatsappButton />

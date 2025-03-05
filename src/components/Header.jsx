@@ -15,7 +15,8 @@ const catalogoOptions = [
 ];
 
 const productosOptions = [
-  { name: "Maquinaria Pesada", href: "/catalogoActivo" },
+ { name: 'Maquinaria Amarilla', href: '/catalogoActivo' },
+ { name: 'Equipos Medicos', href: '/medicina' },
 ];
 
 const creditosOptions = [
