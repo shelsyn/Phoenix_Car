@@ -1,26 +1,25 @@
 import Head from "next/head";
-import EquiposMedicos from "@/components/CatalogoMedicina/EquiposMedicos";
 import { Contacto } from "@/components/Contacto";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Celulares from "@/components/CatalogoCelulares/Celulares";
 import WhatsappButton from "@/components/WhatsappButton"; 
-export default function EquiposMedicosPage() {
+
+export default function RentingCelulares() {
   return (
     <>
       <Head>
-        <title>Alquiler de Equipos Médicos | VentRentAll</title>
+        <title>Renting de Celulares | VentRentAll</title>
         <meta
           name="description"
-          content="Renta de equipos médicos con las mejores condiciones. Descubre las ventajas de nuestro servicio y cotiza ahora."
+          content="Accede a celulares de alta tecnología sin afectar el presupuesto de tu empresa. Equipos nuevos y flexibilidad total."
         />
       </Head>
       <Header />
-      <EquiposMedicos />
-      <br />
+      <Celulares /> 
       <Contacto />
       <Footer />
       <WhatsappButton />
-      
     </>
   );
 }
