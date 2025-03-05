@@ -34,8 +34,8 @@ const productosOptions = [
   {
     name: "Otros Productos",
     subItems: [
-      { name: "Asset Management", href: "/assetManagement" },
-      { name: "Puntos de Venta (POS)", href: "/puntosDeVenta" },
+  
+      { name: "Puntos de Venta (POS)", href: "/catalogoPOS" },
       { name: "Equipos Médicos", href: "/medicina" },
     ],
   },
