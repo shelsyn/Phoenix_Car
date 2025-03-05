@@ -14,8 +14,8 @@ export default function MaquinariaIndustrial() {
     { nombre: "Termoformadoras", img: "/termoformadora-3.jpg" },
     { nombre: "Líneas de llenado", img: "/LENEAS.jpg" },
     { nombre: "Compresores", img: "/Compresores.jpg" },
-    { nombre: "Tornos", img: "/tornos.jpg" },
-    { nombre: "Plantas eléctricas", img: "/placas.jpg" },
+    { nombre: "Tornos", img: "/ton.jpg" },
+    { nombre: "Plantas eléctricas", img: "/plam.jpg" },
   ];
 
   const beneficios = [
