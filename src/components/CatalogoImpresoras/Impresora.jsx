@@ -101,7 +101,7 @@ const Printers = () => {
       {/* Beneficios del Servicio */}
       <div className="mt-16 py-16 bg-[#f4f8fc] rounded-3xl">
         <h2 className="text-4xl font-bold text-[#047ab7] text-center">
-          Beneficios del Alquiler de Impresoras con Rentek
+          Beneficios del Alquiler de Impresoras con VentaRentAll
         </h2>
 
         <div className="mt-10 flex flex-col items-center">
