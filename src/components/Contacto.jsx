@@ -74,7 +74,7 @@ export function Contacto() {
                 </div>
                 <div className="mt-3 flex items-center">
                   <EnvelopeIcon className="h-6 w-6 flex-shrink-0 text-[#047ab7] mr-3" aria-hidden="true" />
-                  <a href="mailto:Comercial@phoenixcar.com.co?Subject=Aquí%20el%20asunto%20del%20mail" className="hover:text-gray-700">Comercial@phoenixcar.com.co</a>
+                  <a href="mailto:gerencia@ventrentall.com?Subject=Aquí%20el%20asunto%20del%20mail" className="hover:text-gray-700">Gerencia@ventrentall.com</a>
                 </div>
               </dl>
             </div>

@@ -89,7 +89,7 @@ export function Contacto_dos() {
               </div>
               <div className="flex items-center mt-4">
                 <EnvelopeIcon className="h-8 w-8 mr-3 text-[#047ab7]" />
-                <a href="mailto:Comercial@phoenixcar.com.co?Subject=Aquí%20el%20asunto%20del%20mail" className="text-[#047ab7] text-lg">Comercial@phoenixcar.com.co</a>
+                <a href="mailto:gerencia@ventrentall.com?Subject=Aquí%20el%20asunto%20del%20mail" className="text-[#047ab7] text-lg">Gerencia@ventrentall.com</a>
               </div>
               <div className="flex items-center mt-4">
   <WhatsAppIcon className="h-8 w-8 mr-3" />
