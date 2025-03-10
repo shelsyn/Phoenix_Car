@@ -20,7 +20,7 @@ const productosOptions = [
     subItems: [
       { name: "Alquiler de Tablets", href: "/tablet" },
       { name: "Alquiler de Celulares", href: "/celulares" },
-      { name: "Alquiler de Impresoras", href: "/alquilerImpresoras" },
+      { name: "Alquiler de Impresoras", href: "/impresora" },
       { name: "Alquiler de Computadores", href: "/alquilerComputadores" },
     ],
   },
