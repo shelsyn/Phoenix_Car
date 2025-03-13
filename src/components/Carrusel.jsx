@@ -47,8 +47,9 @@ export default function Carrusel(props) {
     
     './maquinariabanner.png',
     './cel3.gif',
+    './carro.gif',
     './BAN.png',
-    './BANER23.png',
+    
 
   ];
 
