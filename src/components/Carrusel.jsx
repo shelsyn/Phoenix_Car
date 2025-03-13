@@ -46,7 +46,10 @@ export default function Carrusel(props) {
   const sliderImages = [
     
     './maquinariabanner.png',
+    './cel3.gif',
     './BAN.png',
+    './BANER23.png',
+
   ];
 
   return (
@@ -61,7 +64,7 @@ export default function Carrusel(props) {
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
-                height: '40vh', // Altura predeterminada para computadoras
+                height: '55vh', // Altura predeterminada para computadoras
               }}
             />
           </div>
