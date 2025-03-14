@@ -13,6 +13,16 @@ const catalogoOptions = [
   { name: "Catálogo Empresa", href: "/catalogoEmpresa" },
   { name: "Catálogo Persona Natural", href: "/catalogoNatural" },
 ];
+const marcasAutos = [
+  { imgSrc: "/renaulds.avif", href: "/marcas/" },
+  { imgSrc: "/toyor.avif", href: "/marcas/toyota" },
+  { imgSrc: "/susu.avif", href: "/marcas/suzuki" },
+  {  imgSrc: "/citro.avif", href: "/marcas/citroen" },
+  {  imgSrc: "/sub.avif", href: "/marcas/subaru" },
+  {  imgSrc: "/dfsk.avif", href: "/marcas/dfsk" },
+  {  imgSrc: "/gwm.avif", href: "/marcas/gwm" },
+  {  imgSrc: "/seres.avif", href: "/marcas/seres" },
+];
 
 const productosOptions = [
   {
@@ -44,15 +54,14 @@ const productosOptions = [
 
 const creditosOptions = [
   { name: "Crédito de vehículo", href: "/quienesSomos" },
-  { name: "Crédito Hipotecario", href: "/hipoteca" },
+
 ];
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <>
-      <header className="bg-gradient-to-r from-[#1e4d89] via-[#147ac4] to-[#05a0e3]
-">
+      <header className="bg-gradient-to-r from-[#1e4d89] via-[#147ac4] to-[#05a0e3]">
         <nav className="mx-12 flex items-center justify-between space-x-8" aria-label="Global">
           {/* Logo */}
 <div className="flex items-center space-x-4 lg:flex-1">
@@ -82,8 +91,82 @@ export default function Header() {
       {item.name}
     </Link>
   ))}
+ {/* Productos */}
 
-  {/* Catálogo */}
+<Popover className="relative">
+  <Popover.Button className="flex items-center gap-x-1 text-lg font-semibold leading-6 text-white hover:text-gray-300 transition-all">
+    Productos
+    <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
+  </Popover.Button>
+  <Transition
+    as={Fragment}
+    enter="transition ease-out duration-200"
+    enterFrom="opacity-0 translate-y-1"
+    enterTo="opacity-100 translate-y-0"
+    leave="transition ease-in duration-150"
+    leaveFrom="opacity-100 translate-y-0"
+    leaveTo="opacity-0 translate-y-1">
+    {/* Panel con estructura mejorada */}
+    <Popover.Panel className="absolute left-0 z-10 mt-3 w-[650px] bg-white rounded-lg shadow-lg ring-1 ring-gray-900/5 p-6 grid grid-cols-3 gap-6 text-left">
+      {productosOptions.map((category) => (
+        <div key={category.name} className="space-y-3">
+          <h4 className="text-gray-800 font-semibold text-md border-b pb-2">{category.name}</h4>
+          <div className="space-y-2">
+            {category.subItems.map((subItem) => (
+              <Link 
+                key={subItem.name} 
+                href={subItem.href} 
+                className="flex items-center gap-2 p-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all"
+              >
+                <span className="w-2 h-2 bg-[#05a0e3] rounded-full" />
+                {subItem.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      ))}
+    </Popover.Panel>
+  </Transition>
+</Popover>
+
+ 
+{/* Menú de Marcas de Autos */}
+<Popover className="relative">
+  <Popover.Button className="flex items-center gap-x-1 text-lg font-semibold leading-6 text-white hover:text-gray-300">
+    Vehículos Nuevos
+    <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
+  </Popover.Button>
+
+  <Transition
+    as={Fragment}
+    enter="transition ease-out duration-200"
+    enterFrom="opacity-0 translate-y-1"
+    enterTo="opacity-100 translate-y-0"
+    leave="transition ease-in duration-150"
+    leaveFrom="opacity-100 translate-y-0"
+    leaveTo="opacity-0 translate-y-1">
+    <Popover.Panel className="absolute left-0 z-10 mt-3 w-[700px] bg-white rounded-lg shadow-lg ring-1 ring-gray-900/3 p-6">
+      <div className="grid grid-cols-4 gap-4">
+        {marcasAutos.map((marca) => (
+          <Link 
+            key={marca.name} 
+            href={marca.href} 
+            className="flex items-center justify-center bg-gray-100 rounded-xl p-6 shadow-md hover:shadow-lg transition duration-200"
+          >
+            <img 
+              src={marca.imgSrc} 
+              alt={marca.name} 
+              className="h-20 w-20 object-contain"
+            />
+          </Link>
+        ))}
+      </div>
+    </Popover.Panel>
+  </Transition>
+</Popover>
+
+      
+        {/* Catálogo */}
   <Popover className="relative">
     <Popover.Button className="flex items-center gap-x-1 text-lg font-semibold leading-6 text-white hover:text-gray-200">
       Catálogo
@@ -114,51 +197,9 @@ export default function Header() {
       </Popover.Panel>
     </Transition>
   </Popover>
+    
 
-
-           
-           {/* Productos */}
-
-<Popover className="relative">
-  <Popover.Button className="flex items-center gap-x-1 text-lg font-semibold leading-6 text-white hover:text-gray-300 transition-all">
-    Productos
-    <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
-  </Popover.Button>
-  <Transition
-    as={Fragment}
-    enter="transition ease-out duration-200"
-    enterFrom="opacity-0 translate-y-1"
-    enterTo="opacity-100 translate-y-0"
-    leave="transition ease-in duration-150"
-    leaveFrom="opacity-100 translate-y-0"
-    leaveTo="opacity-0 translate-y-1"
-  >
-    {/* Panel con estructura mejorada */}
-    <Popover.Panel className="absolute left-0 z-10 mt-3 w-[650px] bg-white rounded-lg shadow-lg ring-1 ring-gray-900/5 p-6 grid grid-cols-3 gap-6 text-left">
-      {productosOptions.map((category) => (
-        <div key={category.name} className="space-y-3">
-          <h4 className="text-gray-800 font-semibold text-md border-b pb-2">{category.name}</h4>
-          <div className="space-y-2">
-            {category.subItems.map((subItem) => (
-              <Link 
-                key={subItem.name} 
-                href={subItem.href} 
-                className="flex items-center gap-2 p-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all"
-              >
-                <span className="w-2 h-2 bg-[#05a0e3] rounded-full" />
-                {subItem.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      ))}
-    </Popover.Panel>
-  </Transition>
-</Popover>
-
-
-
-            {/* Créditos */}
+  {/* Créditos */}
             <Popover className="relative">
               <Popover.Button className="flex items-center gap-x-1 text-lg font-semibold leading-6 text-white hover:text-gray-300 transition-all">
                 Créditos
@@ -226,6 +267,7 @@ export default function Header() {
         <HomeIcon className="h-5 w-5 text-gray-300" />
         Inicio
       </Link>
+      
 
       {/* Categoría Catálogo */}
       <div className="border-b border-white/20 pb-3">
@@ -241,8 +283,27 @@ export default function Header() {
           ))}
         </div>
       </div>
+{/* Marcas de Autos en Móvil */}
+<div className="mt-6">
+  <h3 className="text-white font-semibold text-lg mb-3">Vehículos Nuevos</h3>
+  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+    {marcasAutos.map((marca) => (
+      <Link 
+        key={marca.name} 
+        href={marca.href} 
+        className="flex flex-col items-center bg-gray-900/20 rounded-lg p-4 shadow-md hover:shadow-lg transition duration-200"
+      >
+        <img 
+          src={marca.imgSrc} 
+          alt={marca.name} 
+          className="h-16 w-16 object-contain"
+        />
+      </Link>
+    ))}
+  </div>
+</div>
 
-     
+          <div className="border-b border-white/20 pb-3"></div>
    {/* Categoría Productos */}
 <div className="border-b border-white/20 pb-3">
   <div className="flex items-center gap-3 text-white font-semibold text-lg">
