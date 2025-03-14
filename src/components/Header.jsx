@@ -107,7 +107,7 @@ export default function Header() {
     leaveFrom="opacity-100 translate-y-0"
     leaveTo="opacity-0 translate-y-1">
     {/* Panel con estructura mejorada */}
-    <Popover.Panel className="absolute left-0 z-10 mt-3 w-[650px] bg-white rounded-lg shadow-lg ring-1 ring-gray-900/5 p-6 grid grid-cols-3 gap-6 text-left">
+    <Popover.Panel className="absolute left-0 z-10 mt-6 w-[650px] bg-white rounded-lg shadow-lg ring-1 ring-gray-900/5 p-6 grid grid-cols-3 gap-6 text-left">
       {productosOptions.map((category) => (
         <div key={category.name} className="space-y-3">
           <h4 className="text-gray-800 font-semibold text-md border-b pb-2">{category.name}</h4>
@@ -145,7 +145,7 @@ export default function Header() {
     leave="transition ease-in duration-150"
     leaveFrom="opacity-100 translate-y-0"
     leaveTo="opacity-0 translate-y-1">
-    <Popover.Panel className="absolute left-0 z-10 mt-3 w-[700px] bg-white rounded-lg shadow-lg ring-1 ring-gray-900/3 p-6">
+    <Popover.Panel className="absolute left-0 z-10 mt-6 w-[700px] bg-white rounded-lg shadow-lg ring-1 ring-gray-900/3 p-6">
       <div className="grid grid-cols-4 gap-4">
         {marcasAutos.map((marca) => (
           <Link 
@@ -181,7 +181,7 @@ export default function Header() {
       leaveFrom="opacity-100 translate-y-0"
       leaveTo="opacity-0 translate-y-1"
     >
-      <Popover.Panel className="absolute left-0 z-10 mt-3 w-56 overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-gray-900/5">
+      <Popover.Panel className="absolute left-0 z-10 mt-6 w-56 overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-gray-900/5">
         <div className="p-4 space-y-2">
           {catalogoOptions.map((item) => (
             <Link
@@ -214,7 +214,7 @@ export default function Header() {
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-1"
               >
-                <Popover.Panel className="absolute left-0 z-10 mt-3 w-56 overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-gray-900/5">
+                <Popover.Panel className="absolute left-0 z-10 mt-6 w-56 overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-gray-900/5">
                   <div className="p-4 space-y-2">
                     {creditosOptions.map((item) => (
                       <Link
