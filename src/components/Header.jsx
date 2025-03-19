@@ -14,7 +14,7 @@ const catalogoOptions = [
   { name: "Catálogo Persona Natural", href: "/catalogoNatural" },
 ];
 const marcasAutos = [
-  { imgSrc: "/renaulds.avif", href: "/marcas/" },
+  { imgSrc: "/renaulds.avif", href: "/renauld" },
   { imgSrc: "/toyor.avif", href: "/marcas/toyota" },
   { imgSrc: "/susu.avif", href: "/marcas/suzuki" },
   {  imgSrc: "/citro.avif", href: "/marcas/citroen" },
@@ -270,7 +270,7 @@ export default function Header() {
       
 
       {/* Categoría Catálogo */}
-      <div className="border-b border-white/20 pb-3">
+      <div className="border-b border-white/20 pb-8">
         <div className="flex items-center gap-3 text-white font-semibold text-lg">
           <FolderIcon className="h-5 w-5 text-gray-300" />
           Catálogo
