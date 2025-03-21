@@ -16,11 +16,11 @@ const catalogoOptions = [
 
 const marcasAutos = [
   { id: 4, name: "Renault", imgSrc: "/renaulds.avif", href: "/renauld" },
-  { id: 5, name: "Toyota", imgSrc: "/toyor.avif", href: "/marcas/toyota" },
-  { id: 6, name: "Suzuki", imgSrc: "/susu.avif", href: "/marcas/suzuki" },
-  { id: 7, name: "Citroen", imgSrc: "/citro.avif", href: "/marcas/citroen" },
-  { id: 8, name: "Subaru", imgSrc: "/sub.avif", href: "/marcas/subaru" },
-  { id: 9, name: "Dfsk", imgSrc: "/dfsk.avif", href: "/marcas/dfsk" },
+  { id: 5, name: "Toyota", imgSrc: "/toyor.avif", href: "/toyota" },
+  { id: 6, name: "Suzuki", imgSrc: "/susu.avif", href: "/suzuki" },
+  { id: 7, name: "Citroen", imgSrc: "/citro.avif", href: "/citroen" },
+  { id: 8, name: "Subaru", imgSrc: "/sub.avif", href: "/subaru" },
+  { id: 9, name: "Chevrolet", imgSrc: "/ChevroletLogo.png", href: "/Chevrolet" },
   { id: 10, name: "Gwm", imgSrc: "/gwm.avif", href: "/marcas/gwm" },
   { id: 11, name: "Seres", imgSrc: "/seres.avif", href: "/marcas/seres" },
 ];

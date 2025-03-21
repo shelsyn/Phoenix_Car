@@ -2,26 +2,25 @@ import Head from "next/head";
 import { Contacto } from "@/components/Contacto";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import VentaH from "@/components/RenauldV/VentaH";
-import Vent2 from "@/components/RenauldV/Vent2";
-import Vent3 from "@/components/RenauldV/Vent3";
-import ProductCard from "@/components/RenauldV/ProductCard";
+import Catalogoty from "@/components/Toyota/Catalogoty";
+import PrincipalTy from "@/components/Toyota/PrincipalTy";
+
 import WhatsappButton from "@/components/WhatsappButton"; 
 
-export default function RenauldV() {
+export default function Toyota() {
   return (
     <>
       <Head>
-        <title>Venta de Automoviles Renauld | VentRentAll</title>
+        <title>Venta de Autos Toyota | VentRentAll</title>
         <meta
-          name="Renauld"
+          name="Toyota"
           content="Venta de Vehiculos de las mejores marcas con entrega rápida y soporte técnico especializado. Cotiza ahora."
         />
       </Head>
       <Header />
 
-      <VentaH /> 
-      <Vent2 /> 
+      <PrincipalTy /> 
+      <Catalogoty /> 
     <br />
       <Contacto />
       <Footer />
