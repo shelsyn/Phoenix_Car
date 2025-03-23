@@ -4,29 +4,34 @@ import Slider from "react-slick";
 export default function ServiciosCarrusel() {
   const items = [
     {
-      src: "https://trinyrent.com/wp-content/uploads/2023/06/renting-de-vehiculos-en-Peru.jpg",
+      src: "https://static.motor.es/fotos-noticias/2018/08/dudas-renting-coches-201849541_1.jpg",
       href: "/catalogoNatural",
       label: "Renting Vehicular para Personas Naturales",
+      description: "Disfruta de un vehículo nuevo sin preocuparte por la depreciación.",
     },
     {
-      src: "https://rentingautomayor.com/wp-content/uploads/2022/06/RentingAutomayor_Web_Inicio_junio-03.png",
+      src: "https://media.licdn.com/dms/image/v2/D4E12AQHmP8GvodguAQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1691202677700?e=2147483647&v=beta&t=7TBJRr2gzk0UVXLLd1JE8SAcoN8SYjkwc-DphcuSuWY",
       href: "/catalogoEmpresa",
       label: "Renting Vehicular para Empresas",
+      description: "Optimiza tu flota vehicular y reduce costos operativos.",
     },
     {
       src: "https://www.organizacionforsa.com/img/dummies/alquiler.jpg",
       href: "/catalogoActivo",
       label: "Alquiler de Maquinaria Pesada",
+      description: "Accede a maquinaria de alta calidad para tus proyectos.",
     },
     {
-      src: "https://static.wixstatic.com/media/af5ee7_abf4748fa18c4f8dbb4a626f8a98a783~mv2.jpg",
+      src: "https://www.promedco.com/images/Noticias_2022/promedco-equipos-medicos-9-11-22-1.jpg",
       href: "/medicina",
       label: "Renting de Equipos Médicos",
+      description: "Equipa tu clínica con tecnología de punta sin grandes inversiones.",
     },
     {
-      src: "https://itelco.com.co/wp-content/uploads/2020/07/itelco-seguridad-electronica-768x381-1.jpg",
+      src: "https://m.lineaitalia.com.mx/wp-content/uploads/2022/12/Captura-de-pantalla-2022-12-20-a-las-18.41.51-1024x639.png",
       href: "/celulares",
       label: "Renting de Equipos de Oficina",
+      description: "Mantén tu oficina actualizada con equipos modernos y eficientes.",
     },
   ];
 
@@ -40,6 +45,13 @@ export default function ServiciosCarrusel() {
     autoplaySpeed: 3000,
     responsive: [
       {
+        breakpoint: 1280, // Large screens
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
         breakpoint: 1024, // Tablets
         settings: {
           slidesToShow: 2,
@@ -47,7 +59,7 @@ export default function ServiciosCarrusel() {
         },
       },
       {
-        breakpoint: 640, // Móviles
+        breakpoint: 640, // Mobiles
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -61,24 +73,25 @@ export default function ServiciosCarrusel() {
     <section id="servicios" className="bg-gray-50 py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Título */}
-        <div className="text-center mb-10">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#047ab7] mb-4">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl sm:text-5xl font-bold text-[#047ab7] mb-4">
             Nuestro Catálogo de Soluciones
           </h2>
-          <p className="text-lg text-gray-600 sm:text-xl">
-            Descubre nuestras opciones y elige el servicio ideal para ti o tu empresa.
+          <p className="text-lg text-gray-700 sm:text-xl max-w-2xl mx-auto">
+            Descubre nuestras opciones y elige el servicio ideal para ti o tu
+            empresa. Ofrecemos soluciones innovadoras y flexibles.
           </p>
         </div>
 
         {/* Carrusel */}
         <Slider {...settings}>
           {items.map((item, index) => (
-            <div key={index} className="px-2">
+            <div key={index} className="px-3">
               <Link href={item.href}>
-                <div className="relative group rounded-lg overflow-hidden shadow-xl border border-gray-200">
+                <div className="relative group rounded-2xl overflow-hidden shadow-xl border border-gray-200 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
                   {/* Imagen de fondo */}
                   <div
-                    className="h-64 sm:h-72 lg:h-80 bg-gray-200 rounded-lg"
+                    className="h-64 sm:h-72 lg:h-80 bg-gray-200 rounded-2xl transition-opacity duration-300 group-hover:opacity-90"
                     style={{
                       backgroundImage: `url(${item.src})`,
                       backgroundSize: "cover",
@@ -86,11 +99,14 @@ export default function ServiciosCarrusel() {
                     }}
                   ></div>
 
-                  {/* Capa de fondo con degradado en móviles */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/60 via-black/20 to-transparent sm:group-hover:from-black/70 transition-all duration-300">
-                    <span className="text-lg sm:text-xl font-bold text-white text-center">
+                  {/* Capa de fondo con degradado */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-t from-black/70 via-black/40 to-transparent p-6">
+                    <span className="text-xl sm:text-2xl font-bold text-white text-center mb-2">
                       {item.label}
                     </span>
+                    <p className="text-sm text-gray-200 text-center hidden group-hover:block">
+                      {item.description}
+                    </p>
                   </div>
                 </div>
               </Link>

@@ -11,7 +11,7 @@ export default function RentingCelulares() {
       <Head>
         <title>Renting de Computadoras | VentRentAll</title>
         <meta
-          name="description"
+          name="Computadoras"
           content="Accede a celulares de alta tecnología sin afectar el presupuesto de tu empresa. Equipos nuevos y flexibilidad total."
         />
       </Head>

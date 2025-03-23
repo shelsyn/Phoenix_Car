@@ -33,7 +33,7 @@ const productosOptions = [
       { id: 13, name: "Alquiler de Tablets", href: "/tablet" },
       { id: 14, name: "Alquiler de Celulares", href: "/celulares" },
       { id: 15, name: "Alquiler de Impresoras", href: "/impresora" },
-      { id: 16, name: "Alquiler de Computadores", href: "/alquilerComputadores" },
+      { id: 16, name: "Alquiler de Computadores", href: "/computadores" },
     ],
   },
   {
