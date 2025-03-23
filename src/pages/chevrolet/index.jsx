@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CatalogoCh from "@/components/Chevrolet/CatalogoCh";
 import PrincipalVh from "@/components/Chevrolet/PrincipalVh";
+import VehiculosNuevos from "@/components/VehiculosNuevos";
 
 import WhatsappButton from "@/components/WhatsappButton"; 
 
@@ -21,6 +22,7 @@ export default function Chevrolet() {
 
       <PrincipalVh /> 
       <CatalogoCh /> 
+      <VehiculosNuevos /> 
     <br />
       <Contacto />
       <Footer />

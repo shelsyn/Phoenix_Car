@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CatalogoSb from "@/components/Subaru/CatalogoSb";
 import PrincipalSb from "@/components/Subaru/PrincipalSb";
-
+import VehiculosNuevos from "@/components/VehiculosNuevos";
 import WhatsappButton from "@/components/WhatsappButton"; 
 
 export default function Suzuki() {
@@ -21,6 +21,7 @@ export default function Suzuki() {
 
       <PrincipalSb /> 
       <CatalogoSb /> 
+      <VehiculosNuevos /> 
     <br />
       <Contacto />
       <Footer />

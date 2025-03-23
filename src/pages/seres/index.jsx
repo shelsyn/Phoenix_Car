@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CatalogoSeres from "@/components/Seres/CatalogoSeres";
 import PrincipalSers from "@/components/Seres/PrincipalSers";
-
+import VehiculosNuevos from "@/components/VehiculosNuevos";
 import WhatsappButton from "@/components/WhatsappButton"; 
 
 export default function Seres() {
@@ -21,6 +21,7 @@ export default function Seres() {
 
       <PrincipalSers /> 
       <CatalogoSeres /> 
+      <VehiculosNuevos /> 
     <br />
       <Contacto />
       <Footer />

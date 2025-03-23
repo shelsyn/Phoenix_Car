@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import VentaH from "@/components/RenauldV/VentaH";
 import Vent2 from "@/components/RenauldV/Vent2";
-
+import VehiculosNuevos from "@/components/VehiculosNuevos";
 import WhatsappButton from "@/components/WhatsappButton"; 
 
 export default function RenauldV() {
@@ -21,6 +21,7 @@ export default function RenauldV() {
 
       <VentaH /> 
       <Vent2 /> 
+      <VehiculosNuevos /> 
     <br />
       <Contacto />
       <Footer />

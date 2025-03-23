@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CatalogoGw from "@/components/Gwm/CatalogoGw";
 import PrincipalGw from "@/components/Gwm/PrincipalGw";
-
+import VehiculosNuevos from "@/components/VehiculosNuevos";
 import WhatsappButton from "@/components/WhatsappButton"; 
 
 export default function Suzuki() {
@@ -21,6 +21,7 @@ export default function Suzuki() {
 
       <PrincipalGw /> 
       <CatalogoGw /> 
+      <VehiculosNuevos /> 
     <br />
       <Contacto />
       <Footer />

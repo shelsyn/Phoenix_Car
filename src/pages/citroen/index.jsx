@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Catalogocrt from "@/components/Citroen/Catalogocrt";
 import Principal from "@/components/Citroen/Principal";
-
+import VehiculosNuevos from "@/components/VehiculosNuevos";
 import WhatsappButton from "@/components/WhatsappButton"; 
 
 export default function Toyota() {
@@ -21,6 +21,7 @@ export default function Toyota() {
 
       <Principal /> 
       <Catalogocrt /> 
+      <VehiculosNuevos /> 
     <br />
       <Contacto />
       <Footer />

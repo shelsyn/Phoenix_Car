@@ -9,7 +9,7 @@ import TipoPersona from "@/components/TipoPersona";
 import Head from "next/head";
 import Informacion from "@/components/Informacion";
 import WhatsappButton from "@/components/WhatsappButton"; 
-
+import VehiculosNuevos from "@/components/VehiculosNuevos";
 export default function Home() {
   return (
     <>
@@ -27,6 +27,7 @@ export default function Home() {
         <Renting />
         <TipoPersona />
         <Informacion />
+        <VehiculosNuevos /> 
         <Contacto />
         
       </main>
