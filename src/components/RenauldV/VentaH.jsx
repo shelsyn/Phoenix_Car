@@ -1,6 +1,7 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { useMediaQuery } from 'react-responsive';
 
 const sliderSettings = {
   dots: true,
@@ -9,7 +10,7 @@ const sliderSettings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 4000, // Cambiar a 2000 para cambiar cada 2 segundos
+  autoplaySpeed: 4000,
   nextArrow: <CustomNextArrow />,
   prevArrow: <CustomPrevArrow />,
 };
@@ -43,53 +44,65 @@ function CustomPrevArrow(props) {
 }
 
 export default function Carrusel(props) {
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+
   const sliderImages = [
-    
-    './reny.gif',
-    './rentd2.gif',
+    {
+      desktop:
+        'https://alborautosrenault.com/wp-content/uploads/2021/08/Banner-Utilitarios-Nuevos-Renault-WEB-min.png',
+      mobile:
+        'https://casabritanica.com.co/wp-content/uploads/2025/01/casa-britanica-renault-banner-blog-stepway-03.webp',
+    },
+    {
+      desktop:
+        'https://static.caronphone.com/public/brands/29/29_banner.webp',
+      mobile:
+      'https://autojujuy.com.ar/_red/autojujuy/userfiles/images/pro%2Bmaster.jpg',
+    },
+   
   ];
+
+  let currentImage;
+  let currentHeight;
+  let currentBackgroundSize;
 
   return (
     <section id="Home" className="relative w-full overflow-hidden group">
       <Slider {...sliderSettings}>
-        {sliderImages.map((image, index) => (
-          <div key={index}>
-            <div
-              className="w-screen"
-              style={{
-                backgroundImage: `url(${image})`,
-                backgroundPosition: 'center',
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-                height: '55vh', // Altura predeterminada para computadoras
-              }}
-            />
-          </div>
-        ))}
+        {sliderImages.map((image, index) => {
+          if (isMobile) {
+            currentImage = image.mobile;
+            currentHeight = '60vh';
+            currentBackgroundSize = 'cover'; // Change to 'cover' for mobile
+          } else {
+            currentImage = image.desktop;
+            currentHeight = '60vh';
+            currentBackgroundSize = 'cover'; // Keep 'cover' for desktop
+          }
+          return (
+            <div key={index}>
+              <div
+                className="w-screen"
+                style={{
+                  backgroundImage: `url(${currentImage})`,
+                  backgroundPosition: 'center',
+                  backgroundSize: currentBackgroundSize, // Use the dynamic backgroundSize
+                  backgroundRepeat: 'no-repeat',
+                  height: currentHeight,
+                }}
+              />
+            </div>
+          );
+        })}
       </Slider>
 
-      {/* Estilos Responsivos */}
-      <style>
-        {`
-          @media screen and (max-width: 767px) {
-            #Home .slick-slide div {
-              background-size: cover !important;
-              background-repeat: no-repeat !important;
-              background-position: center !important;
-              height: 17vh !important; /* Ajustar la altura de la imagen para dispositivos móviles */
-            }
-          }
-
-          @media screen and (max-width: 1024px) {
-            #Home .slick-slide div {
-              background-size: cover !important;
-              background-repeat: no-repeat !important;
-              background-position: center !important;
-              height: 20vh !important; /* Ajustar la altura de la imagen para dispositivos iPad */
-            }
-          }
-        `}
-      </style>
+      {/* Responsive Styles */}
+      <style jsx>{`
+        #Home .slick-slide div {
+          background-repeat: no-repeat !important;
+          background-position: center !important;
+        }
+      `}</style>
     </section>
   );
 }

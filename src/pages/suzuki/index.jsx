@@ -13,7 +13,7 @@ export default function Suzuki() {
       <Head>
         <title>Venta de Autos Suzuki | VentRentAll</title>
         <meta
-          name="Citroen"
+          name="Suzuki"
           content="Venta de Vehiculos de las mejores marcas con entrega rápida y soporte técnico especializado. Cotiza ahora."
         />
       </Head>

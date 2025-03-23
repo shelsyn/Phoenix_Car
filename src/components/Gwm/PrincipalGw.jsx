@@ -49,15 +49,15 @@ export default function Carrusel(props) {
   const sliderImages = [
     {
       desktop:
-        'https://derco.com.co/wp-content/uploads/2020/11/banner-noticia-suzuki.jpg',
+        'https://gwmhg.mx/wp-content/uploads/banners_web_gwm_poer.jpg',
       mobile:
-        'https://derco.com.co/wp-content/uploads/2020/11/banner-noticia-suzuki.jpg',
+        'https://i0.wp.com/haval.com.bd/wp-content/uploads/2023/07/WhatsApp-Image-2023-07-06-at-17.34.23.jpg',
     },
     {
       desktop:
-        'https://autozen.com.co/wp-content/uploads/2023/12/Autozen-suzuki-s-cross-contadores.webp',
+        'https://media.adtorqueedge.com/new-cars/gwmhaval-nz/tank300/banner.jpg',
       mobile:
-        'https://autozen.com.co/wp-content/uploads/2025/02/autozen-suzuki-banner-home-conectando-desktop.png',
+        'https://www.gwm.cl/media/p51fdjl2/1673628575-ocrjng2qjf.webp',
     },
    
   ];

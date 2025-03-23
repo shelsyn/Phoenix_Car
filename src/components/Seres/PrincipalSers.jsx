@@ -49,15 +49,15 @@ export default function Carrusel(props) {
   const sliderImages = [
     {
       desktop:
-        'https://derco.com.co/wp-content/uploads/2020/11/banner-noticia-suzuki.jpg',
+        'https://www.seresautosmexico.com/static/agency-go-virtual/Motornation/Seres/5_EV/2024/BANNER-BG.jpg',
       mobile:
-        'https://derco.com.co/wp-content/uploads/2020/11/banner-noticia-suzuki.jpg',
+        'https://i.ytimg.com/vi/nnI9yAPoFFo/maxresdefault.jpg',
     },
     {
       desktop:
-        'https://autozen.com.co/wp-content/uploads/2023/12/Autozen-suzuki-s-cross-contadores.webp',
+        'https://www.serescolombia.com/seres/site/artic/20230314/imag/foto_0000000120230314164457/Central_banner_1.jpg',
       mobile:
-        'https://autozen.com.co/wp-content/uploads/2025/02/autozen-suzuki-banner-home-conectando-desktop.png',
+        'https://revistaautosmas.com/2023/07/31/seres-nueva-marca-de-automoviles-electricos-que-llega-a-colombia/seres-3/',
     },
    
   ];
