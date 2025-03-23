@@ -5,28 +5,28 @@ function Catalogo() {
     {
       id: 1,
       nombre: 'Nueva C3',
-      precio: 67990000,
+      precio: "Nueva C3", // Replaced price with name
       imagen: 'https://www.citroen.com.co/wp-content/uploads/2023/05/c3-gris-artense-bitono-negro.jpg',
       descripcion: 'Nueva C3',
     },
     {
       id: 2,
       nombre: 'Nueva C4 Cactus',
-      precio: 93990000,
+      precio: "Nueva C4 Cactus", // Replaced price with name
       imagen: 'https://www.citroen.com.co/wp-content/uploads/2023/08/c4-rojo-rubi.jpg',
       descripcion: 'LA NUEVA CITROËN C4 CACTUS',
     },
     {
       id: 3,
       nombre: 'Nueva Aircross SUV',
-      precio: 79990000,
+      precio: "Nueva Aircross SUV", // Replaced price with name
       imagen: 'https://www.citroen.com.co/wp-content/uploads/2022/10/blanco-nacar-unique-1.jpg',
       descripcion: 'NUEVA AIRCROSS SUV',
     },
     {
       id: 4,
       nombre: 'SUV C5 Aircross',
-      precio: 148490000,
+      precio: "SUV C5 Aircross", // Replaced price with name
       imagen: 'https://visuel3d-secure.citroen.com/V3DImage.ashx?client=DI1&version=1CCESYUP41B0EO70&color=0MM00N9V&width=360&ratio=1&view=001&format=jpg&quality=90',
       descripcion: 'SUV C5 Aircross',
     },
@@ -69,8 +69,8 @@ function Catalogo() {
               <div className="p-5 mt-auto flex flex-col">
                 <div className="mb-4">
                   <span className="font-bold text-[#047ab7] text-xl">
-                    <span className="font-normal text-sm mr-1">a partir de</span>
-                    ${producto.precio.toLocaleString()}
+                    <span className="font-normal text-sm mr-1"></span>
+                    {producto.precio}
                   </span>
                 </div>
                 <a

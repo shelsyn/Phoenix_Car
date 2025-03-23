@@ -20,7 +20,7 @@ const marcasAutos = [
   { id: 6, name: "Suzuki", imgSrc: "/susu.avif", href: "/suzuki" },
   { id: 7, name: "Citroen", imgSrc: "/citro.avif", href: "/citroen" },
   { id: 8, name: "Subaru", imgSrc: "/sub.avif", href: "/subaru" },
-  { id: 9, name: "Chevrolet", imgSrc: "/ChevroletLogo.png", href: "/Chevrolet" },
+  { id: 9, name: "Chevrolet", imgSrc: "/ChevroletLogo.png", href: "/chevrolet" },
   { id: 10, name: "Gwm", imgSrc: "/gwm.avif", href: "/gwm" },
   { id: 11, name: "Seres", imgSrc: "/seres.avif", href: "/seres" },
 ];

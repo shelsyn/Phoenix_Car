@@ -8,7 +8,7 @@ function Catalogo() {
     {
       id: 1,
       nombre: 'Yaris',
-      precio: 89900000,
+      precio: "Yaris", // Replaced price with name
       imagen: 'https://www.toyota.com.co/wp-content/uploads/2020/08/Yaris-HB-Siluetas-768x512-1.png',
       categoria: 'Carros',
       descripcion: 'Hatchback compacto y moderno.',
@@ -16,7 +16,7 @@ function Catalogo() {
     {
       id: 2,
       nombre: 'Corolla',
-      precio: 108500000,
+      precio: "Corolla", // Replaced price with name
       imagen: 'https://autoamerica.com.co/wp-content/uploads/2020/08/COROLLA-XEI-HEV-PLATA-METALICO.jpg',
       categoria: 'Carros',
       descripcion: 'Sedán versátil y espacioso.',
@@ -25,7 +25,7 @@ function Catalogo() {
     {
       id: 3,
       nombre: '4Runner',
-      precio: 246900000,
+      precio: "4Runner", // Replaced price with name
       imagen: 'https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/max/2025/4runner/trdpro/8634/040/36/5.png?fmt=png-alpha&wid=930&qlt=90',
       categoria: 'Camionetas',
       descripcion: 'SUV robusta y versátil.',
@@ -33,7 +33,7 @@ function Catalogo() {
     {
       id: 4,
       nombre: 'Corolla Cross',
-      precio: 135900000,
+      precio: "Corolla Cross", // Replaced price with name
       imagen: 'https://www.toyota.com.co/wp-content/uploads/2024/05/Corolla-Cross-SEG_super-blanco-1.png',
       categoria: 'Camionetas',
       descripcion: 'SUV versátil y espaciosa.',
@@ -41,7 +41,7 @@ function Catalogo() {
     {
       id: 5,
       nombre: 'Fortuner',
-      precio: 237900000,
+      precio: "Fortuner", // Replaced price with name
       imagen: 'https://www.toyota.com.co/wp-content/uploads/2021/02/super-blanco-2.png',
       categoria: 'Camionetas',
       descripcion: 'SUV robusta, ideal para cualquier terreno.',
@@ -49,7 +49,7 @@ function Catalogo() {
     {
       id: 6,
       nombre: 'Land Cruiser 300',
-      precio: 613500000,
+      precio: "Land Cruiser 300", // Replaced price with name
       imagen: 'https://distoyota.com/wp-content/uploads/2024/01/Land-cruiser-300-ZX-Gasolina-AT.png',
       categoria: 'Camionetas',
       descripcion: 'SUV de lujo, potente y sofisticada.',
@@ -57,7 +57,7 @@ function Catalogo() {
     {
       id: 7,
       nombre: 'Land Cruiser Prado',
-      precio: 299000000,
+      precio: "Land Cruiser Prado", // Replaced price with name
       imagen: 'https://www.toyota.com.co/wp-content/uploads/2024/05/TX-L-super-blanco-1.png',
       categoria: 'Camionetas',
       descripcion: 'SUV de lujo, potente y sofisticada.',
@@ -65,7 +65,7 @@ function Catalogo() {
     {
       id: 8,
       nombre: 'RAV 4',
-      precio: 198500000,
+      precio: "RAV 4", // Replaced price with name
       imagen: 'https://toyotaarmenia.com/wp-content/uploads/2021/03/7colores_0014_rav4_xle_azul_nocturno.png',
       categoria: 'Camionetas',
       descripcion: 'SUV versátil y espaciosa.',
@@ -73,7 +73,7 @@ function Catalogo() {
     {
       id: 9,
       nombre: 'Yaris Cross',
-      precio: 131900000,
+      precio: "Yaris Cross", // Replaced price with name
       imagen: 'https://www.toyota.com.co/wp-content/uploads/2024/05/Colores-Yaris-Cross-XS-super-blanco-2.png',
       categoria: 'Camionetas',
       descripcion: 'SUV compacta, moderna y eficiente.',
@@ -82,7 +82,7 @@ function Catalogo() {
     {
       id: 10,
       nombre: 'Hilux',
-      precio: 213900000,
+      precio: "Hilux", // Replaced price with name
       imagen: 'https://www.toyota.com.co/wp-content/uploads/2021/02/hilux_destacada-2-4-AT.jpg',
       categoria: 'PickUps',
       descripcion: 'Pickup resistente y confiable.',
@@ -90,7 +90,7 @@ function Catalogo() {
     {
       id: 11,
       nombre: 'Tundra',
-      precio: 432000000,
+      precio: "Tundra", // Replaced price with name
       imagen: 'https://www.toyota.com.co/wp-content/uploads/2023/10/Colores-Tundra_756_blanco-perla.png',
       categoria: 'PickUps',
       descripcion: 'Pickup de alto rendimiento y capacidad.',
@@ -155,8 +155,8 @@ function Catalogo() {
               <div className="p-5 mt-auto flex flex-col">
                 <div className="mb-4">
                   <span className="font-bold text-[#047ab7] text-xl">
-                    <span className="font-normal text-sm mr-1">Desde</span>
-                    ${producto.precio.toLocaleString()}
+                    <span className="font-normal text-sm mr-1"></span>
+                    {producto.precio}
                   </span>
                 </div>
                 <a

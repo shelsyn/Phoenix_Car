@@ -1,0 +1,108 @@
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { useMediaQuery } from 'react-responsive';
+
+const sliderSettings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 4000,
+  nextArrow: <CustomNextArrow />,
+  prevArrow: <CustomPrevArrow />,
+};
+
+// Flecha Siguiente
+function CustomNextArrow(props) {
+  const { onClick } = props;
+  return (
+    <div
+      className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-900 bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 focus:outline-none opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer z-10"
+      onClick={onClick}
+      aria-label="Siguiente"
+    >
+      &#10095;
+    </div>
+  );
+}
+
+// Flecha Anterior
+function CustomPrevArrow(props) {
+  const { onClick } = props;
+  return (
+    <div
+      className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-900 bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 focus:outline-none opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer z-10"
+      onClick={onClick}
+      aria-label="Anterior"
+    >
+      &#10094;
+    </div>
+  );
+}
+
+export default function Carrusel(props) {
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+
+  const sliderImages = [
+    {
+      desktop:
+        'https://www.busesycamioneschevrolet.com.co/wp-content/uploads/2022/02/banner-camiones-familia-f.jpg',
+      mobile:
+        'https://www.busesycamioneschevrolet.com.co/wp-content/uploads/2022/10/mobile_blog_banner_camion_nhr-1.jpg',
+    },
+    {
+      desktop:
+        'https://scontent.fbog2-3.fna.fbcdn.net/v/t1.6435-9/151037640_2825625177706859_1221254727400649392_n.png?_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=JKTH0dtMENAQ7kNvgFifwa8&_nc_oc=AdkP7pOCtQ_HCzLDHYjY3r-8SSF49JKXPUH3vnPc9N299OSOaRB-sfHHh4ABfZ6R2Jo&_nc_zt=23&_nc_ht=scontent.fbog2-3.fna&_nc_gid=6T6ASfdXxWw2Nzzrs5_kZQ&oh=00_AYG8goi8xjGELZCSj_7QHE3w3wFTL6BAw40DIHHhp0zWqA&oe=6807B8D8',
+      mobile:
+        'https://www.busesycamioneschevrolet.com.co/wp-content/uploads/2022/05/camion-nqr-portada-blog.jpg',
+    },
+ 
+  ];
+
+  let currentImage;
+  let currentHeight;
+  let currentBackgroundSize;
+
+  return (
+    <section id="Home" className="relative w-full overflow-hidden group">
+      <Slider {...sliderSettings}>
+        {sliderImages.map((image, index) => {
+          if (isMobile) {
+            currentImage = image.mobile;
+            currentHeight = '60vh';
+            currentBackgroundSize = 'cover'; // Change to 'cover' for mobile
+          } else {
+            currentImage = image.desktop;
+            currentHeight = '60vh';
+            currentBackgroundSize = 'cover'; // Keep 'cover' for desktop
+          }
+          return (
+            <div key={index}>
+              <div
+                className="w-screen"
+                style={{
+                  backgroundImage: `url(${currentImage})`,
+                  backgroundPosition: 'center',
+                  backgroundSize: currentBackgroundSize, // Use the dynamic backgroundSize
+                  backgroundRepeat: 'no-repeat',
+                  height: currentHeight,
+                }}
+              />
+            </div>
+          );
+        })}
+      </Slider>
+
+      {/* Responsive Styles */}
+      <style jsx>{`
+        #Home .slick-slide div {
+          background-repeat: no-repeat !important;
+          background-position: center !important;
+        }
+      `}</style>
+    </section>
+  );
+}

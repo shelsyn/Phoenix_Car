@@ -7,7 +7,7 @@ function Catalogo() {
     {
       id: 1,
       nombre: 'Renault Kwid',
-      precio: 54190000,
+      precio: "Kwid", // Replaced price with name
       imagen: 'https://store.autogalias.com/cdn/shop/files/Blanco_fd3291e5-baeb-4c75-a5d1-5cb197cf5a9c.png?v=1704822368',
       categoria: 'Carros',
       descripcion: 'Hatchback compacto y moderno.',
@@ -15,7 +15,7 @@ function Catalogo() {
     {
       id: 2,
       nombre: 'Renault Sandero',
-      precio: 63990000,
+      precio: "Sandero", // Replaced price with name
       imagen: 'https://maxiautos.co/img/ybc_blog/post/1920X750png.jpg',
       categoria: 'Carros',
       descripcion: 'Hatchback versátil y espacioso.',
@@ -23,7 +23,7 @@ function Catalogo() {
     {
       id: 3,
       nombre: 'Renault Logan',
-      precio: 66490000,
+      precio: "Logan", // Replaced price with name
       imagen: 'https://cdn.group.renault.com/ren/co/vehicles/logan/design/exterior/logan-lateral-exterior.jpg.ximg.xsmall.jpg/210c18118f.jpg',
       categoria: 'Carros',
       descripcion: 'Sedán espacioso y confortable.',
@@ -31,7 +31,7 @@ function Catalogo() {
     {
       id: 4,
       nombre: 'Renault Stepway',
-      precio: 73490000,
+      precio: "Stepway", // Replaced price with name
       imagen: 'https://cdn.group.renault.com/ren/mx/mex/vehiculos-comerciales/stepway/gris.jpg.ximg.xsmall.jpg/d146db8401.jpg',
       categoria: 'Carros',
       descripcion: 'Hatchback aventurero con mayor altura.',
@@ -39,7 +39,7 @@ function Catalogo() {
     {
       id: 5,
       nombre: 'Renault Kardian',
-      precio: 81690000,
+      precio: "Kardian", // Replaced price with name
       imagen: 'https://www.autocity.ar/wp-content/uploads/2024/10/kardina-autocity.webp',
       categoria: 'Camionetas',
       descripcion: 'SUV moderna y elegante.',
@@ -47,7 +47,7 @@ function Catalogo() {
     {
       id: 6,
       nombre: 'Renault Duster',
-      precio: 81390000,
+      precio: "Duster", // Replaced price with name
       imagen: 'https://alborautosrenault.com/wp-content/uploads/2020/02/renault-duster-exterior-1.jpg',
       categoria: 'Camionetas',
       descripcion: 'SUV compacta y robusta.',
@@ -55,7 +55,7 @@ function Catalogo() {
     {
       id: 7,
       nombre: 'Renault Captur',
-      precio: 99500000,
+      precio: "Captur", // Replaced price with name
       imagen: 'https://www.portafolio.co/files/article_new_multimedia/uploads/2022/03/31/6245c46862cb9.jpeg',
       categoria: 'Camionetas',
       descripcion: 'SUV elegante y confortable.',
@@ -63,7 +63,7 @@ function Catalogo() {
     {
       id: 8,
       nombre: 'Renault Koleos',
-      precio: 118700000,
+      precio: "Koleos", // Replaced price with name
       imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFXbhI8Sz7zE_YjoxqfimTyODur5S_i3UchCrjsN-2M4vCyAbLVPTwPjF09iTHP80ntDM&usqp=CAU',
       categoria: 'Camionetas',
       descripcion: 'SUV de lujo, elegante y sofisticada.',
@@ -71,7 +71,7 @@ function Catalogo() {
     {
       id: 9,
       nombre: 'Renault Oroch',
-      precio: 103300000,
+      precio: "Oroch", // Replaced price with name
       imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCjl8dIAyhAhIZPH2eMechHe02jIen2abYMA&s',
       categoria: 'PickUps',
       descripcion: 'Pickup compacta, moderna y versátil.',
@@ -79,7 +79,7 @@ function Catalogo() {
     {
       id: 10,
       nombre: 'Renault Alaskan',
-      precio: 200990000,
+      precio: "Alaskan", // Replaced price with name
       imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN7-pR5lMiCnJti4_kFxQlOW_eyo0GIGz2vQ&s',
       categoria: 'PickUps',
       descripcion: 'Pickup potente y robusta.',
@@ -87,7 +87,7 @@ function Catalogo() {
       {
         id: 11,
         nombre: 'Megane E-Tech',
-        precio: 179990000,
+        precio: "Megane E-Tech", // Replaced price with name
         imagen: 'https://agenciauto.com/wp-content/uploads/2023/06/bccd134571-1024x576.webp',
         categoria: 'Eléctricos E-Tech',
         descripcion: 'Hatchback eléctrico de alto rendimiento.',
@@ -95,7 +95,7 @@ function Catalogo() {
       {
         id: 12,
         nombre: 'Kwid E-Tech',
-        precio: 76990000,
+        precio: "Kwid E-Tech", // Replaced price with name
         imagen: 'https://agenciauto.com/wp-content/uploads/2023/06/kwid-e-tech-electrico-color2-agenciauto.webp',
         categoria: 'Eléctricos E-Tech',
         descripcion: 'Hatchback eléctrico compacto y eficiente.',
@@ -103,7 +103,7 @@ function Catalogo() {
       {
         id: 13,
         nombre: 'Zoe E-Tech',
-        precio: 139990000,
+        precio: "Zoe E-Tech", // Replaced price with name
         imagen: 'https://alborautosrenault.com/wp-content/uploads/2024/01/Zoe_05.png',
         categoria: 'Eléctricos E-Tech',
         descripcion: 'Hatchback eléctrico elegante y tecnológico.',
@@ -111,7 +111,7 @@ function Catalogo() {
       {
         id: 14,
         nombre: 'Renault Kangoo',
-        precio: 79490000,
+        precio: "Kangoo", // Replaced price with name
         imagen: 'https://cdn.group.renault.com/ren/co/vehicles/kangoo/home/renault-kangoo-exterior.jpg.ximg.xsmall.jpg/575e68ba40.jpg',
         categoria: 'Utilitarios',
         descripcion: 'Vehículo utilitario versátil y espacioso.',
@@ -119,7 +119,7 @@ function Catalogo() {
       {
         id: 15,
         nombre: 'Renault Master',
-        precio: 195990000,
+        precio: "Master", // Replaced price with name
         imagen: 'https://motocostarenault.com/wp-content/uploads/2021/09/master-exterior1.jpg',
         categoria: 'Utilitarios',
         descripcion: 'Vehículo utilitario grande y de alta capacidad.',
@@ -127,7 +127,7 @@ function Catalogo() {
       {
         id: 16,
         nombre: 'Renault Trafic',
-        precio: 177490000,
+        precio: "Trafic", // Replaced price with name
         imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1VR0wcbOL2gr5vFq-Isw-_yelpQsv86zpHQ&s',
         categoria: 'Utilitarios',
         descripcion: 'Vehículo utilitario versátil, para pasajeros o carga.',
@@ -135,7 +135,7 @@ function Catalogo() {
     {
       id: 17,
       nombre: 'Renault Arkana E-Tech',
-      precio: 126990000,
+      precio: "Arkana E-Tech", // Replaced price with name
       imagen: 'https://res.cloudinary.com/total-dealer/image/upload/w_3840,f_auto,q_75/v1/production/b59g14axdbw9six87hkbslxjzmbr',
       categoria: 'Hybrid E-Tech',
       descripcion: 'SUV híbrido, deportivo y elegante.',
@@ -167,8 +167,8 @@ function Catalogo() {
               key={categoria}
               className={`px-6 py-3 m-1 rounded-full font-semibold transition-colors duration-200 text-sm md:text-base border-2 ${
                 categoriaSeleccionada === categoria
-                  ? 'bg-[#047ab7] text-white border-[#047ab7]' // Changed to #047ab7
-                  : 'text-[#047ab7] border-blue-400 hover:bg-blue-50' // Changed to #047ab7
+                  ? 'bg-[#047ab7] text-white border-[#047ab7]'
+                  : 'text-[#047ab7] border-blue-400 hover:bg-blue-50'
               }`}
               onClick={() => setCategoriaSeleccionada(categoria)}
             >
@@ -206,9 +206,9 @@ function Catalogo() {
                 {/* Price and Button section */}
                 <div className="p-5 mt-auto flex flex-col">
                     <div className="mb-4">
-                    <span className="font-bold text-[#047ab7] text-xl"> {/* Changed to #047ab7 */}
-                        <span className="font-normal text-sm mr-1">Desde</span>
-                        ${producto.precio.toLocaleString()}
+                    <span className="font-bold text-[#047ab7] text-xl">
+                        <span className="font-normal text-sm mr-1"></span>
+                        {producto.precio}
                     </span>
                     </div>
                     <a
@@ -216,7 +216,7 @@ function Catalogo() {
                     href={`https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias.`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-[#047ab7] text-white px-5 py-3 rounded-full hover:bg-[#036fa1] transition duration-300 text-sm w-full text-center font-medium" // Changed to #047ab7 and hover color
+                    className="bg-[#047ab7] text-white px-5 py-3 rounded-full hover:bg-[#036fa1] transition duration-300 text-sm w-full text-center font-medium"
                     >
                     Más Información
                     </a>

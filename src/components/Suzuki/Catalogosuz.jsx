@@ -8,6 +8,7 @@ function Catalogo() {
     {
       id: 1,
       nombre: 'Suzuki S-Cross Híbrida 4x2',
+      precio: "S-Cross Híbrida 4x2",
       imagen: 'https://www.suzukiautos.com.co/arquivos/scross-hibrida-2025.png?v=638659943135830000',
       categoria: 'Camionetas',
       descripcion: 'SUV compacta, moderna y eficiente.',
@@ -15,6 +16,7 @@ function Catalogo() {
     {
       id: 2,
       nombre: 'Grand Vitara Híbrida 4x2',
+      precio: "Grand Vitara Híbrida 4x2",
       imagen: 'https://suzukiderco.vteximg.com.br/arquivos/ids/156577-1000-1000/Gran-Vitara-Colors-Grey.png?v=638212443984230000',
       categoria: 'Camionetas',
       descripcion: 'SUV versátil y espaciosa.',
@@ -22,6 +24,7 @@ function Catalogo() {
     {
       id: 3,
       nombre: 'Grand Vitara Híbrida 4x4',
+      precio: "Grand Vitara Híbrida 4x4",
       imagen: 'https://autozen.com.co/wp-content/uploads/2023/12/Autozen-suzuki-gran-vitara-azul.webp',
       categoria: 'Camionetas',
       descripcion: 'SUV robusta, ideal para cualquier terreno.',
@@ -29,6 +32,7 @@ function Catalogo() {
     {
       id: 4,
       nombre: 'Suzuki Fronx Híbrida',
+      precio: "Suzuki Fronx Híbrida",
       imagen: 'https://autozen.com.co/wp-content/uploads/2023/12/Autozen-suzuki-fronx-blue.webp',
       categoria: 'Camionetas',
       descripcion: 'SUV compacta, moderna y ágil.',
@@ -36,6 +40,7 @@ function Catalogo() {
     {
       id: 5,
       nombre: 'Suzuki Jimny 5 Puertas',
+      precio: "Suzuki Jimny 5 Puertas",
       imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjmdUWfg6JciFP2vE5HHTfdgb9MsFTHmEn8A&s',
       categoria: 'Camionetas',
       descripcion: 'SUV compacta, moderna y ágil.',
@@ -43,6 +48,7 @@ function Catalogo() {
     {
       id: 6,
       nombre: 'Suzuki Jimny',
+      precio: "Suzuki Jimny",
       imagen: 'https://suzukiderco.vtexassets.com/arquivos/Jimny-interna.png?v=637544535322500000',
       categoria: 'Camionetas',
       descripcion: 'SUV compacta, moderna y ágil.',
@@ -52,6 +58,7 @@ function Catalogo() {
     {
       id: 8,
       nombre: 'Suzuki Swift Híbrido',
+      precio: "Suzuki Swift Híbrido",
       imagen: 'https://estrenarcarro.com/wp-content/uploads/2021/07/Suzuki-Swift-Hybrid-3.png',
       categoria: 'Híbridos',
       descripcion: 'Hatchback compacto, moderno y eficiente.',
@@ -59,6 +66,7 @@ function Catalogo() {
     {
       id: 9,
       nombre: 'Grand Vitara Híbrida 4x2',
+      precio: "Grand Vitara Híbrida 4x2",
       imagen: 'https://suzukiderco.vteximg.com.br/arquivos/ids/156577-1000-1000/Gran-Vitara-Colors-Grey.png?v=638212443984230000',
       categoria: 'Híbridos',
       descripcion: 'SUV versátil y espaciosa.',
@@ -67,6 +75,7 @@ function Catalogo() {
     {
       id: 11,
       nombre: 'Suzuki Fronx Híbrida',
+      precio: "Suzuki Fronx Híbrida",
       imagen: 'https://autozen.com.co/wp-content/uploads/2023/12/Autozen-suzuki-fronx-blue.webp',
       categoria: 'Híbridos',
       descripcion: 'SUV compacta, moderna y ágil.',
@@ -75,6 +84,7 @@ function Catalogo() {
     {
       id: 12,
       nombre: 'Nuevo Suzuki Swift Híbrido',
+      precio: "Nuevo Suzuki Swift Híbrido",
       imagen: 'https://autozen.com.co/wp-content/uploads/2024/11/autozen-suzuki-swift-sedan-plata.webp',
       categoria: 'Crossovers',
       descripcion: 'Hatchback compacto, moderno y eficiente.',
@@ -82,6 +92,7 @@ function Catalogo() {
     {
       id: 13,
       nombre: 'Suzuki Baleno Cross',
+      precio: "Suzuki Baleno Cross",
       imagen: 'https://www.suzukiautos.com.co/arquivos/baleno-citroen-2024.png?v=638671930262100000',
       categoria: 'Crossovers',
       descripcion: 'Hatchback compacto, moderno y eficiente.',
@@ -144,6 +155,12 @@ function Catalogo() {
 
               {/* Price and Button section */}
               <div className="p-5 mt-auto flex flex-col">
+                <div className="mb-4">
+                  <span className="font-bold text-[#047ab7] text-xl">
+                    <span className="font-normal text-sm mr-1"></span>
+                    {producto.precio}
+                  </span>
+                </div>
                 <a
                   href={`https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias.`}
                   target="_blank"
