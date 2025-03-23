@@ -15,7 +15,7 @@ const catalogoOptions = [
 ];
 
 const marcasAutos = [
-  { id: 4, name: "Renault", imgSrc: "/renaulds.avif", href: "/renauld" },
+  { id: 4, name: "Renault", imgSrc: "/renaulds.avif", href: "/renault" },
   { id: 5, name: "Toyota", imgSrc: "/toyor.avif", href: "/toyota" },
   { id: 6, name: "Suzuki", imgSrc: "/susu.avif", href: "/suzuki" },
   { id: 7, name: "Citroen", imgSrc: "/citro.avif", href: "/citroen" },

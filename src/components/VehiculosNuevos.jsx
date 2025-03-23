@@ -6,7 +6,7 @@ const vehiculos = [
     marca: 'RENAULT',
     imagen: 'https://casabritanica.com.co/wp-content/uploads/2024/04/casabritanica-sedes-banner-llanogrande.webp', // URL
     logo: '/renaulds.avif',
-    link: '/renauld',
+    link: '/renault',
     descripcion: 'Descubre la innovación y el diseño francés.',
   },
   {
