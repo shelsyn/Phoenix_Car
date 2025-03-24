@@ -9,7 +9,7 @@ const navigation = {
     { name: 'Catálogo Activo', href: '/catalogoActivo' },
     { name: 'Medicina', href: '/medicina' },
     { name: 'Catálogo Persona Natural', href: '/catalogoNatural' },
-    { name: 'Términos y condiciones', href: 'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:f002e481-c9de-49f0-be43-0238d920de06' },
+    { name: 'Términos y condiciones', href: '/terminos' },
   ],
   social: [
     {
@@ -90,7 +90,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-gray-700 pt-6">
           <p className="text-center text-xs text-gray-400">
-            &copy; {new Date().getFullYear()} Phoenix Car. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} VENTRENTALL. Todos los derechos reservados.
           </p>
         </div>
       </div>
