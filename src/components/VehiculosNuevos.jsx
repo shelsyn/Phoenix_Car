@@ -9,13 +9,7 @@ const vehiculos = [
     link: '/renault',
     descripcion: 'Descubre la innovación y el diseño francés.',
   },
-  {
-    marca: 'TOYOTA',
-    imagen: 'https://www.matsuri.com.pe/wp-content/uploads/2022/10/Banner-01-2.jpg', // URL
-    logo: '/toyor.avif',
-    link: '/toyota',
-    descripcion: 'Experimenta la calidad y confiabilidad de Toyota.',
-  },
+ 
   {
     marca: 'SUZUKI',
     imagen: 'https://media.licdn.com/dms/image/v2/D5612AQHp-f3Zg_EwZA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1690573974483?e=2147483647&v=beta&t=hHQnmZZ203vhs-vhaegj9USwhAnFLtTjHY_K0GNfxP8', // URL

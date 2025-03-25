@@ -184,7 +184,7 @@ const products = [
     tipo: 'Campero',
     ficha:''
   },
-  {
+  /*{
     id: 1,
     name: ' Prado 5 Puertas Diesel 2.8 Tx',
     year: '2024',
@@ -194,6 +194,7 @@ const products = [
     tipo: 'Campero',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:265846d5-9ff8-43ff-8219-0c3706b88bf8'
   },
+  */
   {
     id: 1,
     name: ' Duster Iconic 1.3T 4X4 Mt',

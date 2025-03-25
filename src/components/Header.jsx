@@ -16,7 +16,7 @@ const catalogoOptions = [
 
 const marcasAutos = [
   { id: 4, name: "Renault", imgSrc: "/renaulds.avif", href: "/renault" },
-  { id: 5, name: "Toyota", imgSrc: "/toyor.avif", href: "/toyota" },
+  /*{ id: 5, name: "Toyota", imgSrc: "/toyor.avif", href: "/toyota" },*/
   { id: 6, name: "Suzuki", imgSrc: "/susu.avif", href: "/suzuki" },
   { id: 7, name: "Citroen", imgSrc: "/citro.avif", href: "/citroen" },
   { id: 8, name: "Subaru", imgSrc: "/sub.avif", href: "/subaru" },
@@ -170,7 +170,7 @@ export default function Header() {
             {/* Catálogo */}
             <Popover className="relative">
               <Popover.Button className="flex items-center gap-x-1 text-lg font-semibold leading-6 text-white hover:text-gray-200">
-                Catálogo
+               Renting Autos
                 <ChevronDownIcon className="h-5 w-5 flex-none text-gray-300" aria-hidden="true" />
               </Popover.Button>
               <Transition
