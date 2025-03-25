@@ -94,7 +94,7 @@ export function Contacto_dos() {
               <div className="flex items-center mt-4">
   <WhatsAppIcon className="h-8 w-8 mr-3" />
   <a 
-    href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias." 
+    href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias." 
     className="text-[#047ab7] text-lg" 
     target="_blank" 
     rel="noopener noreferrer"

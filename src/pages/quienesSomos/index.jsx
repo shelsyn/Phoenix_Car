@@ -42,7 +42,7 @@ export default function SobreNosotros() {
               Contáctanos para conocer todos los beneficios que ofrecemos. ¡Estamos aquí para ayudarte!
             </p>
             <a
-              href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias."
+              href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias."
               target="_blank"
               rel="noreferrer"
               className="block text-center bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300"

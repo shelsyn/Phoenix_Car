@@ -13,7 +13,7 @@ const Tablet = () => {
               flexibilidad en los contratos. Ideal para empresas, eventos y soluciones tecnológicas avanzadas.
             </p>
             <a
-             href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias." 
+             href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias." 
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-block bg-white text-[#047ab7] px-6 py-3 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition-all"

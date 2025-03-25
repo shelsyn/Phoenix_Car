@@ -33,7 +33,7 @@ export default function EquiposMedicos() {
           Soluciones médicas innovadoras para hospitales y clínicas. Tecnología avanzada, soporte 24/7 y mantenimiento garantizado.
         </p>
         <a
-          href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias."
+          href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias."
           target="_blank"
           rel="noopener noreferrer"
           className="mt-6 px-6 py-3 bg-white text-[#047ab7] font-semibold rounded-lg shadow-md hover:bg-gray-200 transition-transform duration-300 hover:scale-105"
@@ -86,7 +86,7 @@ export default function EquiposMedicos() {
                         transition-opacity duration-300 opacity-100 md:opacity-0 md:hover:opacity-100">
           <h3 className="text-xl font-semibold text-white text-center">{item}</h3>
           <a 
-            href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias." 
+            href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias." 
             target="_blank" 
             rel="noopener noreferrer"
             className="mt-4 px-5 py-2 bg-[#047ab7] text-white rounded-lg shadow-md hover:bg-[#035a8d] transition-all duration-300 text-center"

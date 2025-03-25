@@ -17,7 +17,7 @@ export default function POS() {
           </p>
           <div className="mt-8 flex gap-4">
             <a
-             href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias." 
+             href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias." 
               target="_blank"
               rel="noopener noreferrer"
               className="bg-yellow-400 text-[#1e4d89] font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-500 transition"

@@ -39,7 +39,7 @@ export default function MaquinariaIndustrial() {
               Optimiza tu producción con equipos modernos sin costos excesivos.
             </p>
             <div className="flex flex-col sm:flex-row gap-4"> {/* Added flex-direction for buttons */}
-              <a href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias." target="_blank" rel="noopener noreferrer">
+              <a href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias." target="_blank" rel="noopener noreferrer">
                 <button className="bg-[#0099FF] text-white px-8 py-4 rounded-full shadow-lg hover:bg-[#0077CC] transition text-lg flex items-center gap-2"> {/* Changed button color and padding */}
                   <FaWhatsapp className="text-lg" />
                   Cotiza Ahora
@@ -81,7 +81,7 @@ export default function MaquinariaIndustrial() {
                 <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out p-8">
                   <h3 className="text-white text-xl font-semibold mb-4 text-center">{item.nombre}</h3>
                   <p className="text-white text-sm text-center">{item.descripcion}</p>
-                  <a href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias." target="_blank" rel="noopener noreferrer" className="group">
+                  <a href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias." target="_blank" rel="noopener noreferrer" className="group">
                     <button className="mt-4 bg-[#0099FF] text-white px-4 py-2 rounded-md hover:bg-[#0077CC] transition flex items-center gap-2 group-hover:scale-105">
                       Más Información <FaArrowRight />
                     </button>
@@ -116,7 +116,7 @@ export default function MaquinariaIndustrial() {
             Contáctanos y descubre cómo podemos ayudarte.
           </p>
           <div className="flex gap-6 items-center">
-            <a href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias." target="_blank" rel="noopener noreferrer" className="group">
+            <a href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias." target="_blank" rel="noopener noreferrer" className="group">
               <button className="bg-[#0099FF] text-white px-8 py-4 rounded-md shadow-lg hover:bg-[#0077CC] transition text-base font-medium flex items-center gap-2 group-hover:scale-105">
                 <FaWhatsapp className="text-lg" />
                 Contáctanos Ahora

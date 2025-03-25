@@ -26,7 +26,7 @@ function ProductCard() {
                 Personaliza tu Renault con accesorios originales.
               </p>
               <a
-                href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias."
+                href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#047ab7] text-white px-4 py-2 rounded-full hover:bg-[#036fa1] transition duration-300 text-sm w-full text-center font-medium"
@@ -54,7 +54,7 @@ function ProductCard() {
                 Cuida tu Renault con repuestos originales.
               </p>
               <a
-                href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias."
+                href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#047ab7] text-white px-4 py-2 rounded-full hover:bg-[#036fa1] transition duration-300 text-sm w-full text-center font-medium"

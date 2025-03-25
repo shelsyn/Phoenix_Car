@@ -86,7 +86,7 @@ export default function MaquinariaPesada() {
         {/* Botón de cotizar */}
         <div className="mt-8 text-center">
           <a
-            href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias."
+            href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias."
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 bg-[#047ab7] text-white font-semibold rounded-lg shadow-md hover:bg-[#05a0e3] hover:scale-105 transition-transform duration-300 inline-block"

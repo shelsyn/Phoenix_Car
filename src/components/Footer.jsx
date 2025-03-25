@@ -19,7 +19,7 @@ const navigation = {
     },
     {
       name: 'WhatsApp',
-      href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+de+Renting+gracias.',
+      href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias.',
       icon: AiOutlineWhatsApp,
     },
   ],
