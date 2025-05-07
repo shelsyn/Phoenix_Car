@@ -40,7 +40,7 @@ function Catalogo() {
       id: 5,
       nombre: 'Renault Kardian',
       precio: "Kardian", // Replaced price with name
-      imagen: 'https://www.autocity.ar/wp-content/uploads/2024/10/kardina-autocity.webp',
+      imagen: 'https://store.autogalias.com/cdn/shop/files/Karian-2.jpg?v=1725328715',
       categoria: 'Camionetas',
       descripcion: 'SUV moderna y elegante.',
     },

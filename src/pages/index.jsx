@@ -28,6 +28,7 @@ export default function Home() {
         <TipoPersona />
         <Informacion />
         <VehiculosNuevos /> 
+        <br />
         <Contacto />
         
       </main>

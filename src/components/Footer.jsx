@@ -14,7 +14,7 @@ const navigation = {
   social: [
     {
       name: 'Instagram',
-      href: 'https://www.instagram.com/phoenix_car_sas/',
+      href: 'https://www.instagram.com/ventarentall_?igsh=M2FoMTQ4Y3k5YWln',
       icon: AiOutlineInstagram,
     },
     {

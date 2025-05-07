@@ -5,7 +5,7 @@ export default function Productos() {
       name: "Cx5 Touring 2.0 At 4X2",
       year: "2024",
       href: "https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias.",
-      imageSrc: "https://mazda-brochures.com/main/mazdacx5/2023/1/es-es/assets/images/cx-5-eternal-blue-crystal.jpg",
+      imageSrc: "https://dercocenter-api.s3.us-east-1.amazonaws.com/images/version/1706733992-ZHtrlJSUKd.webp",
       marca: "Mazda",
       iva: "IVA INCLUIDO",
     },
