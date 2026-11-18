@@ -1,4 +1,5 @@
 import { Truck, Headset, Wrench } from "lucide-react";
+import OptImg from '@/components/ui/OptImg';
 
 const Tablet = () => {
   return (
@@ -22,7 +23,7 @@ const Tablet = () => {
             </a>
           </div>
           <div className="flex justify-center">
-            <img 
+            <OptImg 
               src="/tableysin.png"
               alt="Alquiler de Tablets"
               className="w-105 object-cover drop-shadow-lg"

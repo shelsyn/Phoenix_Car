@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import OptImg from '@/components/ui/OptImg';
 
 function Catalogo() {
   const productos = [
@@ -6,28 +7,28 @@ function Catalogo() {
       id: 1,
       nombre: 'Nueva C3',
       precio: "Nueva C3", // Replaced price with name
-      imagen: 'https://www.citroen.com.co/wp-content/uploads/2023/05/c3-gris-artense-bitono-negro.jpg',
+      imagen: '/catalogo/citroen-c3.webp',
       descripcion: 'Nueva C3',
     },
     {
       id: 2,
       nombre: 'Nueva C4 Cactus',
       precio: "Nueva C4 Cactus", // Replaced price with name
-      imagen: 'https://www.citroen.com.co/wp-content/uploads/2023/08/c4-rojo-rubi.jpg',
+      imagen: '/catalogo/citroen-c4-cactus.webp',
       descripcion: 'LA NUEVA CITROËN C4 CACTUS',
     },
     {
       id: 3,
       nombre: 'Nueva Aircross SUV',
       precio: "Nueva Aircross SUV", // Replaced price with name
-      imagen: 'https://www.citroen.com.co/wp-content/uploads/2022/10/blanco-nacar-unique-1.jpg',
+      imagen: '/catalogo/citroen-c3-aircross.webp',
       descripcion: 'NUEVA AIRCROSS SUV',
     },
     {
       id: 4,
       nombre: 'SUV C5 Aircross',
       precio: "SUV C5 Aircross", // Replaced price with name
-      imagen: 'https://visuel3d-secure.citroen.com/V3DImage.ashx?client=DI1&version=1CCESYUP41B0EO70&color=0MM00N9V&width=360&ratio=1&view=001&format=jpg&quality=90',
+      imagen: '/catalogo/citroen-c5-aircross.webp',
       descripcion: 'SUV C5 Aircross',
     },
   ];
@@ -52,7 +53,7 @@ function Catalogo() {
               className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col"
             >
               <div className="relative h-60 group-hover:scale-105 transition duration-300 overflow-hidden">
-                <img
+                <OptImg
                   src={producto.imagen}
                   alt={producto.nombre}
                   className="w-full h-full object-contain object-center transition duration-300"

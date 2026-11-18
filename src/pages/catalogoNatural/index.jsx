@@ -1,11 +1,10 @@
-import { useState } from "react";
-import HeaderNatural from "@/components/CatalogoNatural/HeaderNatural";
 import RentingNatural from "@/components/CatalogoNatural/RentingNatural";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Productos from "@/components/Productos";
 import Head from "next/head";
 import WhatsappButton from "@/components/WhatsappButton"; 
+import OptImg from '@/components/ui/OptImg';
 const products = [
   {
     id: 1,
@@ -23,7 +22,7 @@ const products = [
     name: 'Tracker Turbo Ls At',
     year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias.',
-    imageSrc: 'https://acroadtrip.blob.core.windows.net/catalogo-imagenes/s/RT_V_aea7e70d73154e948dd6d70f75527a70.jpg',
+    imageSrc: '/catalogo/ext/acroadtrip-rt-v-aea7e70d73154e948dd6d70f75527a70-f5dda8.webp',
     marca: 'Chevrolet',
     tipo: 'Camioneta - SUV',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:6858eb01-bab7-4c05-81ad-d86aeb00a0ac'
@@ -73,7 +72,7 @@ const products = [
     name: 'Nueva Koleos Intens 4X4 Ph2',
     year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias.',
-    imageSrc: 'https://cdn.group.renault.com/ren/ar/modelos/koleos/ph1/2560x1440-responsive-format/renault-koleos2-hzg-ph1-exterior-diseno-013.jpg.ximg.xsmall.jpg/46b5832186.jpg',
+    imageSrc: '/catalogo/ext/cdn-46b5832186-08d21e.webp',
     marca: 'Renault',
     tipo: 'Camioneta – SUV',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:7fb00daf-f8a0-42c4-ae05-e6bae40e9eed'
@@ -95,7 +94,7 @@ const products = [
     name: 'Logan Life Ph2',
     year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias.',
-    imageSrc: 'https://agenciauto.com/wp-content/uploads/2021/02/10797-color-vehiculo-nuevo-logan.jpg',
+    imageSrc: '/catalogo/ext/agenciauto-10797-color-vehiculo-nuevo-logan-b87994.webp',
     imageAlt: 'Renault ',
     marca: 'Renault ',
     tipo: 'Automovil',
@@ -148,7 +147,7 @@ const products = [
     name: ' Logan Intens Cvt Ph2',
     year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias.',
-    imageSrc: 'https://movilidadco.vteximg.com.br/arquivos/ids/975357/Renault-Logan-Intens-CVT-00691234-1.jpg?v=638452706169130000',
+    imageSrc: '/catalogo/ext/movilidadco-renault-logan-intens-cvt-00691234-1-852705.webp',
     marca: 'Renault',
     tipo: 'Automovil',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:97e30701-aea4-40a8-9878-6aed570bf12e'
@@ -158,7 +157,7 @@ const products = [
     name: ' Virtus Trendline 1.6L 110Hp 5Mt',
     year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias.',
-    imageSrc: 'https://autolab.com.co/wp-content/uploads/2022/06/ddc847450ff156db4098748c83d50f18dd4ec9896b78313c99e0286ec4189b4e.jpg',
+    imageSrc: '/catalogo/ext/autolab-ddc847450ff156db4098748c83d50f18dd4ec989-dc9ae9.webp',
     marca: 'Volkswagen',
     tipo: 'Automovil',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:37ee82c5-c505-44ee-9cce-c1b0df307e42'
@@ -168,7 +167,7 @@ const products = [
     name: 'Arona FR 1.6 AT',
     year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias.',
-    imageSrc: 'https://movilidadco.vteximg.com.br/arquivos/ids/950356/Seat-Arona-fr-reference.jpg?v=638406900317400000',
+    imageSrc: '/catalogo/ext/movilidadco-seat-arona-fr-reference-ee77ce.webp',
     marca: 'Seat',
     tipo: 'Automovil',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:5be6a945-a718-4c0b-b46f-2985882cdf62'
@@ -210,7 +209,7 @@ const products = [
     name: ' Nueva Duster Intens 1.3T 4X4 Mt',
     year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias.',
-    imageSrc: 'https://cdn.group.renault.com/ren/ar/modelos/nuevo-duster/ph1/renault-duster-hjd-ph1-diseno-exterior-017.jpg.ximg.xsmall.jpg/906484ffde.jpg',
+    imageSrc: '/catalogo/ext/cdn-906484ffde-dec44d.webp',
     marca: 'Renault',
     tipo: 'Campero',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:950e36d6-5626-4af8-8c81-539679c1e075'
@@ -220,7 +219,7 @@ const products = [
     name: ' Crossland Edition',
     year: '2024',
     href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias.',
-    imageSrc: 'https://www.elcolombiano.com/binrepository/1020x680/0c26/1020d627/none/11101/AWQY/grpi20-c02-606-dark-ruby-red_37642515_20210430205013.jpg',
+    imageSrc: '/catalogo/ext/elcolombiano-grpi20-c02-606-dark-ruby-red-37642515-20-69c622.webp',
     marca: 'Opel',
     tipo: 'Campero',
     ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:42d09578-c779-4ccc-8e24-7fb05a90aca9'
@@ -228,11 +227,6 @@ const products = [
  
 ];
 export default function CatalogoPersonaNatural() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleChat = () => {
-    setIsOpen(!isOpen);
-  };
 
   return (
     <>
@@ -252,9 +246,9 @@ export default function CatalogoPersonaNatural() {
               Nuestro Catálogo
             </h2>
             <div className="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-8">
-              {products.map((product) => (
+              {products.map((product, index) => (
                 <div
-                  key={product.id}
+                  key={`${product.name}-${index}`}
                   className="rounded-xl shadow-lg border border-gray-200 overflow-hidden"
                 >
                   <div className="p-4 flex flex-col items-center text-center">
@@ -272,7 +266,7 @@ export default function CatalogoPersonaNatural() {
                     <p className="text-sm text-gray-600 mt-2">{product.tipo}</p>
                   </div>
                   <div className="relative h-56 w-full overflow-hidden flex items-center justify-center bg-white">
-                            <img
+                            <OptImg
                   src={product.imageSrc}
                 alt={product.name}
                    className="w-full h-full object-cover"

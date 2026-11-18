@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import OptImg from '@/components/ui/OptImg';
 
 function CatalogoCh() {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('Familia N');
@@ -9,7 +10,7 @@ function CatalogoCh() {
       id: 1,
       nombre: 'NHR Reward EURO VI',
       version: 'NHR Reward EURO VI',
-      imagen: 'https://www.centrodiesel.com.co/wp-content/uploads/2023/08/nhr-euro-vi-1.jpg', // Replace with actual image path
+      imagen: '/catalogo/chevrolet-nhr-reward.webp', // Replace with actual image path
       categoria: 'Familia N',
       descripcion: 'Camión ligero, eficiente y confiable.',
     },
@@ -17,7 +18,7 @@ function CatalogoCh() {
       id: 2,
       nombre: 'NKR MEDIO EURO VI',
       version: 'NKR MEDIO EURO VI',
-      imagen: 'https://www.busesycamioneschevrolet.com.co/wp-content/uploads/2024/05/X3-1.png', // Replace with actual image path
+      imagen: '/catalogo/ext/busesycamioneschevrolet-x3-1-1eb703.webp', // Replace with actual image path
       categoria: 'Familia N',
       descripcion: 'Camión mediano, versátil para diversas aplicaciones.',
     },
@@ -25,7 +26,7 @@ function CatalogoCh() {
       id: 3,
       nombre: 'NKR MEDIO EURO V',
       version: 'NKR MEDIO EURO V',
-      imagen: 'https://www.centrodiesel.com.co/wp-content/uploads/2022/11/nkr-ii-blanco.webp', // Replace with actual image path
+      imagen: '/catalogo/chevrolet-nkr-medio.webp', // Replace with actual image path
       categoria: 'Familia N',
       descripcion: 'Camión mediano, versátil para diversas aplicaciones.',
     },
@@ -33,7 +34,7 @@ function CatalogoCh() {
       id: 4,
       nombre: 'NKR LARGO EURO VI',
       version: 'NKR LARGO EURO VI',
-      imagen: 'https://www.centrodiesel.com.co/wp-content/uploads/2023/08/NKR-COLOR-1.jpg', // Replace with actual image path
+      imagen: '/catalogo/chevrolet-nkr-largo.webp', // Replace with actual image path
       categoria: 'Familia N',
       descripcion: 'Camión mediano, con mayor capacidad de carga.',
     },
@@ -41,7 +42,7 @@ function CatalogoCh() {
       id: 5,
       nombre: 'NHR Doble cabina EURO VI',
       version: 'NHR Doble cabina EURO VI',
-      imagen: 'https://www.centrodiesel.com.co/wp-content/uploads/2023/10/Carrusel_NHR-DC_1366x498-px_x3-1.jpg', // Replace with actual image path
+      imagen: '/catalogo/chevrolet-nhr-doble-cabina.webp', // Replace with actual image path
       categoria: 'Familia N',
       descripcion: 'Camión ligero con doble cabina para mayor comodidad.',
     },
@@ -49,7 +50,7 @@ function CatalogoCh() {
       id: 6,
       nombre: 'NLR Reward EURO VI',
       version: 'NLR Reward EURO VI',
-      imagen: 'https://www.centrodiesel.com.co/wp-content/uploads/2024/06/Artboard-1-2.jpg', // Replace with actual image path
+      imagen: '/catalogo/chevrolet-nlr-reward.webp', // Replace with actual image path
       categoria: 'Familia N',
       descripcion: 'Camión ligero, con características mejoradas.',
     },
@@ -58,7 +59,7 @@ function CatalogoCh() {
       id: 8,
       nombre: 'NPR Euro VI',
       version: 'NPR Euro VI',
-      imagen: 'https://www.centrodiesel.com.co/wp-content/uploads/2022/11/npr-furgon.webp', // Replace with actual image path
+      imagen: '/catalogo/chevrolet-npr.webp', // Replace with actual image path
       categoria: 'Familia N',
       descripcion: 'Camión mediano, ideal para transporte urbano.',
     },
@@ -68,7 +69,7 @@ function CatalogoCh() {
       id: 10,
       nombre: 'FRR EURO VI',
       version: 'FRR EURO VI',
-      imagen: 'https://www.centrodiesel.com.co/wp-content/uploads/2023/08/Banner-Camion-FRR-2.jpeg', // Replace with actual image path
+      imagen: '/catalogo/chevrolet-frr.webp', // Replace with actual image path
       categoria: 'Familia F',
       descripcion: 'Camión pesado, potente y versátil.',
     },
@@ -76,7 +77,7 @@ function CatalogoCh() {
       id: 11,
       nombre: 'FVR CORTO MECÁNICO EURO VI',
       version: 'FVR CORTO MECÁNICO EURO VI',
-      imagen: 'https://www.centrodiesel.com.co/wp-content/uploads/2024/06/fvr-corto-vi-rojo.jpg', // Replace with actual image path
+      imagen: '/catalogo/chevrolet-fvr-corto.webp', // Replace with actual image path
       categoria: 'Familia F',
       descripcion: 'Camión pesado, con transmisión mecánica.',
     },
@@ -84,7 +85,7 @@ function CatalogoCh() {
       id: 12,
       nombre: 'FVR Largo Euro VI',
       version: 'FVR Largo Euro VI',
-      imagen: 'https://www.centrodiesel.com.co/wp-content/uploads/2024/06/fvr-largo-azul.jpg', // Replace with actual image path
+      imagen: '/catalogo/chevrolet-fvr-largo.webp', // Replace with actual image path
       categoria: 'Familia F',
       descripcion: 'Camión pesado, con mayor longitud de chasis.',
     },
@@ -93,7 +94,7 @@ function CatalogoCh() {
       id: 14,
       nombre: 'FVR X LONG Euro VI',
       version: 'FVR X LONG Euro VI',
-      imagen: 'https://www.centrodiesel.com.co/wp-content/uploads/2024/06/FVR-X-LONG-gris.jpg', // Replace with actual image path
+      imagen: '/catalogo/chevrolet-fvr-x-long.webp', // Replace with actual image path
       categoria: 'Familia F',
       descripcion: 'Camión pesado, con chasis extra largo.',
     },
@@ -140,7 +141,7 @@ function CatalogoCh() {
               className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col"
             >
               <div className="relative h-60 group-hover:scale-105 transition duration-300 overflow-hidden">
-                <img
+                <OptImg
                   src={producto.imagen}
                   alt={producto.nombre}
                   className="w-full h-full object-contain object-center transition duration-300"

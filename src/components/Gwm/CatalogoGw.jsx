@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import OptImg from '@/components/ui/OptImg';
 
 function Catalogo() {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('TANK');
@@ -9,7 +10,7 @@ function Catalogo() {
       id: 1,
       nombre: 'TANK 500 HEV',
       version: 'TANK 500 HEV',
-      imagen: 'https://gwmqatar.com/wp-content/uploads/2024/05/arctic-white-tank500.webp',
+      imagen: '/catalogo/ext/gwmqatar-arctic-white-tank500-edb3e3.webp',
       categoria: 'TANK',
       descripcion: 'SUV híbrida de lujo, potente y elegante.',
     },
@@ -17,7 +18,7 @@ function Catalogo() {
       id: 2,
       nombre: 'TANK 300 HEV',
       version: 'TANK 300 HEV',
-      imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSABdWRFbkjtzm-aSQTGHfJYQe8SMNL0h5PYQ&s',
+      imagen: '/catalogo/ext/encrypted-tbn0-images-bd47f7.webp',
       categoria: 'TANK',
       descripcion: 'SUV híbrida compacta, lista para la aventura.',
     },
@@ -26,7 +27,7 @@ function Catalogo() {
       id: 3,
       nombre: 'H6 HEV',
       version: 'H6 HEV',
-      imagen: 'https://inchcapelatam.sirv.com/GWM/Chile/H6%20HEV/H6%20HIBRIDO_2WD%20ELITE%20AT/760x360_H6%20HIBRIDO_2WD%20ELITE%20AT%20HI%CC%81BRIDO-1.png',
+      imagen: '/catalogo/ext/inchcapelatam-760x360-h6-hibrido-2wd-elite-at-hibrido--f23791.webp',
       categoria: 'HAVAL',
       descripcion: 'SUV híbrida, amplia, cómoda y eficiente.',
     },
@@ -34,7 +35,7 @@ function Catalogo() {
       id: 4,
       nombre: 'JOLION PRO HEV',
       version: 'JOLION PRO HEV',
-      imagen: 'https://inchcapelatam.sirv.com/GWM/Chile/JOLION%20HEV/760x360_JOLION%20HIBRIDO_2WD%20ELITE%20AT%20HI%CC%81BRIDO/HAVAL_VERSIONES-1.png',
+      imagen: '/catalogo/ext/inchcapelatam-haval-versiones-1-02588b.webp',
       categoria: 'HAVAL',
       descripcion: 'SUV híbrida compacta, con estilo y eficiencia.',
     },
@@ -42,7 +43,7 @@ function Catalogo() {
       id: 5,
       nombre: 'JOLION HEV',
       version: 'JOLION HEV',
-      imagen: 'https://www.gwm-mx.com/content/dam/gwm/pages/language-masters/es/models/haval-jolion/hev/sky-blue/2880/blue-1.webp',
+      imagen: '/catalogo/ext/gwm-mx-blue-1-ab8f77.webp',
       categoria: 'HAVAL',
       descripcion: 'SUV híbrida compacta, ágil y confortable.',
     },
@@ -51,7 +52,7 @@ function Catalogo() {
       id: 6,
       nombre: 'POER PASSENGER',
       version: 'POER PASSENGER',
-      imagen: 'https://www.gwm-ve.com/web/image/16359-4a368103/Poer_Passenger_01_Red.svg?access_token=da977a95-1fac-4f8e-8e5a-bb5b2c2eeda5',
+      imagen: '/catalogo/gwm-poer.webp',
       categoria: 'POER',
       descripcion: 'Pick-up versátil, para trabajo y ocio.',
     },
@@ -59,7 +60,7 @@ function Catalogo() {
       id: 7,
       nombre: 'POER MECÁNICA',
       version: 'POER MECÁNICA',
-      imagen: 'https://inchcapelatam.sirv.com/GWM/Chile/DIE%CC%81SEL%204X2%20ELITE/760x360_POER%20MT_DIE%CC%81SEL%204X2%20ELITE_%20NEGRA.png',
+      imagen: '/catalogo/ext/inchcapelatam-760x360-poer-mt-diesel-4x2-elite-negra-83618a.webp',
       categoria: 'POER',
       descripcion: 'Pick-up robusta, ideal para trabajos pesados.',
     },
@@ -67,7 +68,7 @@ function Catalogo() {
       id: 8,
       nombre: 'WINGLE 7',
       version: 'WINGLE 7',
-      imagen: 'https://www.ambacar.co/wp-content/uploads/2019/12/ambacar-great-wall-wingle-7-vista-diagonal.jpg',
+      imagen: '/catalogo/gwm-wingle-7.webp',
       categoria: 'POER',
       descripcion: 'Pick-up grande, confortable y capaz.',
     },
@@ -75,7 +76,7 @@ function Catalogo() {
       id: 9,
       nombre: 'WINGLE 5',
       version: 'WINGLE 5',
-      imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc0Pfo3DK5bPOsTgjbTVYkVgTqDgpfM5WoXw&s',
+      imagen: '/catalogo/ext/encrypted-tbn0-images-aa8f80.webp',
       categoria: 'POER',
       descripcion: 'Pick-up compacta, funcional y accesible.',
     },
@@ -84,7 +85,7 @@ function Catalogo() {
       id: 10,
       nombre: 'ORA 03 GT',
       version: 'ORA 03 GT',
-      imagen: 'https://inchcapelatam.sirv.com/GWM%20CO/Ora%2003%20GT/GT/Hamilton-White.webp?w=412',
+      imagen: '/catalogo/gwm-ora-03.webp',
       categoria: 'ORA',
       descripcion: 'Eléctrico compacto deportivo, ágil y moderno.',
     },
@@ -92,7 +93,7 @@ function Catalogo() {
       id: 11,
       nombre: 'ORA 03',
       version: 'ORA 03',
-      imagen: 'https://gwmcleber.com/ora03/img/ora03-todoazul.webp',
+      imagen: '/catalogo/ext/gwmcleber-ora03-todoazul-b433f3.webp',
       categoria: 'ORA',
       descripcion: 'Eléctrico compacto, eficiente y elegante.',
     },
@@ -139,7 +140,7 @@ function Catalogo() {
               className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col"
             >
               <div className="relative h-60 group-hover:scale-105 transition duration-300 overflow-hidden">
-                <img
+                <OptImg
                   src={producto.imagen}
                   alt={producto.nombre}
                   className="w-full h-full object-contain object-center transition duration-300"

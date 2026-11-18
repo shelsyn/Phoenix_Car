@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { HomeIcon } from "@heroicons/react/24/outline";
+import OptImg from '@/components/ui/OptImg';
 
 export default function Pensionado() {
     return (
@@ -33,8 +34,8 @@ export default function Pensionado() {
                             </div>
                             <div className="hidden lg:flex justify-center lg:justify-end">
                                 <div className="w-64 sm:w-80 lg:w-[30rem] overflow-hidden rounded-lg">
-                                    <img
-                                        src="https://dontamalio.com/wp-content/uploads/2020/09/mini_subsidio_vivienda_urbana.png"
+                                    <OptImg
+                                        src="/catalogo/ext/dontamalio-mini-subsidio-vivienda-urbana-4d2491.webp"
                                         alt="Ilustración de un automóvil"
                                         className="h-full w-full object-cover object-center"
                                     />

@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import OptImg from '@/components/ui/OptImg';
 
 function Catalogo() {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('SUV');
@@ -9,7 +10,7 @@ function Catalogo() {
       id: 1,
       nombre: 'SERES 3',
       version: 'SERES 3',
-      imagen: 'https://www.serescolombia.com/seres/site/artic/20230314/imag/foto_0000015220230314121032/rojo.jpeg',
+      imagen: '/catalogo/seres-3.webp',
       categoria: 'SUV',
       descripcion: 'SUV compacto eléctrico, ideal para la ciudad.',
     },
@@ -17,7 +18,7 @@ function Catalogo() {
       id: 2,
       nombre: 'SERES 5',
       version: 'SERES 5',
-      imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv_C2gp5Cv47WmKl4bfM2e79NhhTofhAGWGw&s',
+      imagen: '/catalogo/ext/encrypted-tbn0-images-aeb04e.webp',
       categoria: 'SUV',
       descripcion: 'SUV eléctrico de alto rendimiento, con diseño elegante.',
     },
@@ -64,7 +65,7 @@ function Catalogo() {
               className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col"
             >
               <div className="relative h-60 group-hover:scale-105 transition duration-300 overflow-hidden">
-                <img
+                <OptImg
                   src={producto.imagen}
                   alt={producto.nombre}
                   className="w-full h-full object-contain object-center transition duration-300"

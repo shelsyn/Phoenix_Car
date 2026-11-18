@@ -1,6 +1,7 @@
 import { AiOutlineBarChart, AiOutlineDollarCircle } from "react-icons/ai";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { MdOutlineDevicesOther } from "react-icons/md";
+import OptImg from '@/components/ui/OptImg';
 
 const resultados = [
   {
@@ -70,8 +71,8 @@ export default function RentingActivos() {
         <div className="mt-12 flex flex-col lg:flex-row items-center justify-between">
           {/* Imagen */}
           <div className="lg:w-1/2">
-            <img
-              src="https://www.revei2000.com/wp-content/uploads/2021/01/maquinaria-pesada-724x429.jpg"
+            <OptImg
+              src="/catalogo/ext/revei2000-maquinaria-pesada-724x429-bed9ca.webp"
               alt="Persona usando tecnología"
               className="rounded-lg shadow-md"
             />

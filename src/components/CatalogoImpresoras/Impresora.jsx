@@ -1,5 +1,6 @@
 import { Printer, ShieldCheck, Settings, RefreshCw, CheckCircle } from "lucide-react";
-import { motion } from "framer-motion";
+import Reveal from '@/components/ui/Reveal';
+import OptImg from '@/components/ui/OptImg';
 
 const benefits = [
   {
@@ -46,7 +47,7 @@ const Printers = () => {
             </a>
           </div>
           <div className="flex justify-center">
-            <img 
+            <OptImg 
               src="/imprefondo.jpg"
               alt="Alquiler de Impresoras"
               className="w-full max-w-lg object-cover drop-shadow-lg"
@@ -106,11 +107,9 @@ const Printers = () => {
 
         <div className="mt-10 flex flex-col items-center">
           {benefits.map((benefit, index) => (
-            <motion.div 
-              key={index} 
-              initial={{ opacity: 0, x: -20 }} 
-              animate={{ opacity: 1, x: 0 }} 
-              transition={{ delay: index * 0.2, duration: 0.5 }}
+            <Reveal
+              key={index}
+              delay={index * 120}
               className="flex items-start space-x-4 bg-white p-6 w-full max-w-3xl rounded-lg shadow-md my-2"
             >
               <CheckCircle className="w-8 h-8 text-[#047ab7] flex-shrink-0" />
@@ -118,7 +117,7 @@ const Printers = () => {
                 <h4 className="text-xl font-semibold text-gray-800">{benefit.title}</h4>
                 <p className="text-gray-600 mt-1">{benefit.description}</p>
               </div>
-            </motion.div>
+            </Reveal>
           ))}
         </div>
       </div>
@@ -139,7 +138,7 @@ const AdvantageCard = ({ icon, title, description }) => (
 // Componente de Opción de Impresora
 const PrinterOption = ({ title, description, image }) => (
   <div className="relative bg-white p-8 rounded-xl shadow-md w-96 flex flex-col items-center text-center hover:scale-105 transition-transform">
-    <img 
+    <OptImg 
       src={image} 
       alt={title} 
       className="w-48 h-48 object-cover mb-4"

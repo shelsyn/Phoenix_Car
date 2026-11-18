@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { HomeIcon } from "@heroicons/react/24/outline";
+import OptImg from '@/components/ui/OptImg';
 
 export default function Empleado() {
     return (
@@ -40,8 +41,8 @@ export default function Empleado() {
                             {/* Imagen */}
                             <div className="flex justify-center lg:justify-center">
                                 <div className="w-96 h-72 sm:h-96 sm:w-120 lg:h-96 lg:w-120 overflow-hidden rounded-lg">
-                                    <img
-                                        src="https://s3.pagegear.co/181/69/imagenes-editor/2023/09/0912_primer_plano_agente_bienes_raices_dando_par_llaves_su_nuevo_hogar_xwarfh.jpg"
+                                    <OptImg
+                                        src="/catalogo/hipoteca-vivienda.webp"
                                         alt="Persona entregando llaves en una oficina de bienes raíces"
                                         loading="lazy"
                                         className="h-full w-full object-cover object-center"

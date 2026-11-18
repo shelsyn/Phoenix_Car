@@ -1,11 +1,10 @@
-import { useState } from "react";
-import HeaderEmpresas from "@/components/CatalogoEmpresas/HeaderEmpresas";
 import RentingEmpresas from "@/components/CatalogoEmpresas/RentingEmpresas";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Productos from "@/components/Productos";
 import Head from "next/head";
 import WhatsappButton from "@/components/WhatsappButton"; 
+import OptImg from '@/components/ui/OptImg';
 
 const products = [
   ////////////////////////camioneta/////////
@@ -87,7 +86,7 @@ const products = [
   name: 'Nhr Reward Euro Iv',
   year: '2024',
   href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias.',
-  imageSrc: 'https://www.centrodiesel.com.co/wp-content/uploads/2024/06/nlr-especiales.jpg',
+  imageSrc: '/catalogo/chevrolet-nhr-reward.webp',
   marca: 'Chevrolet ',
   tipo: 'Camion liviano',
   ficha:'https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:df7671bd-ac13-4c30-afcb-90953beed280'
@@ -105,11 +104,6 @@ const products = [
 ];
 
 export default function CatalogoEmpresa() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleChat = () => {
-    setIsOpen(!isOpen);
-  };
 
   return (
     <>
@@ -128,9 +122,9 @@ export default function CatalogoEmpresa() {
               Nuestro Catálogo
             </h2>
             <div className="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-8">
-              {products.map((product) => (
+              {products.map((product, index) => (
                 <div
-                  key={product.id}
+                  key={`${product.name}-${index}`}
                   className="rounded-xl shadow-lg border border-gray-200 overflow-hidden"
                 >
                   <div className="p-4 flex flex-col items-center text-center">
@@ -148,7 +142,7 @@ export default function CatalogoEmpresa() {
                     <p className="text-sm text-gray-600 mt-2">{product.tipo}</p>
                   </div>
                   <div className="relative h-56 w-full overflow-hidden">
-                    <img
+                    <OptImg
                       src={product.imageSrc}
                       alt={product.name}
                       className="w-full h-full object-cover"

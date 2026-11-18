@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import OptImg from '@/components/ui/OptImg';
 
 function Catalogo() {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('Carros');
@@ -8,7 +9,7 @@ function Catalogo() {
       id: 1,
       nombre: 'Renault Kwid',
       precio: "Kwid", // Replaced price with name
-      imagen: 'https://store.autogalias.com/cdn/shop/files/Blanco_fd3291e5-baeb-4c75-a5d1-5cb197cf5a9c.png?v=1704822368',
+      imagen: '/catalogo/renault-kwid.webp',
       categoria: 'Carros',
       descripcion: 'Hatchback compacto y moderno.',
     },
@@ -16,7 +17,7 @@ function Catalogo() {
       id: 2,
       nombre: 'Renault Sandero',
       precio: "Sandero", // Replaced price with name
-      imagen: 'https://maxiautos.co/img/ybc_blog/post/1920X750png.jpg',
+      imagen: '/catalogo/ext/maxiautos-1920x750png-f7fcb9.webp',
       categoria: 'Carros',
       descripcion: 'Hatchback versátil y espacioso.',
     },
@@ -24,7 +25,7 @@ function Catalogo() {
       id: 3,
       nombre: 'Renault Logan',
       precio: "Logan", // Replaced price with name
-      imagen: 'https://cdn.group.renault.com/ren/co/vehicles/logan/design/exterior/logan-lateral-exterior.jpg.ximg.xsmall.jpg/210c18118f.jpg',
+      imagen: '/catalogo/ext/cdn-210c18118f-baa799.webp',
       categoria: 'Carros',
       descripcion: 'Sedán espacioso y confortable.',
     },
@@ -32,7 +33,7 @@ function Catalogo() {
       id: 4,
       nombre: 'Renault Stepway',
       precio: "Stepway", // Replaced price with name
-      imagen: 'https://cdn.group.renault.com/ren/mx/mex/vehiculos-comerciales/stepway/gris.jpg.ximg.xsmall.jpg/d146db8401.jpg',
+      imagen: '/catalogo/ext/cdn-d146db8401-b7ec1a.webp',
       categoria: 'Carros',
       descripcion: 'Hatchback aventurero con mayor altura.',
     },
@@ -40,7 +41,7 @@ function Catalogo() {
       id: 5,
       nombre: 'Renault Kardian',
       precio: "Kardian", // Replaced price with name
-      imagen: 'https://store.autogalias.com/cdn/shop/files/Karian-2.jpg?v=1725328715',
+      imagen: '/catalogo/renault-kardian.webp',
       categoria: 'Camionetas',
       descripcion: 'SUV moderna y elegante.',
     },
@@ -48,7 +49,7 @@ function Catalogo() {
       id: 6,
       nombre: 'Renault Duster',
       precio: "Duster", // Replaced price with name
-      imagen: 'https://alborautosrenault.com/wp-content/uploads/2020/02/renault-duster-exterior-1.jpg',
+      imagen: '/catalogo/renault-duster.webp',
       categoria: 'Camionetas',
       descripcion: 'SUV compacta y robusta.',
     },
@@ -56,7 +57,7 @@ function Catalogo() {
       id: 7,
       nombre: 'Renault Captur',
       precio: "Captur", // Replaced price with name
-      imagen: 'https://www.portafolio.co/files/article_new_multimedia/uploads/2022/03/31/6245c46862cb9.jpeg',
+      imagen: '/catalogo/renault-captur.webp',
       categoria: 'Camionetas',
       descripcion: 'SUV elegante y confortable.',
     },
@@ -64,7 +65,7 @@ function Catalogo() {
       id: 8,
       nombre: 'Renault Koleos',
       precio: "Koleos", // Replaced price with name
-      imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFXbhI8Sz7zE_YjoxqfimTyODur5S_i3UchCrjsN-2M4vCyAbLVPTwPjF09iTHP80ntDM&usqp=CAU',
+      imagen: '/catalogo/ext/encrypted-tbn0-images-ecc332.webp',
       categoria: 'Camionetas',
       descripcion: 'SUV de lujo, elegante y sofisticada.',
     },
@@ -72,7 +73,7 @@ function Catalogo() {
       id: 9,
       nombre: 'Renault Oroch',
       precio: "Oroch", // Replaced price with name
-      imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCjl8dIAyhAhIZPH2eMechHe02jIen2abYMA&s',
+      imagen: '/catalogo/ext/encrypted-tbn0-images-2c78e7.webp',
       categoria: 'PickUps',
       descripcion: 'Pickup compacta, moderna y versátil.',
     },
@@ -80,7 +81,7 @@ function Catalogo() {
       id: 10,
       nombre: 'Renault Alaskan',
       precio: "Alaskan", // Replaced price with name
-      imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN7-pR5lMiCnJti4_kFxQlOW_eyo0GIGz2vQ&s',
+      imagen: '/catalogo/ext/encrypted-tbn0-images-436bdc.webp',
       categoria: 'PickUps',
       descripcion: 'Pickup potente y robusta.',
     },
@@ -88,7 +89,7 @@ function Catalogo() {
         id: 11,
         nombre: 'Megane E-Tech',
         precio: "Megane E-Tech", // Replaced price with name
-        imagen: 'https://agenciauto.com/wp-content/uploads/2023/06/bccd134571-1024x576.webp',
+        imagen: '/catalogo/renault-megane-etech.webp',
         categoria: 'Eléctricos E-Tech',
         descripcion: 'Hatchback eléctrico de alto rendimiento.',
       },
@@ -96,7 +97,7 @@ function Catalogo() {
         id: 12,
         nombre: 'Kwid E-Tech',
         precio: "Kwid E-Tech", // Replaced price with name
-        imagen: 'https://agenciauto.com/wp-content/uploads/2023/06/kwid-e-tech-electrico-color2-agenciauto.webp',
+        imagen: '/catalogo/renault-kwid-etech.webp',
         categoria: 'Eléctricos E-Tech',
         descripcion: 'Hatchback eléctrico compacto y eficiente.',
       },
@@ -104,7 +105,7 @@ function Catalogo() {
         id: 13,
         nombre: 'Zoe E-Tech',
         precio: "Zoe E-Tech", // Replaced price with name
-        imagen: 'https://alborautosrenault.com/wp-content/uploads/2024/01/Zoe_05.png',
+        imagen: '/catalogo/renault-zoe.webp',
         categoria: 'Eléctricos E-Tech',
         descripcion: 'Hatchback eléctrico elegante y tecnológico.',
       },
@@ -112,7 +113,7 @@ function Catalogo() {
         id: 14,
         nombre: 'Renault Kangoo',
         precio: "Kangoo", // Replaced price with name
-        imagen: 'https://cdn.group.renault.com/ren/co/vehicles/kangoo/home/renault-kangoo-exterior.jpg.ximg.xsmall.jpg/575e68ba40.jpg',
+        imagen: '/catalogo/ext/cdn-575e68ba40-6c4fe1.webp',
         categoria: 'Utilitarios',
         descripcion: 'Vehículo utilitario versátil y espacioso.',
       },
@@ -120,7 +121,7 @@ function Catalogo() {
         id: 15,
         nombre: 'Renault Master',
         precio: "Master", // Replaced price with name
-        imagen: 'https://motocostarenault.com/wp-content/uploads/2021/09/master-exterior1.jpg',
+        imagen: '/catalogo/ext/motocostarenault-master-exterior1-8f3f39.webp',
         categoria: 'Utilitarios',
         descripcion: 'Vehículo utilitario grande y de alta capacidad.',
       },
@@ -128,7 +129,7 @@ function Catalogo() {
         id: 16,
         nombre: 'Renault Trafic',
         precio: "Trafic", // Replaced price with name
-        imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1VR0wcbOL2gr5vFq-Isw-_yelpQsv86zpHQ&s',
+        imagen: '/catalogo/ext/encrypted-tbn0-images-416e50.webp',
         categoria: 'Utilitarios',
         descripcion: 'Vehículo utilitario versátil, para pasajeros o carga.',
       },
@@ -136,7 +137,7 @@ function Catalogo() {
       id: 17,
       nombre: 'Renault Arkana E-Tech',
       precio: "Arkana E-Tech", // Replaced price with name
-      imagen: 'https://res.cloudinary.com/total-dealer/image/upload/w_3840,f_auto,q_75/v1/production/b59g14axdbw9six87hkbslxjzmbr',
+      imagen: '/catalogo/ext/res-b59g14axdbw9six87hkbslxjzmbr-4226d2.webp',
       categoria: 'Hybrid E-Tech',
       descripcion: 'SUV híbrido, deportivo y elegante.',
     },
@@ -190,7 +191,7 @@ function Catalogo() {
                 className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col"
                 >
                 <div className="relative h-60 group-hover:scale-105 transition duration-300 overflow-hidden">
-                    <img
+                    <OptImg
                     src={producto.imagen}
                     alt={producto.nombre}
                     className="w-full h-full object-contain object-center transition duration-300"

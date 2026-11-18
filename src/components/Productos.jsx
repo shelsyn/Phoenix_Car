@@ -1,3 +1,4 @@
+import OptImg from '@/components/ui/OptImg';
 export default function Productos() {
   const products = [
     {
@@ -5,7 +6,7 @@ export default function Productos() {
       name: "Cx5 Touring 2.0 At 4X2",
       year: "2024",
       href: "https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias.",
-      imageSrc: "https://dercocenter-api.s3.us-east-1.amazonaws.com/images/version/1706733992-ZHtrlJSUKd.webp",
+      imageSrc: "/catalogo/ext/dercocenter-api-1706733992-zhtrljsukd-fb8888.webp",
       marca: "Mazda",
       iva: "IVA INCLUIDO",
     },
@@ -14,7 +15,7 @@ export default function Productos() {
       name: "Renegade Connect",
       year: "2024",
       href: "https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias.",
-      imageSrc: "https://www.ccarprice.com/products/Jeep_Renegade_Limited_2024.jpg",
+      imageSrc: "/catalogo/ext/ccarprice-jeep-renegade-limited-2024-597784.webp",
       marca: "Jeep",
       iva: "IVA INCLUIDO",
     },
@@ -23,7 +24,7 @@ export default function Productos() {
       name: "Logan Life Ph2",
       year: "2024",
       href: "https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias.",
-      imageSrc: "https://agenciauto.com/wp-content/uploads/2021/02/10797-color-vehiculo-nuevo-logan.jpg",
+      imageSrc: "/catalogo/ext/agenciauto-10797-color-vehiculo-nuevo-logan-b87994.webp",
       marca: "Renault",
       iva: "IVA INCLUIDO",
     },
@@ -32,7 +33,7 @@ export default function Productos() {
       name: "Kangoo Evolución",
       year: "2024",
       href: "https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias.",
-      imageSrc: "https://img-ik.cars.co.za/news-site-za/images/2021/02/renault-kangoo-express-van-3.jpg",
+      imageSrc: "/catalogo/ext/img-ik-renault-kangoo-express-van-3-57e105.webp",
       marca: "Renault",
       iva: "IVA INCLUIDO",
     },
@@ -65,7 +66,7 @@ export default function Productos() {
 
                 {/* Imagen del producto */}
                 <div className="relative h-48 w-full overflow-hidden rounded-lg my-4">
-                  <img
+                  <OptImg
                     src={product.imageSrc}
                     alt={product.name}
                     className="w-full h-full object-contain"

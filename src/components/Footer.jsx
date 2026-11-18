@@ -1,97 +1,96 @@
-import { AiOutlineWhatsApp, AiOutlineInstagram } from 'react-icons/ai';
-import Link from 'next/link'; // Import Link from Next.js
+import Link from 'next/link';
+import { AiOutlineInstagram, AiOutlineWhatsApp } from 'react-icons/ai';
+import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
+import { EMAIL, INSTAGRAM_URL, PHONE, PHONE_DISPLAY, WHATSAPP_URL } from '@/lib/contacto';
 
-const navigation = {
-  main: [
-    { name: 'Inicio', href: '/' },
-    { name: 'Crédito de vehículo', href: '/quienesSomos' },
-    { name: 'Catálogo Empresa', href: '/catalogoEmpresa' },
-    { name: 'Catálogo Activo', href: '/catalogoActivo' },
-    { name: 'Medicina', href: '/medicina' },
-    { name: 'Catálogo Persona Natural', href: '/catalogoNatural' },
-    { name: 'Términos y condiciones', href: '/terminos' },
-  ],
-  social: [
-    {
-      name: 'Instagram',
-      href: 'https://www.instagram.com/ventarentall_?igsh=M2FoMTQ4Y3k5YWln',
-      icon: AiOutlineInstagram,
-    },
-    {
-      name: 'WhatsApp',
-      href: 'https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias.',
-      icon: AiOutlineWhatsApp,
-    },
-  ],
-};
+const columns = [
+  {
+    title: 'Renting',
+    links: [
+      { name: 'Catálogo Empresa', href: '/catalogoEmpresa' },
+      { name: 'Catálogo Persona Natural', href: '/catalogoNatural' },
+      { name: 'Maquinaria Pesada', href: '/catalogoActivo' },
+      { name: 'Equipos Médicos', href: '/medicina' },
+    ],
+  },
+  {
+    title: 'Compañía',
+    links: [
+      { name: 'Inicio', href: '/' },
+      { name: 'Crédito de vehículo', href: '/quienesSomos' },
+      { name: 'Términos y condiciones', href: '/terminos' },
+    ],
+  },
+];
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-[#1e4d89] to-[#147ac4] text-white py-12 mt-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10"> {/* 3-column grid on desktop */}
-          {/* Logo and Description */}
-          <div className="flex flex-col items-start">
-            <Link href="/" legacyBehavior>
-              <a className="cursor-pointer">
-                <img className="h-14 w-auto object-contain" src="/logos.png" alt="Logo" /> {/* Reduced logo size */}
-              </a>
+    <footer className="relative overflow-hidden bg-brand-ink text-white">
+      {/* Brillo decorativo */}
+      <div className="pointer-events-none absolute -top-40 left-1/2 h-80 w-[60rem] -translate-x-1/2 rounded-full bg-brand/30 blur-3xl" aria-hidden="true" />
+
+      <div className="relative mx-auto max-w-7xl px-4 pb-10 pt-16 sm:px-6 lg:px-8">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+          <div className="lg:col-span-2">
+            <Link href="/" aria-label="VentRentAll - Inicio">
+              <img className="h-12 w-auto" src="/logos.png" alt="VentRentAll" loading="lazy" width="581" height="141" />
             </Link>
-         
-          </div>
-
-          {/* Navigation */}
-          <div>
-            <h4 className="text-lg font-semibold mb-3">Navegación</h4>
-            <nav className="flex flex-col space-y-2" aria-label="Footer"> {/* Increased space */}
-              {navigation.main.map((item) => (
-                <div key={item.name}>
-                  {item.name === 'Términos y condiciones' ? (
-                    <a
-                      href={item.href}
-                      className="text-gray-300 hover:text-phoenix-orange transition-colors text-sm"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {item.name}
-                    </a>
-                  ) : (
-                    <Link href={item.href} legacyBehavior>
-                      <a className="text-gray-300 hover:text-phoenix-orange transition-colors text-sm">
-                        {item.name}
-                      </a>
-                    </Link>
-                  )}
-                </div>
-              ))}
-            </nav>
-          </div>
-
-          {/* Social Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-3">Síguenos</h4>
-            <div className="flex flex-col space-y-2"> {/* Increased space */}
-              {navigation.social.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  target="_blank"
-                  className="text-gray-300 hover:text-phoenix-orange transition-colors flex items-center"
-                  rel="noreferrer"
-                >
-                  <item.icon className="h-5 w-5 mr-2" aria-hidden="true" />
-                  <span className="text-sm">{item.name}</span>
-                </a>
-              ))}
+            <p className="mt-5 max-w-sm text-sm leading-6 text-white/70">
+              Renting de vehículos, maquinaria y equipos para empresas y personas. Sin cuota inicial y con
+              mantenimiento, seguros e impuestos incluidos.
+            </p>
+            <div className="mt-6 space-y-3 text-sm">
+              <a href={`tel:+${PHONE}`} className="flex items-center gap-3 text-white/80 transition hover:text-white">
+                <PhoneIcon className="h-5 w-5 text-brand-gold" aria-hidden="true" />
+                {PHONE_DISPLAY}
+              </a>
+              <a href={`mailto:${EMAIL}`} className="flex items-center gap-3 text-white/80 transition hover:text-white">
+                <EnvelopeIcon className="h-5 w-5 text-brand-gold" aria-hidden="true" />
+                {EMAIL}
+              </a>
             </div>
           </div>
+
+          {columns.map((col) => (
+            <div key={col.title}>
+              <h4 className="font-display text-sm font-semibold uppercase tracking-wider text-white">{col.title}</h4>
+              <ul className="mt-4 space-y-3">
+                {col.links.map((item) => (
+                  <li key={item.name}>
+                    <Link href={item.href} className="text-sm text-white/70 transition hover:text-brand-gold">
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
-        {/* Copyright */}
-        <div className="border-t border-gray-700 pt-6">
-          <p className="text-center text-xs text-gray-400">
+        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
+          <p className="text-xs text-white/50">
             &copy; {new Date().getFullYear()} VENTRENTALL. Todos los derechos reservados.
           </p>
+          <div className="flex gap-3">
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+              className="rounded-full bg-white/10 p-2.5 transition hover:bg-brand-gold hover:text-brand-ink"
+            >
+              <AiOutlineInstagram className="h-5 w-5" aria-hidden="true" />
+            </a>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="WhatsApp"
+              className="rounded-full bg-white/10 p-2.5 transition hover:bg-brand-gold hover:text-brand-ink"
+            >
+              <AiOutlineWhatsApp className="h-5 w-5" aria-hidden="true" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

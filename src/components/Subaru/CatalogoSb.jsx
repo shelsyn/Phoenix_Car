@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import OptImg from '@/components/ui/OptImg';
 
 function Catalogo() {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('Camionetas');
@@ -9,7 +10,7 @@ function Catalogo() {
       id: 1,
       nombre: 'Crosstrek',
       precio: 135900000,
-      imagen: 'https://www.subarucolombia.com/subaru/site/artic/20230323/imag/foto_0000021220230323182042/3.png',
+      imagen: '/catalogo/ext/subarucolombia-3-c82204.webp',
       categoria: 'Camionetas',
       descripcion: 'SUV compacta, moderna y eficiente.',
     },
@@ -17,7 +18,7 @@ function Catalogo() {
       id: 2,
       nombre: 'Outback',
       precio: 193900000,
-      imagen: 'https://s7d1.scene7.com/is/image/scom/SDI_UAT_360e_032?$750p$',
+      imagen: '/catalogo/subaru-outback.webp',
       categoria: 'Camionetas',
       descripcion: 'SUV versátil y espaciosa.',
     },
@@ -25,7 +26,7 @@ function Catalogo() {
       id: 3,
       nombre: 'Evoltis',
       precio: 264900000,
-      imagen: 'https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_ea8814c4c90844039fddbf8172a2ffbe.webp',
+      imagen: '/catalogo/ext/acroadtrip-rt-v-ea8814c4c90844039fddbf8172a2ffbe-7064fa.webp',
       categoria: 'Camionetas',
       descripcion: 'SUV robusta, ideal para cualquier terreno.',
     },
@@ -33,7 +34,7 @@ function Catalogo() {
       id: 4,
       nombre: 'Forester',
       precio: 159900000,
-      imagen: 'https://inchcapelatam.sirv.com/Subaru/Colombia/FORESTER/2.%20Forester%202.0%20Advance%20Exterior/Forester%20Advance%20Cascade%20Green%20Silica.png',
+      imagen: '/catalogo/ext/inchcapelatam-forester-advance-cascade-green-silica-c9e627.webp',
       categoria: 'Camionetas',
       descripcion: 'SUV compacta, moderna y ágil.',
     },
@@ -42,7 +43,7 @@ function Catalogo() {
       id: 5,
       nombre: 'WRX',
       precio: 199990000,
-      imagen: 'https://www.subarucolombia.com/subaru/site/artic/20240527/imag/foto_0000016820240527215020/25WRX_0010BP_tS-ES_CVT_E3QF_CW_E3.jpg',
+      imagen: '/catalogo/ext/subarucolombia-25wrx-0010bp-ts-es-cvt-e3qf-cw-e3-bb5477.webp',
       categoria: 'VRX',
       descripcion: 'Sedán deportivo de alto rendimiento.',
     },
@@ -51,7 +52,7 @@ function Catalogo() {
       id: 6,
       nombre: 'Forester Hybrid',
       precio: 195900000,
-      imagen: 'https://inchcapelatam.sirv.com/Subaru/Colombia/FORESTER/2.%20Forester%202.0%20Advance%20Exterior/Forester%20Advance%20Cascade%20Green%20Silica.png',
+      imagen: '/catalogo/ext/inchcapelatam-forester-advance-cascade-green-silica-c9e627.webp',
       categoria: 'Híbridas',
       descripcion: 'SUV híbrida, eficiente y versátil.',
     },
@@ -59,7 +60,7 @@ function Catalogo() {
       id: 7,
       nombre: 'Crosstrek Hybrid',
       precio: 159900000,
-      imagen: 'https://cdn-image-handler.oem-production.subaru.com.au/vehicle/2024/crosstrek/specs-pack/my24-crosstrek-awd-hybrid-l-crystal-white-pearl-front.png',
+      imagen: '/catalogo/ext/cdn-image-handler-my24-crosstrek-awd-hybrid-l-crystal-whit-f3509b.webp',
       categoria: 'Híbridas',
       descripcion: 'SUV híbrida, compacta y moderna.',
     },
@@ -106,7 +107,7 @@ function Catalogo() {
               className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col"
             >
               <div className="relative h-60 group-hover:scale-105 transition duration-300 overflow-hidden">
-                <img
+                <OptImg
                   src={producto.imagen}
                   alt={producto.nombre}
                   className="w-full h-full object-contain object-center transition duration-300"

@@ -1,5 +1,6 @@
 import React from 'react';
 import { GlobeAltIcon, EyeIcon, HomeIcon, CurrencyDollarIcon } from '@heroicons/react/24/outline';
+import OptImg from '@/components/ui/OptImg';
 
 const supportLinks = [
   {
@@ -27,8 +28,8 @@ export default function Hipotecario() {
       <div className="bg-white">
         <div className="relative pb-32">
         <div className="absolute inset-0">
-  <img className="h-full w-full object-cover opacity-75" 
-       src="https://www.semana.com/resizer/v2/Y6C7P6UHDBC3FHPUIKLBQHY4NM.jpg?auth=add0fb2473c72632eb179721d01d35f8ef6e24c30b95d31e6f9ae0466fd8d11e&smart=true&quality=75&width=1280&height=720" 
+  <OptImg className="h-full w-full object-cover opacity-75" 
+       src="/catalogo/ext/semana-y6c7p6uhdbc3fhpuiklbqhy4nm-1be29c.webp" 
        alt="" 
   />
   <div className="absolute inset-0 bg-[#05a0e3] bg-opacity-40 mix-blend-multiply" aria-hidden="true" />

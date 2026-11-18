@@ -32,6 +32,18 @@ module.exports = {
       fuchsia: colors.fuchsia,
       indigo: colors.indigo,
       gray: colors.gray,
+      emerald: colors.emerald,
+      // Paleta de marca VentRentAll
+      brand: {
+        ink: '#0a1f3d', // azul marino (fondos oscuros)
+        navy: '#1e4d89',
+        DEFAULT: '#047ab7',
+        light: '#05a0e3',
+        soft: '#e8f4fb',
+        gold: '#e9b949', // acento del logo "ALL"
+      },
+      // Alias usado en el footer anterior
+      'phoenix-orange': '#e9b949',
       gold: {
         goldTitle: ' #827458',
         goldText: '#dcb47a',
@@ -62,9 +74,21 @@ module.exports = {
       borderRadius: {
         '4xl': '2rem',
       },
+      // Barra de carga entre páginas (RouteLoader)
+      keyframes: {
+        carga: {
+          '0%': { width: '0%' },
+          '20%': { width: '35%' },
+          '60%': { width: '70%' },
+          '100%': { width: '92%' },
+        },
+      },
+      animation: {
+        carga: 'carga 8s cubic-bezier(0.1, 0.7, 0.2, 1) forwards',
+      },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
-        display: ['Lexend', ...defaultTheme.fontFamily.sans],
+        sans: ['var(--font-inter)', 'Inter', ...defaultTheme.fontFamily.sans],
+        display: ['var(--font-display)', 'Lexend', ...defaultTheme.fontFamily.sans],
       },
       maxWidth: {
         '2xl': '40rem',

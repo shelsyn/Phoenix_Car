@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
+import OptImg from '@/components/ui/OptImg';
 
 const maquinariaItems = [
-  { name: "Montacargas", href: "/montacargas", image: "https://lc.cx/ncC75P" },
-  { name: "Excavadoras", href: "/excavadoras", image: "https://lc.cx/ocQRB1" },
-  { name: "Retroexcavadoras", href: "/retroexcavadoras", image: "https://lc.cx/hKxhiy" },
-  { name: "Vibrocompactadores", href: "/vibrocompactadores", image: "https://s.alicdn.com/@sc04/kf/H92fcd8c3f8be4bfd9006618e5b785dbe6.jpg_720x720q50.jpg" },
-  { name: "Motoniveladoras", href: "/motoniveladoras", image: "https://lc.cx/wi7-Jg" },
-  { name: "Mini excavadoras", href: "/mini-excavadoras", image: "https://www.topconpositioning.com/content/topconpositioning/global/es/solutions/infrastructure/earthmoving/mini-excavators/_jcr_content/root/container/container/container/teaser_8671333_copy_.coreimg.jpeg/1709084559369/mini-excavator-solutions-web-teaser.jpeg" },
-  { name: "Compresores", href: "/compresores", image: "https://maquinariapesadanegocios.com.co/wp-content/uploads/2023/07/WhatsApp-Image-2023-07-17-at-10.20.04-1024x768.jpeg" },
-  { name: "Camiones", href: "/camiones", image: "https://lc.cx/44EAhL" },
-  { name: "Grúas", href: "/gruas", image: "https://gruasarlin.com/wp-content/uploads/2016/04/Grove-GRT8100.jpg" },
-  { name: "Martillos hidráulicos", href: "/martillos-hidraulicos", image: "https://bbrskrental.s3-sa-east-1.amazonaws.com/images/slider/Martillos%20Hidraulicos_2020-09-07-184706.jpg" },
-  { name: "Bulldozer", href: "/bulldozer", image: "https://webklat.s3.amazonaws.com/wp-content/uploads/sites/23/2022/09/19193655/Maquinaria-Pesada-Que-es-y-para-que-sirve-Komatsu-1.jpg" },
+  { name: "Montacargas", href: "/montacargas", image: "/catalogo/maquinaria-montacargas.webp" },
+  { name: "Excavadoras", href: "/excavadoras", image: "/catalogo/maquinaria-excavadoras.webp" },
+  { name: "Retroexcavadoras", href: "/retroexcavadoras", image: "/catalogo/maquinaria-retroexcavadoras.webp" },
+  { name: "Vibrocompactadores", href: "/vibrocompactadores", image: "/catalogo/ext/s-h92fcd8c3f8be4bfd9006618e5b785dbe6-jpg-7-c726fa.webp" },
+  { name: "Motoniveladoras", href: "/motoniveladoras", image: "/catalogo/maquinaria-motoniveladoras.webp" },
+  { name: "Mini excavadoras", href: "/mini-excavadoras", image: "/catalogo/ext/topconpositioning-mini-excavator-solutions-web-teaser-ca9bf6.webp" },
+  { name: "Compresores", href: "/compresores", image: "/catalogo/ext/maquinariapesadanegocios-whatsapp-image-2023-07-17-at-10-20-04-10-ac353e.webp" },
+  { name: "Camiones", href: "/camiones", image: "/catalogo/maquinaria-camiones.webp" },
+  { name: "Grúas", href: "/gruas", image: "/catalogo/ext/gruasarlin-grove-grt8100-5fb4e7.webp" },
+  { name: "Martillos hidráulicos", href: "/martillos-hidraulicos", image: "/catalogo/ext/bbrskrental-martillos-hidraulicos-2020-09-07-184706-925c24.webp" },
+  { name: "Bulldozer", href: "/bulldozer", image: "/catalogo/ext/webklat-maquinaria-pesada-que-es-y-para-que-sirv-3128b3.webp" },
 ];
 
 export default function MaquinariaPesada() {
@@ -52,7 +53,7 @@ export default function MaquinariaPesada() {
           {/* Imagen dinámica */}
           <div className="flex-1 text-center lg:text-left">
             <a href={maquinariaItems[activeIndex].href}>
-              <img
+              <OptImg
                 src={maquinariaItems[activeIndex].image}
                 alt={maquinariaItems[activeIndex].name}
                 className="w-full max-w-md mx-auto rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"

@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import OptImg from '@/components/ui/OptImg';
 
 function Catalogo() {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('Camionetas');
@@ -9,7 +10,7 @@ function Catalogo() {
       id: 1,
       nombre: 'Suzuki S-Cross Híbrida 4x2',
       precio: "S-Cross Híbrida 4x2",
-      imagen: 'https://www.suzukiautos.com.co/arquivos/scross-hibrida-2025.png?v=638659943135830000',
+      imagen: '/catalogo/suzuki-s-cross.webp',
       categoria: 'Camionetas',
       descripcion: 'SUV compacta, moderna y eficiente.',
     },
@@ -17,7 +18,7 @@ function Catalogo() {
       id: 2,
       nombre: 'Grand Vitara Híbrida 4x2',
       precio: "Grand Vitara Híbrida 4x2",
-      imagen: 'https://suzukiderco.vteximg.com.br/arquivos/ids/156577-1000-1000/Gran-Vitara-Colors-Grey.png?v=638212443984230000',
+      imagen: '/catalogo/ext/suzukiderco-gran-vitara-colors-grey-1a12a7.webp',
       categoria: 'Camionetas',
       descripcion: 'SUV versátil y espaciosa.',
     },
@@ -25,7 +26,7 @@ function Catalogo() {
       id: 3,
       nombre: 'Grand Vitara Híbrida 4x4',
       precio: "Grand Vitara Híbrida 4x4",
-      imagen: 'https://autozen.com.co/wp-content/uploads/2023/12/Autozen-suzuki-gran-vitara-azul.webp',
+      imagen: '/catalogo/suzuki-grand-vitara.webp',
       categoria: 'Camionetas',
       descripcion: 'SUV robusta, ideal para cualquier terreno.',
     },
@@ -33,7 +34,7 @@ function Catalogo() {
       id: 4,
       nombre: 'Suzuki Fronx Híbrida',
       precio: "Suzuki Fronx Híbrida",
-      imagen: 'https://autozen.com.co/wp-content/uploads/2023/12/Autozen-suzuki-fronx-blue.webp',
+      imagen: '/catalogo/ext/autozen-autozen-suzuki-fronx-blue-61e5ec.webp',
       categoria: 'Camionetas',
       descripcion: 'SUV compacta, moderna y ágil.',
     },
@@ -41,7 +42,7 @@ function Catalogo() {
       id: 5,
       nombre: 'Suzuki Jimny 5 Puertas',
       precio: "Suzuki Jimny 5 Puertas",
-      imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjmdUWfg6JciFP2vE5HHTfdgb9MsFTHmEn8A&s',
+      imagen: '/catalogo/ext/encrypted-tbn0-images-aab8c5.webp',
       categoria: 'Camionetas',
       descripcion: 'SUV compacta, moderna y ágil.',
     },
@@ -49,7 +50,7 @@ function Catalogo() {
       id: 6,
       nombre: 'Suzuki Jimny',
       precio: "Suzuki Jimny",
-      imagen: 'https://suzukiderco.vtexassets.com/arquivos/Jimny-interna.png?v=637544535322500000',
+      imagen: '/catalogo/ext/suzukiderco-jimny-interna-a6a56a.webp',
       categoria: 'Camionetas',
       descripcion: 'SUV compacta, moderna y ágil.',
     },
@@ -59,7 +60,7 @@ function Catalogo() {
       id: 8,
       nombre: 'Suzuki Swift Híbrido',
       precio: "Suzuki Swift Híbrido",
-      imagen: 'https://estrenarcarro.com/wp-content/uploads/2021/07/Suzuki-Swift-Hybrid-3.png',
+      imagen: '/susukiSwift.png',
       categoria: 'Híbridos',
       descripcion: 'Hatchback compacto, moderno y eficiente.',
     },
@@ -67,7 +68,7 @@ function Catalogo() {
       id: 9,
       nombre: 'Grand Vitara Híbrida 4x2',
       precio: "Grand Vitara Híbrida 4x2",
-      imagen: 'https://suzukiderco.vteximg.com.br/arquivos/ids/156577-1000-1000/Gran-Vitara-Colors-Grey.png?v=638212443984230000',
+      imagen: '/catalogo/ext/suzukiderco-gran-vitara-colors-grey-1a12a7.webp',
       categoria: 'Híbridos',
       descripcion: 'SUV versátil y espaciosa.',
     },
@@ -76,7 +77,7 @@ function Catalogo() {
       id: 11,
       nombre: 'Suzuki Fronx Híbrida',
       precio: "Suzuki Fronx Híbrida",
-      imagen: 'https://autozen.com.co/wp-content/uploads/2023/12/Autozen-suzuki-fronx-blue.webp',
+      imagen: '/catalogo/ext/autozen-autozen-suzuki-fronx-blue-61e5ec.webp',
       categoria: 'Híbridos',
       descripcion: 'SUV compacta, moderna y ágil.',
     },
@@ -85,7 +86,7 @@ function Catalogo() {
       id: 12,
       nombre: 'Nuevo Suzuki Swift Híbrido',
       precio: "Nuevo Suzuki Swift Híbrido",
-      imagen: 'https://autozen.com.co/wp-content/uploads/2024/11/autozen-suzuki-swift-sedan-plata.webp',
+      imagen: '/catalogo/ext/autozen-autozen-suzuki-swift-sedan-plata-79a1a9.webp',
       categoria: 'Crossovers',
       descripcion: 'Hatchback compacto, moderno y eficiente.',
     },
@@ -93,7 +94,7 @@ function Catalogo() {
       id: 13,
       nombre: 'Suzuki Baleno Cross',
       precio: "Suzuki Baleno Cross",
-      imagen: 'https://www.suzukiautos.com.co/arquivos/baleno-citroen-2024.png?v=638671930262100000',
+      imagen: '/catalogo/suzuki-baleno-cross.webp',
       categoria: 'Crossovers',
       descripcion: 'Hatchback compacto, moderno y eficiente.',
     },
@@ -140,7 +141,7 @@ function Catalogo() {
               className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col"
             >
               <div className="relative h-60 group-hover:scale-105 transition duration-300 overflow-hidden">
-                <img
+                <OptImg
                   src={producto.imagen}
                   alt={producto.nombre}
                   className="w-full h-full object-contain object-center transition duration-300"

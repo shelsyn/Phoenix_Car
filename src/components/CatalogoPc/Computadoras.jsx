@@ -1,51 +1,52 @@
 import { FaLaptop, FaSyncAlt, FaCheckCircle, FaHeadset, FaTools, FaShieldAlt, FaShippingFast, FaMoneyBillAlt } from "react-icons/fa";
+import OptImg from '@/components/ui/OptImg';
 
 export default function Computadoras() {
   const brands = [
-    { name: "HP", img: "https://logos-world.net/wp-content/uploads/2020/11/HP-Logo.png" },
-    { name: "Lenovo", img: "https://cdn.worldvectorlogo.com/logos/lenovo-2.svg" },
-    { name: "Dell", img: "https://1000logos.net/wp-content/uploads/2017/07/Dell-Logo.png" },
-    { name: "Asus", img: "https://upload.wikimedia.org/wikipedia/commons/d/de/AsusTek-black-logo.png" },
-    { name: "Apple", img: "https://images.icon-icons.com/2699/PNG/512/apple_logo_icon_168588.png" },
-    { name: "Acer", img: "https://1000logos.net/wp-content/uploads/2016/09/Acer-logo.jpg" },
-    { name: "Microsoft", img: "https://www.gmevents.ae/wp-content/uploads/2024/03/microsoft-logo.png" },
+    { name: "HP", img: "/catalogo/ext/logos-world-hp-logo-0d72b1.webp" },
+    { name: "Lenovo", img: "/catalogo/ext/cdn-lenovo-2-c92494.svg" },
+    { name: "Dell", img: "/catalogo/ext/1000logos-dell-logo-ebc14b.webp" },
+    { name: "Asus", img: "/catalogo/ext/upload-asustek-black-logo-96f8e8.webp" },
+    { name: "Apple", img: "/catalogo/ext/images-apple-logo-icon-168588-fa3a59.webp" },
+    { name: "Acer", img: "/catalogo/ext/1000logos-acer-logo-39e367.webp" },
+    { name: "Microsoft", img: "/catalogo/ext/gmevents-microsoft-logo-f9e326.webp" },
  
   ];
 
   const equipos = [
     {
       name: "Dell XPS 15 2025",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUDMMka9jiw8k-DhrQgFvIcIqOMZY0cJH1TA&s",
+      img: "/catalogo/ext/encrypted-tbn0-images-43f818.webp",
       specs: { procesador: "Intel Core Ultra 9", ram: "32GB", almacenamiento: "1TB SSD", pantalla: "15.6' OLED 4K", grafica: "NVIDIA GeForce RTX 4070" },
     },
     {
       name: "Lenovo ThinkPad X1 Carbon Gen 12",
-      img: "https://sourceit.com.sg/cdn/shop/files/lenovo-thinkpad-x1-carbon-gen-12-u7-155u32gb1tb-ssd-21kc0083sg-739192_300x300.jpg?v=1718172060",
+      img: "/catalogo/ext/sourceit-lenovo-thinkpad-x1-carbon-gen-12-u7-155u-eeaba8.webp",
       specs: { procesador: "Intel Core Ultra 7", ram: "32GB", almacenamiento: "1TB SSD", pantalla: "14' IPS WUXGA", grafica: "Intel Iris Xe" },
     },
     {
       name: "HP ZBook Fury 16 G10",
-      img: "https://www.hp.com/es-es/shop/Html/Merch/Images/c08700238_1750x1285.jpg",
+      img: "/catalogo/computador-hp.webp",
       specs: { procesador: "AMD Ryzen 9 PRO", ram: "64GB", almacenamiento: "2TB SSD", pantalla: "16' IPS WQUXGA", grafica: "NVIDIA RTX A5000" },
     },
     {
       name: "Asus ROG Zephyrus G14",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwWEcmwl2PHR6Vqp7idNJLSDbqCng8hm5nIA&s",
+      img: "/catalogo/ext/encrypted-tbn0-images-5396ba.webp",
       specs: { procesador: "AMD Ryzen 9", ram: "32GB", almacenamiento: "1TB SSD", pantalla: "14' QHD 165Hz", grafica: "NVIDIA GeForce RTX 4060" },
     },
     {
       name: "Apple MacBook Pro 16' M3 Max",
-      img: "https://www.compudemano.com/wp-content/uploads/2023/11/macbook-pro-16-m3.jpg",
+      img: "/catalogo/ext/compudemano-macbook-pro-16-m3-1e5709.webp",
       specs: { procesador: "Apple M3 Max", ram: "64GB", almacenamiento: "2TB SSD", pantalla: "16.2' Liquid Retina XDR", grafica: "30-core GPU" },
     },
     {
       name: "Acer Predator Helios 16",
-      img: "https://www.professionalwireless.com.co/wp-content/uploads/2024/11/Predator-Helios-16-PH16-71-93FR_2.png",
+      img: "/catalogo/ext/professionalwireless-predator-helios-16-ph16-71-93fr-2-b4fb37.webp",
       specs: { procesador: "Intel Core i9", ram: "32GB", almacenamiento: "1TB SSD", pantalla: "16' WQXGA 240Hz", grafica: "NVIDIA GeForce RTX 4080" },
     },
   ];
 
-  const heroImage = "https://newsbook.es/wp-content/uploads/2025/01/acer-pc-copilot-newsbook-ces-2025.png";
+  const heroImage = "/catalogo/ext/newsbook-acer-pc-copilot-newsbook-ces-2025-e2ac0d.webp";
 
     const beneficios = [
     {
@@ -107,7 +108,7 @@ export default function Computadoras() {
 
           {/* Hero Image */}
           <div className="flex justify-center">
-            <img
+            <OptImg
               src={heroImage}
               alt="Renting de Computadoras"
               width={550}
@@ -126,7 +127,7 @@ export default function Computadoras() {
           <div className="mt-12 flex justify-center gap-16 flex-wrap">
             {brands.map((brand, index) => (
               <div key={index} className="flex flex-col items-center hover:scale-105 transition-transform">
-                <img src={brand.img} alt={brand.name} className="w-24 h-24 object-contain grayscale hover:grayscale-0 transition-all" />
+                <OptImg src={brand.img} alt={brand.name} className="w-24 h-24 object-contain grayscale hover:grayscale-0 transition-all" />
                 <p className="mt-3 text-lg font-medium text-gray-700">{brand.name}</p>
               </div>
             ))}
@@ -145,7 +146,7 @@ export default function Computadoras() {
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
             {equipos.map((equipo, index) => (
               <div key={index} className="flex flex-col items-center bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition">
-                <img src={equipo.img} alt={equipo.name} className="w-56 h-56 object-contain rounded-xl" />
+                <OptImg src={equipo.img} alt={equipo.name} className="w-56 h-56 object-contain rounded-xl" />
                 <h3 className="mt-6 text-xl font-semibold text-gray-800 text-center">{equipo.name}</h3>
                 <ul className="text-gray-600 mt-4 text-center space-y-3">
                   <li className="flex items-center gap-2"><FaLaptop className="text-[#047ab7]" /> {equipo.specs.procesador}</li>

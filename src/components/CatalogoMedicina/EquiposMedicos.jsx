@@ -1,18 +1,19 @@
 import Head from "next/head";
 import { FaCheckCircle, FaHeartbeat, FaTools, FaHandHoldingMedical, FaTruckMoving, FaSync, FaMedkit, FaChartLine, FaStar, FaShieldAlt, FaUsers } from "react-icons/fa";
+import OptImg from '@/components/ui/OptImg';
 
 const imageUrls = {
-  "Tomógrafos": "https://imedi.com.co/wp-content/uploads/2020/10/banner-tomografia.png",
-  "Angiógrafos": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGUeWADkNFIKAgNRebWU1s_d6CeHIOCTD58A&s",
-  "Equipo de RX": "https://es.bimedis.com/latest-news/showimg/565_03_ge_proteus_xr_a_585-290jpg_1489423742.342_97412498/850",
-  "Ecógrafos": "https://www.tecnicaelectromedica.com/wp-content/uploads/2019/08/P40-ELITE-.jpg",
-  "Equipos ultrasonido": "https://www.promedco.com/images/Noticias_2022/ultrasonido-novedades1.png",
-  "Equipos dermatológicos": "https://img.freepik.com/fotos-premium/equipos-diagnostico-piel-facial-dermatologia-cosmetologia_83055-1309.jpg?w=360",
-  "Equipos estéticos": "https://medicalasersl.com/wp-content/uploads/2024/02/La-importancia-de-invertir-en-equipos-esteticos-profesionales.jpg",
-  "Equipos oftalmológicos": "https://medicalmix.com/images/images/carrusel/laseres-oftalmologicos.jpg",
-  "Camas hospitalarias médicas": "https://mubimedical.com/wp-content/uploads/2024/03/Life-Elite-Excelencia-en-Camas-Hospitalarias-para-un-Cuidado-Superior.png",
-  "Electrocardiógrafos": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqcyuhudhhvjiUZLZUlav73eayuJE5JAtRkQ&s",
-  "Arcos en C": "https://static.wixstatic.com/media/0495b0_8f18fea3a4794a208490a436dc16d10d~mv2.jpg/v1/fill/w_775,h_467,al_c,lg_1,q_85/0495b0_8f18fea3a4794a208490a436dc16d10d~mv2.jpg"
+  "Tomógrafos": "/catalogo/ext/imedi-banner-tomografia-98d377.webp",
+  "Angiógrafos": "/catalogo/ext/encrypted-tbn0-images-7ae6e9.webp",
+  "Equipo de RX": "/catalogo/medico-rayos-x.webp",
+  "Ecógrafos": "/catalogo/ext/tecnicaelectromedica-p40-elite-85bfb6.webp",
+  "Equipos ultrasonido": "/catalogo/ext/promedco-ultrasonido-novedades1-d4ad1c.webp",
+  "Equipos dermatológicos": "/catalogo/ext/img-equipos-diagnostico-piel-facial-dermatol-a89773.webp",
+  "Equipos estéticos": "/catalogo/medico-estetico.webp",
+  "Equipos oftalmológicos": "/catalogo/ext/medicalmix-laseres-oftalmologicos-0631ba.webp",
+  "Camas hospitalarias médicas": "/catalogo/ext/mubimedical-life-elite-excelencia-en-camas-hospitala-7146bd.webp",
+  "Electrocardiógrafos": "/catalogo/ext/encrypted-tbn0-images-97e676.webp",
+  "Arcos en C": "/catalogo/ext/static-0495b0-8f18fea3a4794a208490a436dc16d10d--05cc53.webp"
 };
 
 export default function EquiposMedicos() {
@@ -75,7 +76,7 @@ export default function EquiposMedicos() {
       <div 
         key={item} 
         className="relative bg-white p-6 rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-        <img 
+        <OptImg 
           src={imageUrls[item]} 
           alt={item} 
           className="w-full h-48 object-cover rounded-lg"

@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import OptImg from '@/components/ui/OptImg';
 
 function Catalogo() {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('Carros');
@@ -9,7 +10,7 @@ function Catalogo() {
       id: 1,
       nombre: 'Yaris',
       precio: "Yaris", // Replaced price with name
-      imagen: 'https://www.toyota.com.co/wp-content/uploads/2020/08/Yaris-HB-Siluetas-768x512-1.png',
+      imagen: '/catalogo/toyota-yaris.webp',
       categoria: 'Carros',
       descripcion: 'Hatchback compacto y moderno.',
     },
@@ -17,7 +18,7 @@ function Catalogo() {
       id: 2,
       nombre: 'Corolla',
       precio: "Corolla", // Replaced price with name
-      imagen: 'https://autoamerica.com.co/wp-content/uploads/2020/08/COROLLA-XEI-HEV-PLATA-METALICO.jpg',
+      imagen: '/catalogo/ext/autoamerica-corolla-xei-hev-plata-metalico-0a3a9a.webp',
       categoria: 'Carros',
       descripcion: 'Sedán versátil y espacioso.',
     },
@@ -26,7 +27,7 @@ function Catalogo() {
       id: 3,
       nombre: '4Runner',
       precio: "4Runner", // Replaced price with name
-      imagen: 'https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/max/2025/4runner/trdpro/8634/040/36/5.png?fmt=png-alpha&wid=930&qlt=90',
+      imagen: '/catalogo/ext/tmna-5-01c815.webp',
       categoria: 'Camionetas',
       descripcion: 'SUV robusta y versátil.',
     },
@@ -34,7 +35,7 @@ function Catalogo() {
       id: 4,
       nombre: 'Corolla Cross',
       precio: "Corolla Cross", // Replaced price with name
-      imagen: 'https://www.toyota.com.co/wp-content/uploads/2024/05/Corolla-Cross-SEG_super-blanco-1.png',
+      imagen: '/catalogo/toyota-corolla-cross.webp',
       categoria: 'Camionetas',
       descripcion: 'SUV versátil y espaciosa.',
     },
@@ -42,7 +43,7 @@ function Catalogo() {
       id: 5,
       nombre: 'Fortuner',
       precio: "Fortuner", // Replaced price with name
-      imagen: 'https://www.toyota.com.co/wp-content/uploads/2021/02/super-blanco-2.png',
+      imagen: '/catalogo/toyota-fortuner.webp',
       categoria: 'Camionetas',
       descripcion: 'SUV robusta, ideal para cualquier terreno.',
     },
@@ -50,7 +51,7 @@ function Catalogo() {
       id: 6,
       nombre: 'Land Cruiser 300',
       precio: "Land Cruiser 300", // Replaced price with name
-      imagen: 'https://distoyota.com/wp-content/uploads/2024/01/Land-cruiser-300-ZX-Gasolina-AT.png',
+      imagen: '/catalogo/ext/distoyota-land-cruiser-300-zx-gasolina-at-6244b4.webp',
       categoria: 'Camionetas',
       descripcion: 'SUV de lujo, potente y sofisticada.',
     },
@@ -58,7 +59,7 @@ function Catalogo() {
       id: 7,
       nombre: 'Land Cruiser Prado',
       precio: "Land Cruiser Prado", // Replaced price with name
-      imagen: 'https://www.toyota.com.co/wp-content/uploads/2024/05/TX-L-super-blanco-1.png',
+      imagen: '/catalogo/toyota-prado.webp',
       categoria: 'Camionetas',
       descripcion: 'SUV de lujo, potente y sofisticada.',
     },
@@ -66,7 +67,7 @@ function Catalogo() {
       id: 8,
       nombre: 'RAV 4',
       precio: "RAV 4", // Replaced price with name
-      imagen: 'https://toyotaarmenia.com/wp-content/uploads/2021/03/7colores_0014_rav4_xle_azul_nocturno.png',
+      imagen: '/catalogo/ext/toyotaarmenia-7colores-0014-rav4-xle-azul-nocturno-1b1c15.webp',
       categoria: 'Camionetas',
       descripcion: 'SUV versátil y espaciosa.',
     },
@@ -74,7 +75,7 @@ function Catalogo() {
       id: 9,
       nombre: 'Yaris Cross',
       precio: "Yaris Cross", // Replaced price with name
-      imagen: 'https://www.toyota.com.co/wp-content/uploads/2024/05/Colores-Yaris-Cross-XS-super-blanco-2.png',
+      imagen: '/catalogo/toyota-yaris-cross.webp',
       categoria: 'Camionetas',
       descripcion: 'SUV compacta, moderna y eficiente.',
     },
@@ -83,7 +84,7 @@ function Catalogo() {
       id: 10,
       nombre: 'Hilux',
       precio: "Hilux", // Replaced price with name
-      imagen: 'https://www.toyota.com.co/wp-content/uploads/2021/02/hilux_destacada-2-4-AT.jpg',
+      imagen: '/catalogo/toyota-hilux.webp',
       categoria: 'PickUps',
       descripcion: 'Pickup resistente y confiable.',
     },
@@ -91,7 +92,7 @@ function Catalogo() {
       id: 11,
       nombre: 'Tundra',
       precio: "Tundra", // Replaced price with name
-      imagen: 'https://www.toyota.com.co/wp-content/uploads/2023/10/Colores-Tundra_756_blanco-perla.png',
+      imagen: '/catalogo/toyota-tundra.webp',
       categoria: 'PickUps',
       descripcion: 'Pickup de alto rendimiento y capacidad.',
     },
@@ -138,7 +139,7 @@ function Catalogo() {
               className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col"
             >
               <div className="relative h-60 group-hover:scale-105 transition duration-300 overflow-hidden">
-                <img
+                <OptImg
                   src={producto.imagen}
                   alt={producto.nombre}
                   className="w-full h-full object-contain object-center transition duration-300"

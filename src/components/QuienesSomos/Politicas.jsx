@@ -1,3 +1,4 @@
+import OptImg from '@/components/ui/OptImg';
 
     import React from 'react';
 
@@ -20,17 +21,17 @@ const products = [
   {
     id: 4,
     name: 'Comerciales de pasajeros',
-    imageSrc: 'https://www.autosonline.cl/images/stories/foton/ft-crew/exterior/foton-ft-crew-2.jpg',
+    imageSrc: '/catalogo/ext/autosonline-foton-ft-crew-2-48a830.webp',
   },
   {
     id: 5,
     name: 'Comerciales de carga',
-    imageSrc: 'https://leonalperovich.com.ar/wp-content/uploads/2023/08/10005-1.jpg',
+    imageSrc: '/catalogo/comercial-pasajeros.webp',
   },
   {
     id: 6,
     name: 'Vanes',
-    imageSrc: 'https://build.ford.com/dig/Ford/Transit%20VanWagon/2024/HD-TILE/Image%5B%7CFord%7CTransit%20VanWagon%7C2024%7C1%7C1.%7C301A.X2Y.148.PYZ..88C.89K.LRL.18P.XL.20G.B2GAB.16E.85C.41B.90B.21L.96K.CS2.~CA%23KA_SE%23B8.51D.SRW.64D.TC8.RWD.998.57G.FLE.60C.SAA.58U.19Z.62D.18A.15F.BS4.44U.17F.X73.96X.541.CLO.WAL.%5D/EXT/1/vehicle.png',
+    imageSrc: '/catalogo/comercial-van.webp',
   },
 ];
 
@@ -45,7 +46,7 @@ export default function Politicas() {
               <div key={product.id}>
                 <div className="relative rounded-xl shadow-lg">
                   <div className="relative h-72 w-full overflow-hidden rounded-lg">
-                    <img src={product.imageSrc} alt={product.name} className="w-full h-auto object-cover object-center" />
+                    <OptImg src={product.imageSrc} alt={product.name} className="w-full h-auto object-cover object-center" />
                   </div>
                   <div className="relative p-2">
                     <h3 className="text-xl font-bold text-center" style={{ color: '#451a03' }}>{product.name}</h3>

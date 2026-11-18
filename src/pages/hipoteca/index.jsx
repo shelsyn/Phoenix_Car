@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Head from "next/head";
 import { Contacto } from "@/components/Contacto";
 import Footer from "@/components/Footer";

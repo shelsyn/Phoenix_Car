@@ -1,360 +1,300 @@
-import { Fragment, useState } from "react";
-import { Dialog, Popover, Transition } from "@headlessui/react";
-import { Bars3Icon, ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import { HomeIcon, FolderIcon, ShoppingBagIcon, CreditCardIcon, X } from "lucide-react";
-
-import Link from "next/link";
-
-const navigation = [
-  { id: 1, name: "Inicio", href: "/" },
-];
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import {
+  Dialog,
+  DialogPanel,
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+  Popover,
+  PopoverButton,
+  PopoverGroup,
+  PopoverPanel,
+} from '@headlessui/react';
+import { Bars3Icon, ChevronDownIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { WHATSAPP_URL } from '@/lib/contacto';
 
 const catalogoOptions = [
-  { id: 2, name: "Catálogo Empresa", href: "/catalogoEmpresa" },
-  { id: 3, name: "Catálogo Persona Natural", href: "/catalogoNatural" },
+  { id: 2, name: 'Catálogo Empresa', desc: 'Flotas y vehículos para tu negocio', href: '/catalogoEmpresa' },
+  { id: 3, name: 'Catálogo Persona Natural', desc: 'Tu carro nuevo sin cuota inicial', href: '/catalogoNatural' },
 ];
 
 const marcasAutos = [
-  { id: 4, name: "Renault", imgSrc: "/renaulds.avif", href: "/renault" },
+  { id: 4, name: 'Renault', imgSrc: '/renaulds.avif', href: '/renault' },
   /*{ id: 5, name: "Toyota", imgSrc: "/toyor.avif", href: "/toyota" },*/
-  { id: 6, name: "Suzuki", imgSrc: "/susu.avif", href: "/suzuki" },
-  { id: 7, name: "Citroen", imgSrc: "/citro.avif", href: "/citroen" },
-  { id: 8, name: "Subaru", imgSrc: "/sub.avif", href: "/subaru" },
-  { id: 9, name: "Chevrolet", imgSrc: "/ChevroletLogo.png", href: "/chevrolet" },
-  { id: 10, name: "Gwm", imgSrc: "/gwm.avif", href: "/gwm" },
-  { id: 11, name: "Seres", imgSrc: "/seres.avif", href: "/seres" },
+  { id: 6, name: 'Suzuki', imgSrc: '/susu.avif', href: '/suzuki' },
+  { id: 7, name: 'Citroën', imgSrc: '/citro.avif', href: '/citroen' },
+  { id: 8, name: 'Subaru', imgSrc: '/sub.avif', href: '/subaru' },
+  { id: 9, name: 'Chevrolet', imgSrc: '/ChevroletLogo.png', href: '/chevrolet' },
+  { id: 10, name: 'GWM', imgSrc: '/gwm.avif', href: '/gwm' },
+  { id: 11, name: 'Seres', imgSrc: '/seres.avif', href: '/seres' },
 ];
 
 const productosOptions = [
   {
     id: 12,
-    name: "Equipos de Oficina",
+    name: 'Equipos de Oficina',
     subItems: [
-      { id: 13, name: "Alquiler de Tablets", href: "/tablet" },
-      { id: 14, name: "Alquiler de Celulares", href: "/celulares" },
-      { id: 15, name: "Alquiler de Impresoras", href: "/impresora" },
-      { id: 16, name: "Alquiler de Computadores", href: "/computadores" },
+      { id: 13, name: 'Alquiler de Tablets', href: '/tablet' },
+      { id: 14, name: 'Alquiler de Celulares', href: '/celulares' },
+      { id: 15, name: 'Alquiler de Impresoras', href: '/impresora' },
+      { id: 16, name: 'Alquiler de Computadores', href: '/computadores' },
     ],
   },
   {
     id: 17,
-    name: "Alquiler de Maquinaria",
+    name: 'Alquiler de Maquinaria',
     subItems: [
-      { id: 18, name: "Maquinaria Industrial", href: "/maquinariaIndustrial" },
-      { id: 19, name: "Maquinaria Pesada ", href: "/catalogoActivo" },
+      { id: 18, name: 'Maquinaria Industrial', href: '/maquinariaIndustrial' },
+      { id: 19, name: 'Maquinaria Pesada', href: '/catalogoActivo' },
     ],
   },
   {
     id: 20,
-    name: "Otros Productos",
+    name: 'Otros Productos',
     subItems: [
-      { id: 21, name: "Puntos de Venta (POS)", href: "/catalogoPOS" },
-      { id: 22, name: "Equipos Médicos", href: "/medicina" },
+      { id: 21, name: 'Puntos de Venta (POS)', href: '/catalogoPOS' },
+      { id: 22, name: 'Equipos Médicos', href: '/medicina' },
     ],
   },
 ];
 
-const creditosOptions = [
-  { id: 23, name: "Crédito de vehículo", href: "/quienesSomos" },
-];
+const creditosOptions = [{ id: 23, name: 'Crédito de vehículo', desc: 'Financia tu próximo carro', href: '/quienesSomos' }];
+
+const navButton =
+  'group flex items-center gap-1 rounded-full px-3 py-2 text-[15px] font-medium text-white/85 outline-none transition hover:bg-white/10 hover:text-white data-[open]:bg-white/10 data-[open]:text-white';
+const panelBase =
+  'absolute left-1/2 z-50 mt-3 -translate-x-1/2 rounded-2xl bg-white p-3 shadow-2xl ring-1 ring-slate-900/5 transition duration-200 ease-out data-[closed]:translate-y-1 data-[closed]:opacity-0';
+
+function NavDropdown({ label, children, panelClass }) {
+  return (
+    <Popover className="relative">
+      <PopoverButton className={navButton}>
+        {label}
+        <ChevronDownIcon className="h-4 w-4 opacity-70 transition group-data-[open]:rotate-180" aria-hidden="true" />
+      </PopoverButton>
+      <PopoverPanel transition className={`${panelBase} ${panelClass}`}>
+        {children}
+      </PopoverPanel>
+    </Popover>
+  );
+}
+
+function LinkItem({ item }) {
+  return (
+    <Link
+      href={item.href}
+      className="block rounded-xl p-3 transition hover:bg-brand-soft"
+    >
+      <span className="block text-sm font-semibold text-slate-900">{item.name}</span>
+      {item.desc && <span className="mt-0.5 block text-xs text-slate-500">{item.desc}</span>}
+    </Link>
+  );
+}
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  // Cierra el menú móvil al navegar
+  useEffect(() => {
+    const close = () => setMobileMenuOpen(false);
+    router.events.on('routeChangeStart', close);
+    return () => router.events.off('routeChangeStart', close);
+  }, [router.events]);
 
   return (
-    <>
-      <header className="bg-gradient-to-r from-[#1e4d89] via-[#147ac4] to-[#05a0e3]">
-        <nav className="mx-12 flex items-center justify-between space-x-8" aria-label="Global">
-          {/* Logo */}
-          <div className="flex items-center space-x-4 lg:flex-1">
-            <img className="h-16 w-auto object-contain" src="/logos.png" alt="Logo" />
-          </div>
+    <header
+      className={`sticky top-0 z-40 w-full transition-all duration-300 ${
+        scrolled ? 'bg-brand-ink/90 shadow-lg shadow-black/10 backdrop-blur-md' : 'bg-brand-ink'
+      }`}
+    >
+      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:h-20 lg:px-8" aria-label="Principal">
+        <Link href="/" className="flex shrink-0 items-center" aria-label="VentRentAll - Inicio">
+          <img className="h-10 w-auto lg:h-12" src="/logos.png" alt="VentRentAll" width="581" height="141" />
+        </Link>
 
-          {/* Menú móvil */}
-          <div className="flex lg:hidden">
-            <button
-              type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white hover:text-gray-300 transition-all"
-              onClick={() => setMobileMenuOpen(true)}
-            >
-              <span className="sr-only">Abrir menú</span>
-              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-            </button>
-          </div>
+        {/* Escritorio */}
+        <PopoverGroup className="hidden items-center gap-1 lg:flex">
+          <Link href="/" className={navButton}>
+            Inicio
+          </Link>
 
-          {/* Menú en Escritorio */}
-          <Popover.Group className="hidden lg:flex lg:gap-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.id}
-                href={item.href}
-                className="text-lg font-semibold leading-6 text-[#ffffff] hover:text-gray-3000 transition-all"
-              >
-                {item.name}
-              </Link>
-            ))}
-            {/* Productos */}
-            <Popover className="relative">
-              <Popover.Button className="flex items-center gap-x-1 text-lg font-semibold leading-6 text-white hover:text-gray-300 transition-all">
-                Productos
-                <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
-              </Popover.Button>
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-200"
-                enterFrom="opacity-0 translate-y-1"
-                enterTo="opacity-100 translate-y-0"
-                leave="transition ease-in duration-150"
-                leaveFrom="opacity-100 translate-y-0"
-                leaveTo="opacity-0 translate-y-1"
-              >
-                {/* Panel con estructura mejorada */}
-                <Popover.Panel className="absolute left-0 z-10 mt-6 w-[650px] bg-white rounded-lg shadow-lg ring-1 ring-gray-900/5 p-6 grid grid-cols-3 gap-6 text-left">
-                  {productosOptions.map((category) => (
-                    <div key={category.id} className="space-y-3">
-                      <h4 className="text-gray-800 font-semibold text-md border-b pb-2">{category.name}</h4>
-                      <div className="space-y-2">
-                        {category.subItems.map((subItem) => (
-                          <Link
-                            key={subItem.id}
-                            href={subItem.href}
-                            className="flex items-center gap-2 p-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all"
-                          >
-                            <span className="w-2 h-2 bg-[#05a0e3] rounded-full" />
-                            {subItem.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
+          <NavDropdown label="Productos" panelClass="w-[640px]">
+            <div className="grid grid-cols-3 gap-2">
+              {productosOptions.map((category) => (
+                <div key={category.id} className="rounded-xl p-2">
+                  <p className="px-2 pb-2 text-xs font-semibold uppercase tracking-wider text-brand">{category.name}</p>
+                  {category.subItems.map((sub) => (
+                    <Link
+                      key={sub.id}
+                      href={sub.href}
+                      className="block rounded-lg px-2 py-2 text-sm text-slate-700 transition hover:bg-brand-soft hover:text-brand"
+                    >
+                      {sub.name}
+                    </Link>
                   ))}
-                </Popover.Panel>
-              </Transition>
-            </Popover>
+                </div>
+              ))}
+            </div>
+          </NavDropdown>
 
-            {/* Menú de Marcas de Autos */}
-            <Popover className="relative">
-              <Popover.Button className="flex items-center gap-x-1 text-lg font-semibold leading-6 text-white hover:text-gray-300">
-                Vehículos Nuevos
-                <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
-              </Popover.Button>
-
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-200"
-                enterFrom="opacity-0 translate-y-1"
-                enterTo="opacity-100 translate-y-0"
-                leave="transition ease-in duration-150"
-                leaveFrom="opacity-100 translate-y-0"
-                leaveTo="opacity-0 translate-y-1"
-              >
-                <Popover.Panel className="absolute left-0 z-10 mt-6 w-[700px] bg-white rounded-lg shadow-lg ring-1 ring-gray-900/3 p-6">
-                  <div className="grid grid-cols-4 gap-4">
-                    {marcasAutos.map((marca) => (
-                      <Link
-                        key={marca.id}
-                        href={marca.href}
-                        className="flex items-center justify-center bg-gray-100 rounded-xl p-6 shadow-md hover:shadow-lg transition duration-200"
-                      >
-                        <img
-                          src={marca.imgSrc}
-                          alt={marca.name}
-                          className="h-20 w-20 object-contain"
-                        />
-                      </Link>
-                    ))}
-                  </div>
-                </Popover.Panel>
-              </Transition>
-            </Popover>
-
-            {/* Catálogo */}
-            <Popover className="relative">
-              <Popover.Button className="flex items-center gap-x-1 text-lg font-semibold leading-6 text-white hover:text-gray-200">
-               Renting Autos
-                <ChevronDownIcon className="h-5 w-5 flex-none text-gray-300" aria-hidden="true" />
-              </Popover.Button>
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-200"
-                enterFrom="opacity-0 translate-y-1"
-                enterTo="opacity-100 translate-y-0"
-                leave="transition ease-in duration-150"
-                leaveFrom="opacity-100 translate-y-0"
-                leaveTo="opacity-0 translate-y-1"
-              >
-                <Popover.Panel className="absolute left-0 z-10 mt-6 w-56 overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-gray-900/5">
-                  <div className="p-4 space-y-2">
-                    {catalogoOptions.map((item) => (
-                      <Link
-                        key={item.id}
-                        href={item.href}
-                        className="flex items-center gap-2 p-2 text-sm leading-6 hover:bg-gray-100"
-                      >
-                        <span className="w-2 h-2 bg-[#05a0e3] rounded-full" />
-                        <span className="text-gray-900 font-medium">{item.name}</span>
-                      </Link>
-                    ))}
-                  </div>
-                </Popover.Panel>
-              </Transition>
-            </Popover>
-
-            {/* Créditos */}
-            <Popover className="relative">
-              <Popover.Button className="flex items-center gap-x-1 text-lg font-semibold leading-6 text-white hover:text-gray-300 transition-all">
-                Créditos
-                <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
-              </Popover.Button>
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-200"
-                enterFrom="opacity-0 translate-y-1"
-                enterTo="opacity-100 translate-y-0"
-                leave="transition ease-in duration-150"
-                leaveFrom="opacity-100 translate-y-0"
-                leaveTo="opacity-0 translate-y-1"
-              >
-                <Popover.Panel className="absolute left-0 z-10 mt-6 w-56 overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-gray-900/5">
-                  <div className="p-4 space-y-2">
-                    {creditosOptions.map((item) => (
-                      <Link
-                        key={item.id}
-                        href={item.href}
-                        className="flex items-center gap-2 p-2 text-sm leading-6 hover:bg-gray-50"
-                      >
-                        <span className="w-2 h-2 bg-[#05a0e3] rounded-full" />
-                        <span className="text-gray-900 font-medium">{item.name}</span>
-                      </Link>
-                    ))}
-                  </div>
-                </Popover.Panel>
-              </Transition>
-            </Popover>
-          </Popover.Group>
-
-          {/* Botón de contacto */}
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a
-              href="https://api.whatsapp.com/send/?phone=573143532474&text=Hola,+quiero+información+gracias."
-              target="_blank"
-              className="text-lg font-semibold leading-6 text-gray-900"
-              rel="noreferrer"
-            >
-              <span className="p-3 rounded-lg bg-[#047ab7] text-white shadow-md hover:bg-[#05a0e3] transition-all">
-                Contáctenos
-              </span>
-            </a>
-          </div>
-        </nav>
-
-    {/* Menú móvil */}
-<Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-  <Dialog.Panel className="fixed inset-0 z-10 bg-gradient-to-b from-[#2156a4] to-[#05a0e3] p-6 overflow-y-auto max-h-screen">
-    <div className="flex justify-between items-center">
-      {/* Logo con más espacio */}
-      <div className="flex items-center space-x-4 mb-4">
-        <img className="h-12 w-auto object-contain" src="/logos.png" alt="Logo" />
-      </div>
-      <button type="button" onClick={() => setMobileMenuOpen(false)}>
-        <X className="h-6 w-6 text-white hover:text-gray-300 transition-all" />
-      </button>
-    </div>
-
-    <div className="mt-4 space-y-6">
-      {/* Inicio */}
-      <Link
-        href="/"
-        className="flex items-center gap-3 text-white font-semibold text-lg hover:bg-white/10 p-2 rounded-md transition-all"
-      >
-        <HomeIcon className="h-5 w-5 text-gray-300" />
-        Inicio
-      </Link>
-
-      {/* Categoría Catálogo */}
-      <div className="border-b border-white/20 pb-8">
-        <div className="flex items-center gap-3 text-white font-semibold text-lg">
-          <FolderIcon className="h-5 w-5 text-gray-300" />
-          Catálogo
-        </div>
-        <div className="mt-2 space-y-2">
-          {catalogoOptions.map((item) => (
-            <Link
-              key={item.id} // Usando item.id como key
-              href={item.href}
-              className="flex items-center gap-2 pl-6 text-gray-200 hover:text-white hover:bg-white/10 p-2 rounded-md transition-all"
-            >
-              • {item.name}
-            </Link>
-          ))}
-        </div>
-      </div>
-
-      {/* Marcas de Autos en Móvil */}
-      <div className="mt-6">
-        <h3 className="text-white font-semibold text-lg mb-3">Vehículos Nuevos</h3>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-          {marcasAutos.map((marca) => (
-            <Link
-              key={marca.id} // Usando marca.id como key
-              href={marca.href}
-              className="flex flex-col items-center bg-gray-900/20 rounded-lg p-4 shadow-md hover:shadow-lg transition duration-200"
-            >
-              <img src={marca.imgSrc} alt={marca.name} className="h-16 w-16 object-contain" />
-            </Link>
-          ))}
-        </div>
-      </div>
-
-      <div className="border-b border-white/20 pb-3"></div>
-
-      {/* Categoría Productos */}
-      <div className="border-b border-white/20 pb-3">
-        <div className="flex items-center gap-3 text-white font-semibold text-lg">
-          <ShoppingBagIcon className="h-5 w-5 text-gray-300" />
-          Productos
-        </div>
-        <div className="mt-2 space-y-2">
-          {productosOptions.map((category) => (
-            <div key={category.id} className="pl-4"> {/* Usando category.id como key */}
-              <h4 className="text-gray-300 font-bold text-sm">{category.name}</h4>
-              {category.subItems.map((subItem) => (
+          <NavDropdown label="Vehículos Nuevos" panelClass="w-[520px]">
+            <div className="grid grid-cols-4 gap-2">
+              {marcasAutos.map((marca) => (
                 <Link
-                  key={subItem.id} // Usando subItem.id como key
-                  href={subItem.href}
-                  className="flex items-center gap-2 pl-6 text-gray-200 hover:text-white hover:bg-white/10 p-2 rounded-md transition-all"
+                  key={marca.id}
+                  href={marca.href}
+                  className="group flex flex-col items-center gap-2 rounded-xl p-3 transition hover:bg-brand-soft"
                 >
-                  • {subItem.name}
+                  <img src={marca.imgSrc} alt="" className="h-12 w-12 object-contain transition group-hover:scale-110" loading="lazy" />
+                  <span className="text-xs font-medium text-slate-600 group-hover:text-brand">{marca.name}</span>
                 </Link>
               ))}
             </div>
-          ))}
-        </div>
-      </div>
+          </NavDropdown>
 
-      {/* Categoría Créditos */}
-      <div>
-        <div className="flex items-center gap-3 text-white font-semibold text-lg">
-          <CreditCardIcon className="h-5 w-5 text-gray-300" />
-          Créditos
+          <NavDropdown label="Renting Autos" panelClass="w-72">
+            {catalogoOptions.map((item) => (
+              <LinkItem key={item.id} item={item} />
+            ))}
+          </NavDropdown>
+
+          <NavDropdown label="Créditos" panelClass="w-64">
+            {creditosOptions.map((item) => (
+              <LinkItem key={item.id} item={item} />
+            ))}
+          </NavDropdown>
+        </PopoverGroup>
+
+        <div className="flex items-center gap-2">
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="hidden rounded-full bg-brand-gold px-5 py-2.5 text-sm font-semibold text-brand-ink shadow-md transition hover:-translate-y-0.5 hover:bg-white sm:inline-flex"
+          >
+            Contáctenos
+          </a>
+          <button
+            type="button"
+            className="inline-flex items-center justify-center rounded-full p-2 text-white transition hover:bg-white/10 lg:hidden"
+            onClick={() => setMobileMenuOpen(true)}
+          >
+            <span className="sr-only">Abrir menú</span>
+            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+          </button>
         </div>
-        <div className="mt-2 space-y-2">
-          {creditosOptions.map((item) => (
-            <Link
-              key={item.id} // Usando item.id como key
-              href={item.href}
-              className="flex items-center gap-2 pl-6 text-gray-200 hover:text-white hover:bg-white/10 p-2 rounded-md transition-all"
+      </nav>
+
+      {/* Menú móvil */}
+      <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="relative z-50 lg:hidden">
+        <div className="fixed inset-0 bg-black/40 backdrop-blur-sm" aria-hidden="true" />
+        <DialogPanel
+          transition
+          className="fixed inset-y-0 right-0 flex w-full max-w-sm flex-col overflow-y-auto bg-brand-ink px-5 pb-8 pt-4 shadow-2xl transition duration-300 ease-out data-[closed]:translate-x-full"
+        >
+          <div className="flex items-center justify-between">
+            <img className="h-9 w-auto" src="/logos.png" alt="VentRentAll" />
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(false)}
+              className="rounded-full p-2 text-white transition hover:bg-white/10"
             >
-              • {item.name}
+              <span className="sr-only">Cerrar menú</span>
+              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+            </button>
+          </div>
+
+          <div className="mt-6 space-y-1 text-white">
+            <Link href="/" className="block rounded-xl px-3 py-3 text-base font-semibold hover:bg-white/10">
+              Inicio
             </Link>
-          ))}
-        </div>
-      </div>
-    </div>
-  </Dialog.Panel>
-</Dialog>
 
+            <MobileSection title="Vehículos Nuevos">
+              <div className="grid grid-cols-4 gap-2 px-1 pb-2">
+                {marcasAutos.map((marca) => (
+                  <Link
+                    key={marca.id}
+                    href={marca.href}
+                    className="flex flex-col items-center gap-1 rounded-xl bg-white p-2"
+                  >
+                    <img src={marca.imgSrc} alt="" className="h-9 w-9 object-contain" loading="lazy" />
+                    <span className="text-[10px] font-medium text-slate-600">{marca.name}</span>
+                  </Link>
+                ))}
+              </div>
+            </MobileSection>
 
-      </header>
-    </>
+            <MobileSection title="Renting Autos">
+              {catalogoOptions.map((item) => (
+                <MobileLink key={item.id} href={item.href}>
+                  {item.name}
+                </MobileLink>
+              ))}
+            </MobileSection>
+
+            <MobileSection title="Productos">
+              {productosOptions.map((category) => (
+                <div key={category.id} className="pb-2">
+                  <p className="px-3 pt-2 text-xs font-semibold uppercase tracking-wider text-brand-gold">{category.name}</p>
+                  {category.subItems.map((sub) => (
+                    <MobileLink key={sub.id} href={sub.href}>
+                      {sub.name}
+                    </MobileLink>
+                  ))}
+                </div>
+              ))}
+            </MobileSection>
+
+            <MobileSection title="Créditos">
+              {creditosOptions.map((item) => (
+                <MobileLink key={item.id} href={item.href}>
+                  {item.name}
+                </MobileLink>
+              ))}
+            </MobileSection>
+          </div>
+
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-8 inline-flex items-center justify-center rounded-full bg-brand-gold px-5 py-3 text-sm font-semibold text-brand-ink"
+          >
+            Escríbenos por WhatsApp
+          </a>
+        </DialogPanel>
+      </Dialog>
+    </header>
+  );
+}
+
+function MobileSection({ title, children }) {
+  return (
+    <Disclosure as="div" className="border-t border-white/10">
+      <DisclosureButton className="group flex w-full items-center justify-between rounded-xl px-3 py-3 text-base font-semibold hover:bg-white/5">
+        {title}
+        <ChevronDownIcon className="h-5 w-5 text-white/60 transition group-data-[open]:rotate-180" aria-hidden="true" />
+      </DisclosureButton>
+      <DisclosurePanel className="pb-2">{children}</DisclosurePanel>
+    </Disclosure>
+  );
+}
+
+function MobileLink({ href, children }) {
+  return (
+    <Link href={href} className="block rounded-lg px-3 py-2 text-sm text-white/80 hover:bg-white/10 hover:text-white">
+      {children}
+    </Link>
   );
 }

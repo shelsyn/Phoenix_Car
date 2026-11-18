@@ -1,53 +1,55 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import Reveal from '@/components/ui/Reveal';
+import OptImg from '@/components/ui/OptImg';
 
 const vehiculos = [
   {
-    marca: 'RENAULT',
-    imagen: 'https://casabritanica.com.co/wp-content/uploads/2024/04/casabritanica-sedes-banner-llanogrande.webp', // URL
+    marca: 'Renault',
+    imagen: '/catalogo/ext/casabritanica-casabritanica-sedes-banner-llanogrande-b644f7.webp',
     logo: '/renaulds.avif',
     link: '/renault',
     descripcion: 'Descubre la innovación y el diseño francés.',
   },
- 
   {
-    marca: 'SUZUKI',
-    imagen: 'https://media.licdn.com/dms/image/v2/D5612AQHp-f3Zg_EwZA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1690573974483?e=2147483647&v=beta&t=hHQnmZZ203vhs-vhaegj9USwhAnFLtTjHY_K0GNfxP8', // URL
+    marca: 'Suzuki',
+    imagen: '/catalogo/ext/media-1690573974483-abd0de.webp',
     logo: '/susu.avif',
     link: '/suzuki',
     descripcion: 'Explora vehículos compactos y eficientes.',
   },
   {
-    marca: 'CITROEN',
-    imagen: 'https://www.citroen.com.do/wp-content/uploads/2024/07/1004x428.jpg', // URL
+    marca: 'Citroën',
+    imagen: '/catalogo/citroen-c5-aircross.webp',
     logo: '/citro.avif',
     link: '/citroen',
     descripcion: 'Sumérgete en el confort y estilo único.',
   },
   {
-    marca: 'SUBARU',
-    imagen: 'https://www.subaru.com.pe/subaru/site/artic/20220817/imag/foto_0000000120220817202733/BANNER_HERO_desktop.png', // URL
+    marca: 'Subaru',
+    imagen: '/catalogo/ext/subaru-banner-hero-desktop-24f496.webp',
     logo: '/sub.avif',
     link: '/subaru',
     descripcion: 'Siente la seguridad y la tracción integral.',
   },
   {
     marca: 'Chevrolet',
-    imagen: 'https://www.chevrolet-sanjorge.com.ar/content/dam/chevrolet/sa/ar/es/master/home/index-subcontent/5-subite-a-tu-0km/banner-ofertas-desk_v2.jpg?imwidth=1920', // URL
+    imagen: '/catalogo/ext/chevrolet-sanjorge-banner-ofertas-desk-v2-c78f9c.webp',
     logo: '/ChevroletLogo.png',
     link: '/chevrolet',
     descripcion: 'Descubre la versatilidad y practicidad.',
   },
   {
     marca: 'GWM',
-    imagen: 'https://www.elcarrocolombiano.com/wp-content/uploads/2024/10/20241023-GREAT-WALL-MOTORS-COLOMBIA-INCHCAPE-ADELANTO-MARCAS-ORA-POER-HAVAL-TANK-01.jpg', // URL
+    imagen: '/catalogo/ext/elcarrocolombiano-20241023-great-wall-motors-colombia-inch-a9b761.webp',
     logo: '/gwm.avif',
     link: '/gwm',
     descripcion: 'Adéntrate en la tecnología y vanguardia.',
   },
   {
-    marca: 'SERES',
-    imagen: 'https://www.serescolombia.com/seres/site/artic/20230419/imag/foto_0000000220230419164215/Banner_Promo_Col_Modulo1_Mobile_1.png', // URL
+    marca: 'Seres',
+    imagen: '/catalogo/seres-5.webp',
     logo: '/seres.avif',
     link: '/seres',
     descripcion: 'Vive el futuro de la movilidad eléctrica.',
@@ -55,77 +57,104 @@ const vehiculos = [
 ];
 
 function VehiculosNuevos() {
-  const [currentBrandIndex, setCurrentBrandIndex] = useState(0);
+  const [current, setCurrent] = useState(0);
+  const [inView, setInView] = useState(false);
+  const [paused, setPaused] = useState(false);
+  const ref = useRef(null);
 
+  // Solo empieza a cargar imágenes y a rotar cuando la sección es visible
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentBrandIndex((prevIndex) => (prevIndex + 1) % vehiculos.length);
-    }, 5000); // Change brand every 5 seconds
-
-    return () => clearInterval(interval);
+    const el = ref.current;
+    if (!el) return;
+    const io = new IntersectionObserver(([e]) => setInView(e.isIntersecting), { rootMargin: '200px' });
+    io.observe(el);
+    return () => io.disconnect();
   }, []);
 
-  const handleBrandClick = (index) => {
-    setCurrentBrandIndex(index);
-  };
+  useEffect(() => {
+    if (!inView || paused) return;
+    const id = setInterval(() => setCurrent((i) => (i + 1) % vehiculos.length), 5000);
+    return () => clearInterval(id);
+  }, [inView, paused]);
 
-  const currentBrand = vehiculos[currentBrandIndex];
+  // Imágenes ya solicitadas (la actual y la siguiente); se mantienen para no parpadear
+  const [seen, setSeen] = useState(() => new Set([0, 1]));
+  useEffect(() => {
+    setSeen((prev) => {
+      const next = (current + 1) % vehiculos.length;
+      if (prev.has(current) && prev.has(next)) return prev;
+      return new Set([...prev, current, next]);
+    });
+  }, [current]);
+
+  const brand = vehiculos[current];
 
   return (
-    <section className="bg-gray-100 py-8 md:py-12">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold  text-[#047ab7]  text-center mb-6 md:mb-10">
-        Vehículos Nuevos
-        </h2>
+    <section ref={ref} className="bg-white py-20" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <Reveal className="mx-auto max-w-2xl text-center">
+          <span className="section-eyebrow">Concesionario</span>
+          <h2 className="section-title">Vehículos nuevos</h2>
+          <p className="mt-4 text-base text-slate-600 sm:text-lg">Trabajamos con las mejores marcas del mercado.</p>
+        </Reveal>
 
-        {/* Brand Logos Above */}
-        <div className="flex flex-row gap-2 md:gap-6 overflow-x-auto md:overflow-x-hidden justify-center mb-6 md:mb-10">
-          {vehiculos.map((vehiculo, index) => (
+        {/* Selector de marcas */}
+        <div className="mt-10 flex snap-x gap-3 overflow-x-auto pb-2 sm:justify-center" role="tablist" aria-label="Marcas">
+          {vehiculos.map((v, i) => (
             <button
-              key={index}
-              onClick={() => handleBrandClick(index)}
-              className={`w-14 h-14 md:w-24 md:h-24 rounded-full overflow-hidden transition-opacity duration-300 flex-shrink-0 border-2 border-transparent hover:border-[#047ab7] ${
-                currentBrandIndex === index ? 'opacity-100 border-[#047ab7]' : 'opacity-50 hover:opacity-80'
+              key={v.marca}
+              type="button"
+              role="tab"
+              aria-selected={i === current}
+              onClick={() => setCurrent(i)}
+              className={`flex shrink-0 snap-start items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition ${
+                i === current
+                  ? 'border-brand bg-brand text-white shadow-lg shadow-brand/25'
+                  : 'border-slate-200 bg-white text-slate-600 hover:border-brand/40 hover:text-brand'
               }`}
             >
-              <img
-                src={vehiculo.logo}
-                alt={`${vehiculo.marca} Logo`}
-                className="w-full h-full object-contain"
-                loading="lazy"
-              />
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white">
+                <img src={v.logo} alt="" className="h-5 w-5 object-contain" loading="lazy" />
+              </span>
+              {v.marca}
             </button>
           ))}
         </div>
 
-        {/* Main Brand Spotlight */}
-        <div className="flex flex-col items-center justify-center">
-          <div className="relative w-full md:w-[750px] h-[300px] md:h-[450px] rounded-3xl overflow-hidden shadow-2xl"> {/* Adjusted width */}
-            <div className="absolute inset-0 transition-opacity duration-500 ease-in-out">
-              <img
-                src={currentBrand.imagen}
-                alt={currentBrand.marca}
-                className="w-full h-full object-cover"
+        {/* Marca destacada */}
+        <div className="relative mx-auto mt-8 aspect-[4/3] max-w-5xl overflow-hidden rounded-3xl bg-slate-200 shadow-2xl sm:aspect-[16/7]">
+          {inView &&
+            vehiculos.map((v, i) =>
+              !seen.has(i) ? null : (
+              <OptImg
+                key={v.marca}
+                src={v.imagen}
+                sizes="(max-width: 1024px) 100vw, 1024px"
+                alt={i === current ? v.marca : ''}
+                aria-hidden={i !== current}
                 loading="lazy"
+                decoding="async"
+                className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
+                  i === current ? 'opacity-100' : 'opacity-0'
+                }`}
               />
-            </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent flex flex-col justify-end p-4 md:p-10">
-              <div className="flex items-center gap-2 md:gap-6">
-                <img
-                  src={currentBrand.logo}
-                  alt={`${currentBrand.marca} Logo`}
-                  className="w-14 h-14 md:w-24 md:h-24 object-contain bg-white rounded-full p-1 md:p-3"
-                  loading="lazy"
-                />
-                <h3 className="text-white text-xl md:text-4xl font-bold">{currentBrand.marca}</h3>
+              )
+            )}
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-ink via-brand-ink/40 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 flex flex-col gap-4 p-6 sm:flex-row sm:items-end sm:justify-between sm:p-10">
+            <div className="flex items-center gap-4">
+              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white p-2 shadow-lg sm:h-20 sm:w-20">
+                <img src={brand.logo} alt="" className="h-full w-full object-contain" />
+              </span>
+              <div>
+                <h3 className="text-2xl font-bold text-white sm:text-4xl">{brand.marca}</h3>
+                <p className="mt-1 text-sm text-white/80 sm:text-base">{brand.descripcion}</p>
               </div>
-              <p className="text-white mt-1 md:mt-3 text-sm md:text-lg">{currentBrand.descripcion}</p>
-              <Link href={currentBrand.link} passHref>
-                <button className="mt-2 md:mt-5 bg-[#047ab7] text-white px-4 py-2 md:px-8 md:py-4 rounded-full hover:bg-[#036fa1] transition duration-300 text-sm md:text-base md:text-lg">
-                  Explorar
-                </button>
-              </Link>
             </div>
+            <Link href={brand.link} className="btn-primary self-start sm:self-auto">
+              Explorar {brand.marca}
+              <ArrowRightIcon className="h-4 w-4" aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </div>
